@@ -1,0 +1,26 @@
+
+## Service Boundary Problem ##
+
+**Current Issue:**  
+LOCI components and pages are scattered under `recycling_bin/LOCI` folders with inconsistent naming `(loci)` causing path resolution issues and import errors. Legacy Node.js services exist alongside .NET and React frontend, causing confusion and duplication.
+
+## Proposed Solutions
+
+### 1. Flatten LOCI folder structure
+- Move all LOCI components to a single `LOCI` folder.
+- Remove parentheses and redundant subfolders.
+- **Pros:** Simpler imports, fewer errors.
+- **Cons:** May break references in legacy code if not fully updated.
+
+### 2. Use TypeScript path aliases
+- Define `tsconfig.json` paths for:
+```json
+{
+  "@/*": ["./*"],
+  "@/LOCI/*": ["./app/recycling_bin/LOCI_folders/*"],
+  "@/components/*": ["./app/components/*"]
+}
+Pros: Easy imports without worrying about relative paths.
+
+Cons: Requires consistent alias usage across all files.
+
