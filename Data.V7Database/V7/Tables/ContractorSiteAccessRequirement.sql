@@ -1,0 +1,28 @@
+﻿CREATE TABLE [V7].[ContractorSiteAccessRequirement] (
+    [ContractorSiteAccessRequirementID] INT            IDENTITY (1, 1) NOT NULL,
+    [ContractorSiteAccessID]            INT            NOT NULL,
+    [RequirementType]                   INT            NOT NULL,
+    [RequirementTitle]                  NVARCHAR (150) NULL,
+    [ContractorSiteAccessAttachmentID]  INT            NULL,
+    [TaskID]                            INT            NULL,
+    [ExemptUntilDate]                   DATETIMEOFFSET (7) NULL,
+    [CreatedByUserID]                   INT            NOT NULL,
+    [CreatedDate]                       DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]                  INT            NULL,
+    [ModifiedDate]                  DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]                  INT            NULL,
+    [ArchivedDate]                      DATETIMEOFFSET (7) NULL,
+    [UserAreaFormResponseID]            INT            NULL,
+    [ContractorSiteAccessPersonnelID]   INT            NULL,
+    [IsComplete]                        BIT            DEFAULT ((0)) NOT NULL,
+    PRIMARY KEY CLUSTERED ([ContractorSiteAccessRequirementID] ASC),
+    CONSTRAINT [FK_ContractorSiteAccessRequirement_ArchivedBy] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_ContractorSiteAccessRequirement_ContractorSiteAccess] FOREIGN KEY ([ContractorSiteAccessID]) REFERENCES [V7].[ContractorSiteAccess] ([ContractorSiteAccessID]),
+    CONSTRAINT [FK_ContractorSiteAccessRequirement_ContractorSiteAccessAttachment] FOREIGN KEY ([ContractorSiteAccessAttachmentID]) REFERENCES [V7].[ContractorSiteAccessAttachment] ([ContractorSiteAccessAttachmentID]),
+    CONSTRAINT [FK_ContractorSiteAccessRequirement_ContractorSiteAccessPersonnel] FOREIGN KEY ([ContractorSiteAccessPersonnelID]) REFERENCES [V7].[ContractorSiteAccessPersonnel] ([ContractorSiteAccessPersonnelID]),
+    CONSTRAINT [FK_ContractorSiteAccessRequirement_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_ContractorSiteAccessRequirement_ModifiedBy] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_ContractorSiteAccessRequirement_Task] FOREIGN KEY ([TaskID]) REFERENCES [V7].[BSSTask] ([TaskID]),
+    CONSTRAINT [FK_ContractorSiteAccessRequirement_UserAreaFormResponse] FOREIGN KEY ([UserAreaFormResponseID]) REFERENCES [V7].[UserAreaFormResponse] ([UserAreaFormResponseID])
+);
+

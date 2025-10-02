@@ -1,0 +1,28 @@
+﻿CREATE TABLE [V7].[ContractorSiteAccess] (
+    [ContractorSiteAccessID] INT             IDENTITY (1, 1) NOT NULL,
+    [ContractorCompanyID]    INT             NOT NULL,
+    [SiteUserAreaID]         INT             NOT NULL,
+    [SiteLocationID]         INT             NULL,
+    [StartDateTime]          DATETIMEOFFSET (7) NOT NULL,
+    [EndDateTime]            DATETIMEOFFSET (7) NOT NULL,
+    [WorkDetails]            NVARCHAR (1000) NULL,
+    [GeneralComments]        NVARCHAR (MAX)  NULL,
+    [ClosedDate]             DATETIMEOFFSET (7) NULL,
+    [CreatedByUserID]        INT             NOT NULL,
+    [CreatedDate]            DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]       INT             NULL,
+    [ModifiedDate]       DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]       INT             NULL,
+    [ArchivedDate]           DATETIMEOFFSET (7) NULL,
+    [EntryInstructions]      NVARCHAR (MAX)  NULL,
+    [ContractingManagerName] NVARCHAR (100)  NULL,
+    [IsRaisedByContractor]   BIT             DEFAULT ((0)) NOT NULL,
+    PRIMARY KEY CLUSTERED ([ContractorSiteAccessID] ASC),
+    CONSTRAINT [FK_ContractorSiteAccess_ArchivedBy] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_ContractorSiteAccess_ContractorCompany] FOREIGN KEY ([ContractorCompanyID]) REFERENCES [V7].[ContractorCompany] ([ContractorCompanyID]),
+    CONSTRAINT [FK_ContractorSiteAccess_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_ContractorSiteAccess_Location] FOREIGN KEY ([SiteLocationID]) REFERENCES [V7].[Location] ([LocationID]),
+    CONSTRAINT [FK_ContractorSiteAccess_ModifiedBy] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_ContractorSiteAccess_UserArea] FOREIGN KEY ([SiteUserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+

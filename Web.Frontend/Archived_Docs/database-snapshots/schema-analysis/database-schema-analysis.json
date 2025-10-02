@@ -1,0 +1,4620 @@
+{
+  "timestamp": "2025-07-09T21:11:47.980Z",
+  "database": "V7",
+  "server": "YOUR_DATABASE_SERVER.database.windows.net",
+  "tables": [
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "AnswerType",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "Attachment",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "AttachmentUserArea",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "AttachmentUserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "AttachmentID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "UserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          }
+        ],
+        "primaryKeys": [
+          "AttachmentUserAreaID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_AttachmentUserArea_UserArea",
+            "PARENT_TABLE": "AttachmentUserArea",
+            "PARENT_COLUMN": "UserAreaID",
+            "REFERENCED_TABLE": "UserArea",
+            "REFERENCED_COLUMN": "UserAreaID"
+          },
+          {
+            "FK_NAME": "FK_AttachmentUserArea_Attachment",
+            "PARENT_TABLE": "AttachmentUserArea",
+            "PARENT_COLUMN": "AttachmentID",
+            "REFERENCED_TABLE": "Attachment",
+            "REFERENCED_COLUMN": "AttachmentID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "AuditLog",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "CategoryType",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "ChecklistTemplate",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "ChecklistTemplateAssignment",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "ChecklistTemplateCategory",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "ChecklistTemplateEnrolment",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "Employee",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "FrequencyType",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "Location",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "LocationEmployee",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "OrgGroup",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "OrgGroupEmployee",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "SystemPermission",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "PermissionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "Name",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 100,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "DisplayName",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "Layer",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 20,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "Module",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 50,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "Description",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 500,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 6
+          }
+        ],
+        "primaryKeys": [
+          "PermissionID"
+        ],
+        "foreignKeys": [],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "SystemRole",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "RoleID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "Name",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 100,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "DisplayName",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "Category",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 50,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "IsSystemRole",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((1))",
+            "ORDINAL_POSITION": 5
+          }
+        ],
+        "primaryKeys": [
+          "RoleID"
+        ],
+        "foreignKeys": [],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "SystemRolePermission",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "SystemRoleID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "PermissionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          }
+        ],
+        "primaryKeys": [
+          "SystemRoleID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_SystemRolePermission_SystemPermission",
+            "PARENT_TABLE": "SystemRolePermission",
+            "PARENT_COLUMN": "PermissionID",
+            "REFERENCED_TABLE": "SystemPermission",
+            "REFERENCED_COLUMN": "PermissionID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "Task",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "TaskAssignment",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "TaskSchedule",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "TaskScheduleAssignment",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "TaskType",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "TaskTypeUserArea",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "TaskTypeUserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "TaskTypeID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "UserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          }
+        ],
+        "primaryKeys": [
+          "TaskTypeUserAreaID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_TaskTypeUserArea_TaskType",
+            "PARENT_TABLE": "TaskTypeUserArea",
+            "PARENT_COLUMN": "TaskTypeID",
+            "REFERENCED_TABLE": "TaskType",
+            "REFERENCED_COLUMN": "TaskTypeID"
+          },
+          {
+            "FK_NAME": "FK_TaskTypeUserArea_UserArea",
+            "PARENT_TABLE": "TaskTypeUserArea",
+            "PARENT_COLUMN": "UserAreaID",
+            "REFERENCED_TABLE": "UserArea",
+            "REFERENCED_COLUMN": "UserAreaID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "Tenant",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "TenantElementPermissions",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "TenantElementPermissionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "TenantID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "TenantRoleID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "ElementPattern",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "PermissionType",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 50,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "IsGranted",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((1))",
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "(sysdatetimeoffset())",
+            "ORDINAL_POSITION": 7
+          }
+        ],
+        "primaryKeys": [
+          "TenantElementPermissionID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_TenantElementPermissions_Tenant",
+            "PARENT_TABLE": "TenantElementPermissions",
+            "PARENT_COLUMN": "TenantID",
+            "REFERENCED_TABLE": "Tenant",
+            "REFERENCED_COLUMN": "TenantID"
+          },
+          {
+            "FK_NAME": "FK_TenantElementPermissions_TenantRole",
+            "PARENT_TABLE": "TenantElementPermissions",
+            "PARENT_COLUMN": "TenantRoleID",
+            "REFERENCED_TABLE": "TenantRole",
+            "REFERENCED_COLUMN": "TenantRoleID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "TenantPagePermissions",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "TenantPagePermissionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "TenantID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "TenantRoleID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "PageRoute",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "AccessLevel",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 50,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "IsGranted",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((1))",
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "(sysdatetimeoffset())",
+            "ORDINAL_POSITION": 7
+          }
+        ],
+        "primaryKeys": [
+          "TenantPagePermissionID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_TenantPagePermissions_Tenant",
+            "PARENT_TABLE": "TenantPagePermissions",
+            "PARENT_COLUMN": "TenantID",
+            "REFERENCED_TABLE": "Tenant",
+            "REFERENCED_COLUMN": "TenantID"
+          },
+          {
+            "FK_NAME": "FK_TenantPagePermissions_TenantRole",
+            "PARENT_TABLE": "TenantPagePermissions",
+            "PARENT_COLUMN": "TenantRoleID",
+            "REFERENCED_TABLE": "TenantRole",
+            "REFERENCED_COLUMN": "TenantRoleID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "TenantRole",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "TenantRoleID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "TenantID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "Name",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 100,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "DisplayName",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "ParentSystemRoleID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "IsCustomRole",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((1))",
+            "ORDINAL_POSITION": 6
+          }
+        ],
+        "primaryKeys": [
+          "TenantRoleID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_TenantRole_Tenant",
+            "PARENT_TABLE": "TenantRole",
+            "PARENT_COLUMN": "TenantID",
+            "REFERENCED_TABLE": "Tenant",
+            "REFERENCED_COLUMN": "TenantID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "TenantRolePermission",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "TenantRolePermissionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "TenantID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "PermissionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "IsGranted",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((1))",
+            "ORDINAL_POSITION": 4
+          }
+        ],
+        "primaryKeys": [
+          "TenantRolePermissionID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_TenantRolePermission_Tenant",
+            "PARENT_TABLE": "TenantRolePermission",
+            "PARENT_COLUMN": "TenantID",
+            "REFERENCED_TABLE": "Tenant",
+            "REFERENCED_COLUMN": "TenantID"
+          },
+          {
+            "FK_NAME": "FK_TenantRolePermission_SystemPermission",
+            "PARENT_TABLE": "TenantRolePermission",
+            "PARENT_COLUMN": "PermissionID",
+            "REFERENCED_TABLE": "SystemPermission",
+            "REFERENCED_COLUMN": "PermissionID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "TenantServicePermission",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "TenantServicePermissionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "TenantID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "ServiceName",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 100,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "IsEnabled",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((1))",
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "(sysdatetimeoffset())",
+            "ORDINAL_POSITION": 5
+          }
+        ],
+        "primaryKeys": [
+          "TenantServicePermissionID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_TenantServicePermission_Tenant",
+            "PARENT_TABLE": "TenantServicePermission",
+            "PARENT_COLUMN": "TenantID",
+            "REFERENCED_TABLE": "Tenant",
+            "REFERENCED_COLUMN": "TenantID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "ThemeType",
+      "TABLE_TYPE": "BASE TABLE"
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "User",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "GUID",
+            "DATA_TYPE": "uniqueidentifier",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "(newid())",
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "MasterUserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "FullName",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "Email",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "IsMobileAppUser",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((1))",
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "HasReadDisclaimer",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((0))",
+            "ORDINAL_POSITION": 7
+          },
+          {
+            "COLUMN_NAME": "IsLocked",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((0))",
+            "ORDINAL_POSITION": 8
+          },
+          {
+            "COLUMN_NAME": "LockedMessage",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 9
+          },
+          {
+            "COLUMN_NAME": "LastLoginDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 10
+          },
+          {
+            "COLUMN_NAME": "CreatedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 11
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 12
+          },
+          {
+            "COLUMN_NAME": "ModifiedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 13
+          },
+          {
+            "COLUMN_NAME": "ModifiedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 14
+          },
+          {
+            "COLUMN_NAME": "ArchivedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 15
+          },
+          {
+            "COLUMN_NAME": "ArchivedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 16
+          },
+          {
+            "COLUMN_NAME": "AzureADObjectId",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 17
+          }
+        ],
+        "primaryKeys": [
+          "UserID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_User_UserArea",
+            "PARENT_TABLE": "User",
+            "PARENT_COLUMN": "MasterUserAreaID",
+            "REFERENCED_TABLE": "UserArea",
+            "REFERENCED_COLUMN": "UserAreaID"
+          },
+          {
+            "FK_NAME": "FK_User_CreatedBy",
+            "PARENT_TABLE": "User",
+            "PARENT_COLUMN": "CreatedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_User_ModifiedBy",
+            "PARENT_TABLE": "User",
+            "PARENT_COLUMN": "ModifiedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_User_ArchivedBy",
+            "PARENT_TABLE": "User",
+            "PARENT_COLUMN": "ArchivedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          }
+        ],
+        "rowCount": 1,
+        "sampleData": [
+          {
+            "UserID": 1,
+            "GUID": "1DA1BB51-4880-449B-848A-D1CF3A4AFFE7",
+            "MasterUserAreaID": 1,
+            "FullName": "Admin User",
+            "Email": null,
+            "IsMobileAppUser": true,
+            "HasReadDisclaimer": false,
+            "IsLocked": false,
+            "LockedMessage": null,
+            "LastLoginDate": null,
+            "CreatedByUserID": 1,
+            "CreatedDate": "2025-06-26T11:50:23.249Z",
+            "ModifiedByUserID": null,
+            "ModifiedDate": null,
+            "ArchivedByUserID": null,
+            "ArchivedDate": null,
+            "AzureADObjectId": null
+          }
+        ]
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "UserArea",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "ThemeTypeID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "GUID",
+            "DATA_TYPE": "uniqueidentifier",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "(newid())",
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "Title",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "Description",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": -1,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "Prefix",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 10,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "IsDemo",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((0))",
+            "ORDINAL_POSITION": 7
+          },
+          {
+            "COLUMN_NAME": "ExpiryDate",
+            "DATA_TYPE": "date",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 8
+          },
+          {
+            "COLUMN_NAME": "BaseURL",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 9
+          },
+          {
+            "COLUMN_NAME": "SSOLoginURL",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 10
+          },
+          {
+            "COLUMN_NAME": "MobileIdentityAPIInstanceID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 11
+          },
+          {
+            "COLUMN_NAME": "UploadedFileMBLimit",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 12
+          },
+          {
+            "COLUMN_NAME": "CreatedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 13
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 14
+          },
+          {
+            "COLUMN_NAME": "ModifiedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 15
+          },
+          {
+            "COLUMN_NAME": "ModifiedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 16
+          },
+          {
+            "COLUMN_NAME": "ArchivedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 17
+          },
+          {
+            "COLUMN_NAME": "ArchivedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 18
+          }
+        ],
+        "primaryKeys": [
+          "UserAreaID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_UserArea_CreatedBy",
+            "PARENT_TABLE": "UserArea",
+            "PARENT_COLUMN": "CreatedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserArea_ArchivedBy",
+            "PARENT_TABLE": "UserArea",
+            "PARENT_COLUMN": "ArchivedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserArea_ModifiedBy",
+            "PARENT_TABLE": "UserArea",
+            "PARENT_COLUMN": "ModifiedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserArea_ThemeType",
+            "PARENT_TABLE": "UserArea",
+            "PARENT_COLUMN": "ThemeTypeID",
+            "REFERENCED_TABLE": "ThemeType",
+            "REFERENCED_COLUMN": "ThemeTypeID"
+          }
+        ],
+        "rowCount": 1,
+        "sampleData": [
+          {
+            "UserAreaID": 1,
+            "ThemeTypeID": 1,
+            "GUID": "C6728746-D9CF-4727-99D8-47B59E3E8D25",
+            "Title": "Demo Area",
+            "Description": null,
+            "Prefix": null,
+            "IsDemo": false,
+            "ExpiryDate": null,
+            "BaseURL": null,
+            "SSOLoginURL": null,
+            "MobileIdentityAPIInstanceID": null,
+            "UploadedFileMBLimit": null,
+            "CreatedByUserID": 1,
+            "CreatedDate": "2025-06-26T11:59:57.297Z",
+            "ModifiedByUserID": null,
+            "ModifiedDate": null,
+            "ArchivedByUserID": null,
+            "ArchivedDate": null
+          }
+        ]
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "UserAreaContractor",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserAreaContractorID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "UserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "ContractorUserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "IsActive",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((0))",
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "CreatedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "ModifiedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 7
+          },
+          {
+            "COLUMN_NAME": "ModifiedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 8
+          },
+          {
+            "COLUMN_NAME": "ArchivedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 9
+          },
+          {
+            "COLUMN_NAME": "ArchivedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 10
+          }
+        ],
+        "primaryKeys": [
+          "UserAreaContractorID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_UserAreaContractor_UserArea",
+            "PARENT_TABLE": "UserAreaContractor",
+            "PARENT_COLUMN": "UserAreaID",
+            "REFERENCED_TABLE": "UserArea",
+            "REFERENCED_COLUMN": "UserAreaID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaContractor_Employee",
+            "PARENT_TABLE": "UserAreaContractor",
+            "PARENT_COLUMN": "ContractorUserAreaID",
+            "REFERENCED_TABLE": "UserArea",
+            "REFERENCED_COLUMN": "UserAreaID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaContractor_ModifiedBy",
+            "PARENT_TABLE": "UserAreaContractor",
+            "PARENT_COLUMN": "ModifiedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaContractor_ArchivedBy",
+            "PARENT_TABLE": "UserAreaContractor",
+            "PARENT_COLUMN": "ArchivedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaContractor_CreatedBy",
+            "PARENT_TABLE": "UserAreaContractor",
+            "PARENT_COLUMN": "CreatedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "UserAreaForm",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserAreaFormID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "OriginalUserAreaFormID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "Version",
+            "DATA_TYPE": "tinyint",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "Status",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 20,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "UserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "Reference",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 50,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "Title",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 7
+          },
+          {
+            "COLUMN_NAME": "Description",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": -1,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 8
+          },
+          {
+            "COLUMN_NAME": "IsEnabledForWeb",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((1))",
+            "ORDINAL_POSITION": 9
+          },
+          {
+            "COLUMN_NAME": "IsEnabledForApp",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((1))",
+            "ORDINAL_POSITION": 10
+          },
+          {
+            "COLUMN_NAME": "CreatedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 11
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 12
+          },
+          {
+            "COLUMN_NAME": "ModifiedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 13
+          },
+          {
+            "COLUMN_NAME": "ModifiedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 14
+          },
+          {
+            "COLUMN_NAME": "ArchivedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 15
+          },
+          {
+            "COLUMN_NAME": "ArchivedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 16
+          }
+        ],
+        "primaryKeys": [
+          "UserAreaFormID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_UserAreaForm_UserArea",
+            "PARENT_TABLE": "UserAreaForm",
+            "PARENT_COLUMN": "UserAreaID",
+            "REFERENCED_TABLE": "UserArea",
+            "REFERENCED_COLUMN": "UserAreaID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaForm_ModifiedBy",
+            "PARENT_TABLE": "UserAreaForm",
+            "PARENT_COLUMN": "ModifiedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaForm_ArchivedBy",
+            "PARENT_TABLE": "UserAreaForm",
+            "PARENT_COLUMN": "ArchivedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaForm_CreatedBy",
+            "PARENT_TABLE": "UserAreaForm",
+            "PARENT_COLUMN": "CreatedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "UserAreaFormQuestion",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserAreaFormQuestionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "OriginalUserAreaFormQuestionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "UserAreaFormSectionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "AnswerTypeID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "Title",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "Description",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": -1,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "ConfigData",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": -1,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 7
+          },
+          {
+            "COLUMN_NAME": "ParentIDAnswerValues",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": -1,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 8
+          },
+          {
+            "COLUMN_NAME": "AnswerTypeOptionsTable",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 50,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 9
+          },
+          {
+            "COLUMN_NAME": "AnswerTypeOptionsList",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": -1,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 10
+          },
+          {
+            "COLUMN_NAME": "OrderNum",
+            "DATA_TYPE": "tinyint",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((0))",
+            "ORDINAL_POSITION": 11
+          },
+          {
+            "COLUMN_NAME": "Weighting",
+            "DATA_TYPE": "tinyint",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 12
+          },
+          {
+            "COLUMN_NAME": "MaxScore",
+            "DATA_TYPE": "tinyint",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 13
+          },
+          {
+            "COLUMN_NAME": "IsMandatory",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((0))",
+            "ORDINAL_POSITION": 14
+          },
+          {
+            "COLUMN_NAME": "CreatedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 15
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 16
+          },
+          {
+            "COLUMN_NAME": "ModifiedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 17
+          },
+          {
+            "COLUMN_NAME": "ModifiedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 18
+          },
+          {
+            "COLUMN_NAME": "ArchivedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 19
+          },
+          {
+            "COLUMN_NAME": "ArchivedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 20
+          }
+        ],
+        "primaryKeys": [
+          "UserAreaFormQuestionID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_UserAreaFormQuestion_UserAreaFormSection",
+            "PARENT_TABLE": "UserAreaFormQuestion",
+            "PARENT_COLUMN": "UserAreaFormSectionID",
+            "REFERENCED_TABLE": "UserAreaFormSection",
+            "REFERENCED_COLUMN": "UserAreaFormSectionID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormQuestion_AnswerType",
+            "PARENT_TABLE": "UserAreaFormQuestion",
+            "PARENT_COLUMN": "AnswerTypeID",
+            "REFERENCED_TABLE": "AnswerType",
+            "REFERENCED_COLUMN": "AnswerTypeID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormQuestion_CreatedBy",
+            "PARENT_TABLE": "UserAreaFormQuestion",
+            "PARENT_COLUMN": "CreatedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormQuestion_ModifiedBy",
+            "PARENT_TABLE": "UserAreaFormQuestion",
+            "PARENT_COLUMN": "ModifiedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormQuestion_ArchivedBy",
+            "PARENT_TABLE": "UserAreaFormQuestion",
+            "PARENT_COLUMN": "ArchivedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "UserAreaFormQuestionAnswer",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserAreaFormQuestionAnswerID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "OriginalUserAreaFormQuestionAnswerID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "UserAreaFormQuestionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "AnswerText",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "OrderNum",
+            "DATA_TYPE": "tinyint",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((0))",
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "Weighting",
+            "DATA_TYPE": "tinyint",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "ScoreValue",
+            "DATA_TYPE": "tinyint",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 7
+          },
+          {
+            "COLUMN_NAME": "JumpToOriginalUserAreaFormSectionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 8
+          },
+          {
+            "COLUMN_NAME": "ConfigData",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": -1,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 9
+          },
+          {
+            "COLUMN_NAME": "CreatedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 10
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 11
+          },
+          {
+            "COLUMN_NAME": "ModifiedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 12
+          },
+          {
+            "COLUMN_NAME": "ModifiedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 13
+          },
+          {
+            "COLUMN_NAME": "ArchivedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 14
+          },
+          {
+            "COLUMN_NAME": "ArchivedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 15
+          }
+        ],
+        "primaryKeys": [
+          "UserAreaFormQuestionAnswerID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_UserAreaFormQuestionAnswer_OriginalUserAreaFormSection",
+            "PARENT_TABLE": "UserAreaFormQuestionAnswer",
+            "PARENT_COLUMN": "JumpToOriginalUserAreaFormSectionID",
+            "REFERENCED_TABLE": "UserAreaFormSection",
+            "REFERENCED_COLUMN": "UserAreaFormSectionID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormQuestionAnswer_UserAreaFormQuestion",
+            "PARENT_TABLE": "UserAreaFormQuestionAnswer",
+            "PARENT_COLUMN": "UserAreaFormQuestionID",
+            "REFERENCED_TABLE": "UserAreaFormQuestion",
+            "REFERENCED_COLUMN": "UserAreaFormQuestionID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormQuestionAnswer_ArchivedBy",
+            "PARENT_TABLE": "UserAreaFormQuestionAnswer",
+            "PARENT_COLUMN": "ArchivedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormQuestionAnswer_CreatedBy",
+            "PARENT_TABLE": "UserAreaFormQuestionAnswer",
+            "PARENT_COLUMN": "CreatedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormQuestionAnswer_ModifiedBy",
+            "PARENT_TABLE": "UserAreaFormQuestionAnswer",
+            "PARENT_COLUMN": "ModifiedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "UserAreaFormResponse",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserAreaFormResponseID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "OriginalUserAreaFormResponseID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "Version",
+            "DATA_TYPE": "tinyint",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "Status",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 20,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "UserAreaFormID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "UserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "EmployeeID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 7
+          },
+          {
+            "COLUMN_NAME": "LocationID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 8
+          },
+          {
+            "COLUMN_NAME": "OrgGroupID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 9
+          },
+          {
+            "COLUMN_NAME": "Reference",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 100,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 10
+          },
+          {
+            "COLUMN_NAME": "QuestionResponseData",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": -1,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 11
+          },
+          {
+            "COLUMN_NAME": "AttachmentIDList",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 1000,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 12
+          },
+          {
+            "COLUMN_NAME": "TaskIDList",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 1000,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 13
+          },
+          {
+            "COLUMN_NAME": "SubmissionDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 14
+          },
+          {
+            "COLUMN_NAME": "CreatedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 15
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 16
+          },
+          {
+            "COLUMN_NAME": "ModifiedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 17
+          },
+          {
+            "COLUMN_NAME": "ModifiedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 18
+          },
+          {
+            "COLUMN_NAME": "ArchivedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 19
+          },
+          {
+            "COLUMN_NAME": "ArchivedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 20
+          }
+        ],
+        "primaryKeys": [
+          "UserAreaFormResponseID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_UserAreaFormResponse_UserAreaForm",
+            "PARENT_TABLE": "UserAreaFormResponse",
+            "PARENT_COLUMN": "UserAreaFormID",
+            "REFERENCED_TABLE": "UserAreaForm",
+            "REFERENCED_COLUMN": "UserAreaFormID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormResponse_Location",
+            "PARENT_TABLE": "UserAreaFormResponse",
+            "PARENT_COLUMN": "LocationID",
+            "REFERENCED_TABLE": "Location",
+            "REFERENCED_COLUMN": "LocationID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormResponse_UserArea",
+            "PARENT_TABLE": "UserAreaFormResponse",
+            "PARENT_COLUMN": "UserAreaID",
+            "REFERENCED_TABLE": "UserArea",
+            "REFERENCED_COLUMN": "UserAreaID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormResponse_ArchivedBy",
+            "PARENT_TABLE": "UserAreaFormResponse",
+            "PARENT_COLUMN": "ArchivedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormResponse_ModifiedBy",
+            "PARENT_TABLE": "UserAreaFormResponse",
+            "PARENT_COLUMN": "ModifiedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormResponse_CreatedBy",
+            "PARENT_TABLE": "UserAreaFormResponse",
+            "PARENT_COLUMN": "CreatedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormResponse_OrgGroup",
+            "PARENT_TABLE": "UserAreaFormResponse",
+            "PARENT_COLUMN": "OrgGroupID",
+            "REFERENCED_TABLE": "OrgGroup",
+            "REFERENCED_COLUMN": "OrgGroupID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormResponse_Employee",
+            "PARENT_TABLE": "UserAreaFormResponse",
+            "PARENT_COLUMN": "EmployeeID",
+            "REFERENCED_TABLE": "Employee",
+            "REFERENCED_COLUMN": "EmployeeID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "UserAreaFormSection",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserAreaFormSectionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "OriginalUserAreaFormSectionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "UserAreaFormID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "Reference",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 50,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "Title",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "HelpText",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 1000,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "OrderNum",
+            "DATA_TYPE": "tinyint",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((0))",
+            "ORDINAL_POSITION": 7
+          },
+          {
+            "COLUMN_NAME": "CreatedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 8
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 9
+          },
+          {
+            "COLUMN_NAME": "ModifiedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 10
+          },
+          {
+            "COLUMN_NAME": "ModifiedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 11
+          },
+          {
+            "COLUMN_NAME": "ArchivedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 12
+          },
+          {
+            "COLUMN_NAME": "ArchivedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 13
+          }
+        ],
+        "primaryKeys": [
+          "UserAreaFormSectionID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_UserAreaFormSection_UserAreaForm",
+            "PARENT_TABLE": "UserAreaFormSection",
+            "PARENT_COLUMN": "UserAreaFormID",
+            "REFERENCED_TABLE": "UserAreaForm",
+            "REFERENCED_COLUMN": "UserAreaFormID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormSection_ModifiedBy",
+            "PARENT_TABLE": "UserAreaFormSection",
+            "PARENT_COLUMN": "ModifiedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormSection_ArchivedBy",
+            "PARENT_TABLE": "UserAreaFormSection",
+            "PARENT_COLUMN": "ArchivedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormSection_CreatedBy",
+            "PARENT_TABLE": "UserAreaFormSection",
+            "PARENT_COLUMN": "CreatedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "UserTenant",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserTenantID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "UserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "TenantID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "Status",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 20,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": "('Active')",
+            "ORDINAL_POSITION": 4
+          }
+        ],
+        "primaryKeys": [
+          "UserTenantID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_UserTenant_Tenant",
+            "PARENT_TABLE": "UserTenant",
+            "PARENT_COLUMN": "TenantID",
+            "REFERENCED_TABLE": "Tenant",
+            "REFERENCED_COLUMN": "TenantID"
+          },
+          {
+            "FK_NAME": "FK_UserTenant_User",
+            "PARENT_TABLE": "UserTenant",
+            "PARENT_COLUMN": "UserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "UserTenantRole",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserTenantRoleID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "UserTenantID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "TenantRoleID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "AssignedAt",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          }
+        ],
+        "primaryKeys": [
+          "UserTenantRoleID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_UserTenantRole_TenantRole",
+            "PARENT_TABLE": "UserTenantRole",
+            "PARENT_COLUMN": "TenantRoleID",
+            "REFERENCED_TABLE": "TenantRole",
+            "REFERENCED_COLUMN": "TenantRoleID"
+          },
+          {
+            "FK_NAME": "FK_UserTenantRole_UserTenant",
+            "PARENT_TABLE": "UserTenantRole",
+            "PARENT_COLUMN": "UserTenantID",
+            "REFERENCED_TABLE": "UserTenant",
+            "REFERENCED_COLUMN": "UserTenantID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    }
+  ],
+  "permissionRelatedTables": [
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "AttachmentUserArea",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "AttachmentUserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "AttachmentID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "UserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          }
+        ],
+        "primaryKeys": [
+          "AttachmentUserAreaID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_AttachmentUserArea_UserArea",
+            "PARENT_TABLE": "AttachmentUserArea",
+            "PARENT_COLUMN": "UserAreaID",
+            "REFERENCED_TABLE": "UserArea",
+            "REFERENCED_COLUMN": "UserAreaID"
+          },
+          {
+            "FK_NAME": "FK_AttachmentUserArea_Attachment",
+            "PARENT_TABLE": "AttachmentUserArea",
+            "PARENT_COLUMN": "AttachmentID",
+            "REFERENCED_TABLE": "Attachment",
+            "REFERENCED_COLUMN": "AttachmentID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "SystemPermission",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "PermissionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "Name",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 100,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "DisplayName",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "Layer",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 20,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "Module",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 50,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "Description",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 500,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 6
+          }
+        ],
+        "primaryKeys": [
+          "PermissionID"
+        ],
+        "foreignKeys": [],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "SystemRole",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "RoleID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "Name",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 100,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "DisplayName",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "Category",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 50,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "IsSystemRole",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((1))",
+            "ORDINAL_POSITION": 5
+          }
+        ],
+        "primaryKeys": [
+          "RoleID"
+        ],
+        "foreignKeys": [],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "SystemRolePermission",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "SystemRoleID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "PermissionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          }
+        ],
+        "primaryKeys": [
+          "SystemRoleID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_SystemRolePermission_SystemPermission",
+            "PARENT_TABLE": "SystemRolePermission",
+            "PARENT_COLUMN": "PermissionID",
+            "REFERENCED_TABLE": "SystemPermission",
+            "REFERENCED_COLUMN": "PermissionID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "TaskTypeUserArea",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "TaskTypeUserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "TaskTypeID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "UserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          }
+        ],
+        "primaryKeys": [
+          "TaskTypeUserAreaID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_TaskTypeUserArea_TaskType",
+            "PARENT_TABLE": "TaskTypeUserArea",
+            "PARENT_COLUMN": "TaskTypeID",
+            "REFERENCED_TABLE": "TaskType",
+            "REFERENCED_COLUMN": "TaskTypeID"
+          },
+          {
+            "FK_NAME": "FK_TaskTypeUserArea_UserArea",
+            "PARENT_TABLE": "TaskTypeUserArea",
+            "PARENT_COLUMN": "UserAreaID",
+            "REFERENCED_TABLE": "UserArea",
+            "REFERENCED_COLUMN": "UserAreaID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "TenantElementPermissions",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "TenantElementPermissionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "TenantID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "TenantRoleID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "ElementPattern",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "PermissionType",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 50,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "IsGranted",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((1))",
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "(sysdatetimeoffset())",
+            "ORDINAL_POSITION": 7
+          }
+        ],
+        "primaryKeys": [
+          "TenantElementPermissionID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_TenantElementPermissions_Tenant",
+            "PARENT_TABLE": "TenantElementPermissions",
+            "PARENT_COLUMN": "TenantID",
+            "REFERENCED_TABLE": "Tenant",
+            "REFERENCED_COLUMN": "TenantID"
+          },
+          {
+            "FK_NAME": "FK_TenantElementPermissions_TenantRole",
+            "PARENT_TABLE": "TenantElementPermissions",
+            "PARENT_COLUMN": "TenantRoleID",
+            "REFERENCED_TABLE": "TenantRole",
+            "REFERENCED_COLUMN": "TenantRoleID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "TenantPagePermissions",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "TenantPagePermissionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "TenantID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "TenantRoleID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "PageRoute",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "AccessLevel",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 50,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "IsGranted",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((1))",
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "(sysdatetimeoffset())",
+            "ORDINAL_POSITION": 7
+          }
+        ],
+        "primaryKeys": [
+          "TenantPagePermissionID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_TenantPagePermissions_Tenant",
+            "PARENT_TABLE": "TenantPagePermissions",
+            "PARENT_COLUMN": "TenantID",
+            "REFERENCED_TABLE": "Tenant",
+            "REFERENCED_COLUMN": "TenantID"
+          },
+          {
+            "FK_NAME": "FK_TenantPagePermissions_TenantRole",
+            "PARENT_TABLE": "TenantPagePermissions",
+            "PARENT_COLUMN": "TenantRoleID",
+            "REFERENCED_TABLE": "TenantRole",
+            "REFERENCED_COLUMN": "TenantRoleID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "TenantRole",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "TenantRoleID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "TenantID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "Name",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 100,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "DisplayName",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "ParentSystemRoleID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "IsCustomRole",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((1))",
+            "ORDINAL_POSITION": 6
+          }
+        ],
+        "primaryKeys": [
+          "TenantRoleID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_TenantRole_Tenant",
+            "PARENT_TABLE": "TenantRole",
+            "PARENT_COLUMN": "TenantID",
+            "REFERENCED_TABLE": "Tenant",
+            "REFERENCED_COLUMN": "TenantID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "TenantRolePermission",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "TenantRolePermissionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "TenantID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "PermissionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "IsGranted",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((1))",
+            "ORDINAL_POSITION": 4
+          }
+        ],
+        "primaryKeys": [
+          "TenantRolePermissionID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_TenantRolePermission_Tenant",
+            "PARENT_TABLE": "TenantRolePermission",
+            "PARENT_COLUMN": "TenantID",
+            "REFERENCED_TABLE": "Tenant",
+            "REFERENCED_COLUMN": "TenantID"
+          },
+          {
+            "FK_NAME": "FK_TenantRolePermission_SystemPermission",
+            "PARENT_TABLE": "TenantRolePermission",
+            "PARENT_COLUMN": "PermissionID",
+            "REFERENCED_TABLE": "SystemPermission",
+            "REFERENCED_COLUMN": "PermissionID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "TenantServicePermission",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "TenantServicePermissionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "TenantID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "ServiceName",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 100,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "IsEnabled",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((1))",
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "(sysdatetimeoffset())",
+            "ORDINAL_POSITION": 5
+          }
+        ],
+        "primaryKeys": [
+          "TenantServicePermissionID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_TenantServicePermission_Tenant",
+            "PARENT_TABLE": "TenantServicePermission",
+            "PARENT_COLUMN": "TenantID",
+            "REFERENCED_TABLE": "Tenant",
+            "REFERENCED_COLUMN": "TenantID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "User",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "GUID",
+            "DATA_TYPE": "uniqueidentifier",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "(newid())",
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "MasterUserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "FullName",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "Email",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "IsMobileAppUser",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((1))",
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "HasReadDisclaimer",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((0))",
+            "ORDINAL_POSITION": 7
+          },
+          {
+            "COLUMN_NAME": "IsLocked",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((0))",
+            "ORDINAL_POSITION": 8
+          },
+          {
+            "COLUMN_NAME": "LockedMessage",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 9
+          },
+          {
+            "COLUMN_NAME": "LastLoginDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 10
+          },
+          {
+            "COLUMN_NAME": "CreatedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 11
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 12
+          },
+          {
+            "COLUMN_NAME": "ModifiedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 13
+          },
+          {
+            "COLUMN_NAME": "ModifiedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 14
+          },
+          {
+            "COLUMN_NAME": "ArchivedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 15
+          },
+          {
+            "COLUMN_NAME": "ArchivedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 16
+          },
+          {
+            "COLUMN_NAME": "AzureADObjectId",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 17
+          }
+        ],
+        "primaryKeys": [
+          "UserID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_User_UserArea",
+            "PARENT_TABLE": "User",
+            "PARENT_COLUMN": "MasterUserAreaID",
+            "REFERENCED_TABLE": "UserArea",
+            "REFERENCED_COLUMN": "UserAreaID"
+          },
+          {
+            "FK_NAME": "FK_User_CreatedBy",
+            "PARENT_TABLE": "User",
+            "PARENT_COLUMN": "CreatedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_User_ModifiedBy",
+            "PARENT_TABLE": "User",
+            "PARENT_COLUMN": "ModifiedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_User_ArchivedBy",
+            "PARENT_TABLE": "User",
+            "PARENT_COLUMN": "ArchivedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          }
+        ],
+        "rowCount": 1,
+        "sampleData": [
+          {
+            "UserID": 1,
+            "GUID": "1DA1BB51-4880-449B-848A-D1CF3A4AFFE7",
+            "MasterUserAreaID": 1,
+            "FullName": "Admin User",
+            "Email": null,
+            "IsMobileAppUser": true,
+            "HasReadDisclaimer": false,
+            "IsLocked": false,
+            "LockedMessage": null,
+            "LastLoginDate": null,
+            "CreatedByUserID": 1,
+            "CreatedDate": "2025-06-26T11:50:23.249Z",
+            "ModifiedByUserID": null,
+            "ModifiedDate": null,
+            "ArchivedByUserID": null,
+            "ArchivedDate": null,
+            "AzureADObjectId": null
+          }
+        ]
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "UserArea",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "ThemeTypeID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "GUID",
+            "DATA_TYPE": "uniqueidentifier",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "(newid())",
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "Title",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "Description",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": -1,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "Prefix",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 10,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "IsDemo",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((0))",
+            "ORDINAL_POSITION": 7
+          },
+          {
+            "COLUMN_NAME": "ExpiryDate",
+            "DATA_TYPE": "date",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 8
+          },
+          {
+            "COLUMN_NAME": "BaseURL",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 9
+          },
+          {
+            "COLUMN_NAME": "SSOLoginURL",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 10
+          },
+          {
+            "COLUMN_NAME": "MobileIdentityAPIInstanceID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 11
+          },
+          {
+            "COLUMN_NAME": "UploadedFileMBLimit",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 12
+          },
+          {
+            "COLUMN_NAME": "CreatedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 13
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 14
+          },
+          {
+            "COLUMN_NAME": "ModifiedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 15
+          },
+          {
+            "COLUMN_NAME": "ModifiedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 16
+          },
+          {
+            "COLUMN_NAME": "ArchivedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 17
+          },
+          {
+            "COLUMN_NAME": "ArchivedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 18
+          }
+        ],
+        "primaryKeys": [
+          "UserAreaID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_UserArea_CreatedBy",
+            "PARENT_TABLE": "UserArea",
+            "PARENT_COLUMN": "CreatedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserArea_ArchivedBy",
+            "PARENT_TABLE": "UserArea",
+            "PARENT_COLUMN": "ArchivedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserArea_ModifiedBy",
+            "PARENT_TABLE": "UserArea",
+            "PARENT_COLUMN": "ModifiedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserArea_ThemeType",
+            "PARENT_TABLE": "UserArea",
+            "PARENT_COLUMN": "ThemeTypeID",
+            "REFERENCED_TABLE": "ThemeType",
+            "REFERENCED_COLUMN": "ThemeTypeID"
+          }
+        ],
+        "rowCount": 1,
+        "sampleData": [
+          {
+            "UserAreaID": 1,
+            "ThemeTypeID": 1,
+            "GUID": "C6728746-D9CF-4727-99D8-47B59E3E8D25",
+            "Title": "Demo Area",
+            "Description": null,
+            "Prefix": null,
+            "IsDemo": false,
+            "ExpiryDate": null,
+            "BaseURL": null,
+            "SSOLoginURL": null,
+            "MobileIdentityAPIInstanceID": null,
+            "UploadedFileMBLimit": null,
+            "CreatedByUserID": 1,
+            "CreatedDate": "2025-06-26T11:59:57.297Z",
+            "ModifiedByUserID": null,
+            "ModifiedDate": null,
+            "ArchivedByUserID": null,
+            "ArchivedDate": null
+          }
+        ]
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "UserAreaContractor",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserAreaContractorID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "UserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "ContractorUserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "IsActive",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((0))",
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "CreatedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "ModifiedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 7
+          },
+          {
+            "COLUMN_NAME": "ModifiedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 8
+          },
+          {
+            "COLUMN_NAME": "ArchivedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 9
+          },
+          {
+            "COLUMN_NAME": "ArchivedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 10
+          }
+        ],
+        "primaryKeys": [
+          "UserAreaContractorID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_UserAreaContractor_UserArea",
+            "PARENT_TABLE": "UserAreaContractor",
+            "PARENT_COLUMN": "UserAreaID",
+            "REFERENCED_TABLE": "UserArea",
+            "REFERENCED_COLUMN": "UserAreaID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaContractor_Employee",
+            "PARENT_TABLE": "UserAreaContractor",
+            "PARENT_COLUMN": "ContractorUserAreaID",
+            "REFERENCED_TABLE": "UserArea",
+            "REFERENCED_COLUMN": "UserAreaID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaContractor_ModifiedBy",
+            "PARENT_TABLE": "UserAreaContractor",
+            "PARENT_COLUMN": "ModifiedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaContractor_ArchivedBy",
+            "PARENT_TABLE": "UserAreaContractor",
+            "PARENT_COLUMN": "ArchivedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaContractor_CreatedBy",
+            "PARENT_TABLE": "UserAreaContractor",
+            "PARENT_COLUMN": "CreatedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "UserAreaForm",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserAreaFormID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "OriginalUserAreaFormID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "Version",
+            "DATA_TYPE": "tinyint",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "Status",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 20,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "UserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "Reference",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 50,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "Title",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 7
+          },
+          {
+            "COLUMN_NAME": "Description",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": -1,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 8
+          },
+          {
+            "COLUMN_NAME": "IsEnabledForWeb",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((1))",
+            "ORDINAL_POSITION": 9
+          },
+          {
+            "COLUMN_NAME": "IsEnabledForApp",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((1))",
+            "ORDINAL_POSITION": 10
+          },
+          {
+            "COLUMN_NAME": "CreatedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 11
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 12
+          },
+          {
+            "COLUMN_NAME": "ModifiedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 13
+          },
+          {
+            "COLUMN_NAME": "ModifiedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 14
+          },
+          {
+            "COLUMN_NAME": "ArchivedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 15
+          },
+          {
+            "COLUMN_NAME": "ArchivedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 16
+          }
+        ],
+        "primaryKeys": [
+          "UserAreaFormID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_UserAreaForm_UserArea",
+            "PARENT_TABLE": "UserAreaForm",
+            "PARENT_COLUMN": "UserAreaID",
+            "REFERENCED_TABLE": "UserArea",
+            "REFERENCED_COLUMN": "UserAreaID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaForm_ModifiedBy",
+            "PARENT_TABLE": "UserAreaForm",
+            "PARENT_COLUMN": "ModifiedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaForm_ArchivedBy",
+            "PARENT_TABLE": "UserAreaForm",
+            "PARENT_COLUMN": "ArchivedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaForm_CreatedBy",
+            "PARENT_TABLE": "UserAreaForm",
+            "PARENT_COLUMN": "CreatedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "UserAreaFormQuestion",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserAreaFormQuestionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "OriginalUserAreaFormQuestionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "UserAreaFormSectionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "AnswerTypeID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "Title",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "Description",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": -1,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "ConfigData",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": -1,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 7
+          },
+          {
+            "COLUMN_NAME": "ParentIDAnswerValues",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": -1,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 8
+          },
+          {
+            "COLUMN_NAME": "AnswerTypeOptionsTable",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 50,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 9
+          },
+          {
+            "COLUMN_NAME": "AnswerTypeOptionsList",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": -1,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 10
+          },
+          {
+            "COLUMN_NAME": "OrderNum",
+            "DATA_TYPE": "tinyint",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((0))",
+            "ORDINAL_POSITION": 11
+          },
+          {
+            "COLUMN_NAME": "Weighting",
+            "DATA_TYPE": "tinyint",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 12
+          },
+          {
+            "COLUMN_NAME": "MaxScore",
+            "DATA_TYPE": "tinyint",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 13
+          },
+          {
+            "COLUMN_NAME": "IsMandatory",
+            "DATA_TYPE": "bit",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((0))",
+            "ORDINAL_POSITION": 14
+          },
+          {
+            "COLUMN_NAME": "CreatedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 15
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 16
+          },
+          {
+            "COLUMN_NAME": "ModifiedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 17
+          },
+          {
+            "COLUMN_NAME": "ModifiedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 18
+          },
+          {
+            "COLUMN_NAME": "ArchivedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 19
+          },
+          {
+            "COLUMN_NAME": "ArchivedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 20
+          }
+        ],
+        "primaryKeys": [
+          "UserAreaFormQuestionID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_UserAreaFormQuestion_UserAreaFormSection",
+            "PARENT_TABLE": "UserAreaFormQuestion",
+            "PARENT_COLUMN": "UserAreaFormSectionID",
+            "REFERENCED_TABLE": "UserAreaFormSection",
+            "REFERENCED_COLUMN": "UserAreaFormSectionID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormQuestion_AnswerType",
+            "PARENT_TABLE": "UserAreaFormQuestion",
+            "PARENT_COLUMN": "AnswerTypeID",
+            "REFERENCED_TABLE": "AnswerType",
+            "REFERENCED_COLUMN": "AnswerTypeID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormQuestion_CreatedBy",
+            "PARENT_TABLE": "UserAreaFormQuestion",
+            "PARENT_COLUMN": "CreatedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormQuestion_ModifiedBy",
+            "PARENT_TABLE": "UserAreaFormQuestion",
+            "PARENT_COLUMN": "ModifiedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormQuestion_ArchivedBy",
+            "PARENT_TABLE": "UserAreaFormQuestion",
+            "PARENT_COLUMN": "ArchivedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "UserAreaFormQuestionAnswer",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserAreaFormQuestionAnswerID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "OriginalUserAreaFormQuestionAnswerID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "UserAreaFormQuestionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "AnswerText",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "OrderNum",
+            "DATA_TYPE": "tinyint",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((0))",
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "Weighting",
+            "DATA_TYPE": "tinyint",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "ScoreValue",
+            "DATA_TYPE": "tinyint",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 7
+          },
+          {
+            "COLUMN_NAME": "JumpToOriginalUserAreaFormSectionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 8
+          },
+          {
+            "COLUMN_NAME": "ConfigData",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": -1,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 9
+          },
+          {
+            "COLUMN_NAME": "CreatedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 10
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 11
+          },
+          {
+            "COLUMN_NAME": "ModifiedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 12
+          },
+          {
+            "COLUMN_NAME": "ModifiedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 13
+          },
+          {
+            "COLUMN_NAME": "ArchivedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 14
+          },
+          {
+            "COLUMN_NAME": "ArchivedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 15
+          }
+        ],
+        "primaryKeys": [
+          "UserAreaFormQuestionAnswerID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_UserAreaFormQuestionAnswer_OriginalUserAreaFormSection",
+            "PARENT_TABLE": "UserAreaFormQuestionAnswer",
+            "PARENT_COLUMN": "JumpToOriginalUserAreaFormSectionID",
+            "REFERENCED_TABLE": "UserAreaFormSection",
+            "REFERENCED_COLUMN": "UserAreaFormSectionID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormQuestionAnswer_UserAreaFormQuestion",
+            "PARENT_TABLE": "UserAreaFormQuestionAnswer",
+            "PARENT_COLUMN": "UserAreaFormQuestionID",
+            "REFERENCED_TABLE": "UserAreaFormQuestion",
+            "REFERENCED_COLUMN": "UserAreaFormQuestionID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormQuestionAnswer_ArchivedBy",
+            "PARENT_TABLE": "UserAreaFormQuestionAnswer",
+            "PARENT_COLUMN": "ArchivedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormQuestionAnswer_CreatedBy",
+            "PARENT_TABLE": "UserAreaFormQuestionAnswer",
+            "PARENT_COLUMN": "CreatedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormQuestionAnswer_ModifiedBy",
+            "PARENT_TABLE": "UserAreaFormQuestionAnswer",
+            "PARENT_COLUMN": "ModifiedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "UserAreaFormResponse",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserAreaFormResponseID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "OriginalUserAreaFormResponseID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "Version",
+            "DATA_TYPE": "tinyint",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "Status",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 20,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "UserAreaFormID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "UserAreaID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "EmployeeID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 7
+          },
+          {
+            "COLUMN_NAME": "LocationID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 8
+          },
+          {
+            "COLUMN_NAME": "OrgGroupID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 9
+          },
+          {
+            "COLUMN_NAME": "Reference",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 100,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 10
+          },
+          {
+            "COLUMN_NAME": "QuestionResponseData",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": -1,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 11
+          },
+          {
+            "COLUMN_NAME": "AttachmentIDList",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 1000,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 12
+          },
+          {
+            "COLUMN_NAME": "TaskIDList",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 1000,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 13
+          },
+          {
+            "COLUMN_NAME": "SubmissionDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 14
+          },
+          {
+            "COLUMN_NAME": "CreatedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 15
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 16
+          },
+          {
+            "COLUMN_NAME": "ModifiedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 17
+          },
+          {
+            "COLUMN_NAME": "ModifiedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 18
+          },
+          {
+            "COLUMN_NAME": "ArchivedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 19
+          },
+          {
+            "COLUMN_NAME": "ArchivedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 20
+          }
+        ],
+        "primaryKeys": [
+          "UserAreaFormResponseID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_UserAreaFormResponse_UserAreaForm",
+            "PARENT_TABLE": "UserAreaFormResponse",
+            "PARENT_COLUMN": "UserAreaFormID",
+            "REFERENCED_TABLE": "UserAreaForm",
+            "REFERENCED_COLUMN": "UserAreaFormID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormResponse_Location",
+            "PARENT_TABLE": "UserAreaFormResponse",
+            "PARENT_COLUMN": "LocationID",
+            "REFERENCED_TABLE": "Location",
+            "REFERENCED_COLUMN": "LocationID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormResponse_UserArea",
+            "PARENT_TABLE": "UserAreaFormResponse",
+            "PARENT_COLUMN": "UserAreaID",
+            "REFERENCED_TABLE": "UserArea",
+            "REFERENCED_COLUMN": "UserAreaID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormResponse_ArchivedBy",
+            "PARENT_TABLE": "UserAreaFormResponse",
+            "PARENT_COLUMN": "ArchivedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormResponse_ModifiedBy",
+            "PARENT_TABLE": "UserAreaFormResponse",
+            "PARENT_COLUMN": "ModifiedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormResponse_CreatedBy",
+            "PARENT_TABLE": "UserAreaFormResponse",
+            "PARENT_COLUMN": "CreatedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormResponse_OrgGroup",
+            "PARENT_TABLE": "UserAreaFormResponse",
+            "PARENT_COLUMN": "OrgGroupID",
+            "REFERENCED_TABLE": "OrgGroup",
+            "REFERENCED_COLUMN": "OrgGroupID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormResponse_Employee",
+            "PARENT_TABLE": "UserAreaFormResponse",
+            "PARENT_COLUMN": "EmployeeID",
+            "REFERENCED_TABLE": "Employee",
+            "REFERENCED_COLUMN": "EmployeeID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "UserAreaFormSection",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserAreaFormSectionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "OriginalUserAreaFormSectionID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "UserAreaFormID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "Reference",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 50,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          },
+          {
+            "COLUMN_NAME": "Title",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 255,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 5
+          },
+          {
+            "COLUMN_NAME": "HelpText",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 1000,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 6
+          },
+          {
+            "COLUMN_NAME": "OrderNum",
+            "DATA_TYPE": "tinyint",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": "((0))",
+            "ORDINAL_POSITION": 7
+          },
+          {
+            "COLUMN_NAME": "CreatedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 8
+          },
+          {
+            "COLUMN_NAME": "CreatedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 9
+          },
+          {
+            "COLUMN_NAME": "ModifiedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 10
+          },
+          {
+            "COLUMN_NAME": "ModifiedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 11
+          },
+          {
+            "COLUMN_NAME": "ArchivedByUserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 12
+          },
+          {
+            "COLUMN_NAME": "ArchivedDate",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 13
+          }
+        ],
+        "primaryKeys": [
+          "UserAreaFormSectionID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_UserAreaFormSection_UserAreaForm",
+            "PARENT_TABLE": "UserAreaFormSection",
+            "PARENT_COLUMN": "UserAreaFormID",
+            "REFERENCED_TABLE": "UserAreaForm",
+            "REFERENCED_COLUMN": "UserAreaFormID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormSection_ModifiedBy",
+            "PARENT_TABLE": "UserAreaFormSection",
+            "PARENT_COLUMN": "ModifiedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormSection_ArchivedBy",
+            "PARENT_TABLE": "UserAreaFormSection",
+            "PARENT_COLUMN": "ArchivedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          },
+          {
+            "FK_NAME": "FK_UserAreaFormSection_CreatedBy",
+            "PARENT_TABLE": "UserAreaFormSection",
+            "PARENT_COLUMN": "CreatedByUserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "UserTenant",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserTenantID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "UserID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "TenantID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "Status",
+            "DATA_TYPE": "nvarchar",
+            "CHARACTER_MAXIMUM_LENGTH": 20,
+            "IS_NULLABLE": "YES",
+            "COLUMN_DEFAULT": "('Active')",
+            "ORDINAL_POSITION": 4
+          }
+        ],
+        "primaryKeys": [
+          "UserTenantID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_UserTenant_Tenant",
+            "PARENT_TABLE": "UserTenant",
+            "PARENT_COLUMN": "TenantID",
+            "REFERENCED_TABLE": "Tenant",
+            "REFERENCED_COLUMN": "TenantID"
+          },
+          {
+            "FK_NAME": "FK_UserTenant_User",
+            "PARENT_TABLE": "UserTenant",
+            "PARENT_COLUMN": "UserID",
+            "REFERENCED_TABLE": "User",
+            "REFERENCED_COLUMN": "UserID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    },
+    {
+      "TABLE_SCHEMA": "V7",
+      "TABLE_NAME": "UserTenantRole",
+      "TABLE_TYPE": "BASE TABLE",
+      "structure": {
+        "columns": [
+          {
+            "COLUMN_NAME": "UserTenantRoleID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 1
+          },
+          {
+            "COLUMN_NAME": "UserTenantID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 2
+          },
+          {
+            "COLUMN_NAME": "TenantRoleID",
+            "DATA_TYPE": "int",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 3
+          },
+          {
+            "COLUMN_NAME": "AssignedAt",
+            "DATA_TYPE": "datetimeoffset",
+            "CHARACTER_MAXIMUM_LENGTH": null,
+            "IS_NULLABLE": "NO",
+            "COLUMN_DEFAULT": null,
+            "ORDINAL_POSITION": 4
+          }
+        ],
+        "primaryKeys": [
+          "UserTenantRoleID"
+        ],
+        "foreignKeys": [
+          {
+            "FK_NAME": "FK_UserTenantRole_TenantRole",
+            "PARENT_TABLE": "UserTenantRole",
+            "PARENT_COLUMN": "TenantRoleID",
+            "REFERENCED_TABLE": "TenantRole",
+            "REFERENCED_COLUMN": "TenantRoleID"
+          },
+          {
+            "FK_NAME": "FK_UserTenantRole_UserTenant",
+            "PARENT_TABLE": "UserTenantRole",
+            "PARENT_COLUMN": "UserTenantID",
+            "REFERENCED_TABLE": "UserTenant",
+            "REFERENCED_COLUMN": "UserTenantID"
+          }
+        ],
+        "rowCount": 0,
+        "sampleData": []
+      }
+    }
+  ],
+  "permissionColumns": [
+    {
+      "table": "V7.SystemPermission",
+      "columns": [
+        {
+          "COLUMN_NAME": "PermissionID",
+          "DATA_TYPE": "int"
+        }
+      ]
+    },
+    {
+      "table": "V7.SystemRole",
+      "columns": [
+        {
+          "COLUMN_NAME": "RoleID",
+          "DATA_TYPE": "int"
+        },
+        {
+          "COLUMN_NAME": "IsSystemRole",
+          "DATA_TYPE": "bit"
+        }
+      ]
+    },
+    {
+      "table": "V7.SystemRolePermission",
+      "columns": [
+        {
+          "COLUMN_NAME": "SystemRoleID",
+          "DATA_TYPE": "int"
+        },
+        {
+          "COLUMN_NAME": "PermissionID",
+          "DATA_TYPE": "int"
+        }
+      ]
+    }
+  ],
+  "analysis": {
+    "tableNamingPatterns": {
+      "lowercase": 20
+    },
+    "columnNamingPatterns": {},
+    "dataTypeUsage": {}
+  }
+}

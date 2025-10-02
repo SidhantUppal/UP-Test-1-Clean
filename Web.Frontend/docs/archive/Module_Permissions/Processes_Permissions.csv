@@ -1,0 +1,92 @@
+Page,Element_Type,Element_Title,Permission_Required,Location,Parent_Component,Admin,Manager,Operator,Viewer,Notes
+Process Home,Page,Process Dashboard,processes.view,Main Content,Process Home,Yes,Yes,Yes,Yes,Main process overview
+Process Home,KPICard,Active Processes,processes.view,Dashboard,Process Metrics,Yes,Yes,Yes,Yes,Currently running processes
+Process Home,KPICard,Completed Today,processes.view,Dashboard,Completion Metrics,Yes,Yes,Yes,Yes,Processes completed today
+Process Home,KPICard,Pending Approvals,processes.approve,Dashboard,Approval Metrics,Yes,Yes,No,No,Processes awaiting approval
+Process Home,KPICard,Efficiency Rate,processes.analytics,Dashboard,Performance Metrics,Yes,Yes,No,No,Process efficiency metrics
+Process Home,Button,Build Process,processes.builder.access,Header,Quick Actions,Yes,Yes,No,No,Access process builder
+Process Home,Button,Start Process,processes.execute,Header,Quick Actions,Yes,Yes,Yes,No,Start new process instance
+Process Home,Button,View Analytics,analytics.view,Header,Quick Actions,Yes,Yes,No,No,Process performance analytics
+Process Home,Section,My Processes,processes.view,Main Content,Personal Processes,Yes,Yes,Yes,Yes,User's processes
+Process Home,Section,Recent Activity,processes.view,Main Content,Activity Feed,Yes,Yes,Yes,Yes,Recent process actions
+Build Process,Page,Process Builder,processes.builder.access,Main Content,Process Builder,Yes,Yes,No,No,Visual process builder interface
+Build Process,Canvas,Process Canvas,processes.builder.access,Main Content,Builder Canvas,Yes,Yes,No,No,Drag-drop process canvas
+Build Process,Toolbar,Node Palette,processes.builder.access,Sidebar,Builder Tools,Yes,Yes,No,No,Available process nodes
+Build Process,Node,Start Node,processes.builder.access,Canvas,Process Nodes,Yes,Yes,No,No,Process start point
+Build Process,Node,Task Node,processes.builder.access,Canvas,Process Nodes,Yes,Yes,No,No,Process task steps
+Build Process,Node,Decision Node,processes.builder.access,Canvas,Process Nodes,Yes,Yes,No,No,Process decision points
+Build Process,Node,End Node,processes.builder.access,Canvas,Process Nodes,Yes,Yes,No,No,Process end points
+Build Process,Connection,Process Flow,processes.builder.access,Canvas,Flow Connections,Yes,Yes,No,No,Process flow connections
+Build Process,Button,Save Process,processes.create,Header,Builder Actions,Yes,Yes,No,No,Save process definition
+Build Process,Button,Test Process,processes.test,Header,Builder Actions,Yes,Yes,No,No,Test process execution
+Build Process,Button,Deploy Process,processes.deploy,Header,Builder Actions,Yes,Yes,No,No,Deploy process to production
+Build Process,Panel,Properties Panel,processes.builder.access,Sidebar,Node Properties,Yes,Yes,No,No,Node configuration panel
+Build Process,Form,Node Settings,processes.builder.access,Properties Panel,Node Configuration,Yes,Yes,No,No,Individual node settings
+My Processes,Page,Personal Processes,processes.view,Main Content,Personal Dashboard,Yes,Yes,Yes,Yes,User's process instances
+My Processes,Table,Process List,processes.view,Main Content,Process Display,Yes,Yes,Yes,Yes,Personal process list
+My Processes,Button,Start New Process,processes.execute,Header,Process Actions,Yes,Yes,Yes,No,Start new process instance
+My Processes,Button,View Process,processes.view,Table Row,Row Actions,Yes,Yes,Yes,Yes,View process details
+My Processes,Button,Continue Process,processes.execute,Table Row,Row Actions,Yes,Yes,Yes,Yes,Continue paused process
+My Processes,Button,Cancel Process,processes.cancel,Table Row,Row Actions,Yes,Yes,No,No,Cancel running process
+My Processes,Status,Process Status,processes.view,Table Row,Status Display,Yes,Yes,Yes,Yes,Current process status
+My Processes,Progress,Process Progress,processes.view,Table Row,Progress Display,Yes,Yes,Yes,Yes,Process completion progress
+My Processes,Filter,Status Filter,processes.view,Header,Filter Controls,Yes,Yes,Yes,Yes,Filter by process status
+My Processes,Filter,Process Type,processes.view,Header,Filter Controls,Yes,Yes,Yes,Yes,Filter by process type
+Process Templates,Page,Template Library,processes.templates,Main Content,Template Management,Yes,Yes,Yes,Yes,Process template library
+Process Templates,Table,Template List,processes.templates,Main Content,Template Display,Yes,Yes,Yes,Yes,Available process templates
+Process Templates,Button,Create Template,processes.create,Header,Template Actions,Yes,Yes,No,No,Create new template
+Process Templates,Button,Use Template,processes.execute,Table Row,Template Actions,Yes,Yes,Yes,No,Start process from template
+Process Templates,Button,Edit Template,processes.edit,Table Row,Template Actions,Yes,Yes,No,No,Edit template definition
+Process Templates,Button,Clone Template,processes.clone,Table Row,Template Actions,Yes,Yes,No,No,Duplicate template
+Process Templates,Button,Delete Template,processes.delete,Table Row,Template Actions,Yes,No,No,No,Remove template
+Process Templates,Status,Template Status,processes.templates,Table Row,Status Display,Yes,Yes,Yes,Yes,Template availability status
+Process Templates,Info,Usage Count,processes.analytics,Table Row,Usage Display,Yes,Yes,No,No,Template usage statistics
+Process View,Page,Process Details,processes.view,Main Content,Process Display,Yes,Yes,Yes,Yes,Individual process details
+Process View,Section,Process Overview,processes.view,Process Content,Process Info,Yes,Yes,Yes,Yes,Process basic information
+Process View,Section,Process Steps,processes.view,Process Content,Step Display,Yes,Yes,Yes,Yes,Process execution steps
+Process View,Section,Process History,processes.view,Process Content,History Display,Yes,Yes,Yes,Yes,Process execution history
+Process View,Section,Process Variables,processes.view,Process Content,Variable Display,Yes,Yes,Yes,Yes,Process data variables
+Process View,Button,Continue Process,processes.execute,Header,Process Actions,Yes,Yes,Yes,Yes,Continue process execution
+Process View,Button,Pause Process,processes.pause,Header,Process Actions,Yes,Yes,No,No,Pause running process
+Process View,Button,Terminate Process,processes.terminate,Header,Process Actions,Yes,Yes,No,No,Stop process execution
+Process View,Timeline,Process Timeline,processes.view,Process Content,Timeline Display,Yes,Yes,Yes,Yes,Process execution timeline
+Process View,Status,Current Status,processes.view,Process Header,Status Display,Yes,Yes,Yes,Yes,Process current status
+Process View,Progress,Completion Progress,processes.view,Process Header,Progress Display,Yes,Yes,Yes,Yes,Process completion percentage
+Process Execution,Page,Process Instance,processes.execute,Main Content,Process Execution,Yes,Yes,Yes,Yes,Running process instance
+Process Execution,Form,Process Form,processes.execute,Main Content,Process Input,Yes,Yes,Yes,Yes,Process input form
+Process Execution,Input,Process Data,processes.execute,Process Form,Data Input,Yes,Yes,Yes,Yes,Process data fields
+Process Execution,Button,Next Step,processes.execute,Form Footer,Navigation Actions,Yes,Yes,Yes,Yes,Proceed to next step
+Process Execution,Button,Previous Step,processes.execute,Form Footer,Navigation Actions,Yes,Yes,Yes,Yes,Return to previous step
+Process Execution,Button,Save Progress,processes.execute,Form Footer,Save Actions,Yes,Yes,Yes,Yes,Save current progress
+Process Execution,Button,Submit Process,processes.execute,Form Footer,Submit Actions,Yes,Yes,Yes,Yes,Complete process execution
+Process Execution,Section,Step Instructions,processes.view,Process Content,Instruction Display,Yes,Yes,Yes,Yes,Current step instructions
+Process Execution,Section,Process Context,processes.view,Sidebar,Context Display,Yes,Yes,Yes,Yes,Process context information
+Process Reports,Page,Process Analytics,processes.reports,Main Content,Reporting Dashboard,Yes,Yes,No,No,Process reporting interface
+Process Reports,Chart,Process Performance,processes.analytics,Dashboard,Performance Charts,Yes,Yes,No,No,Process performance metrics
+Process Reports,Chart,Completion Rates,processes.analytics,Dashboard,Completion Charts,Yes,Yes,No,No,Process completion trends
+Process Reports,Table,Process Statistics,processes.reports,Main Content,Stats Display,Yes,Yes,No,No,Detailed process statistics
+Process Reports,Button,Generate Report,processes.reports,Header,Report Actions,Yes,Yes,No,No,Create process report
+Process Reports,Button,Export Data,processes.export,Header,Export Actions,Yes,Yes,No,No,Export process data
+Process Reports,Button,Schedule Report,processes.reports,Header,Schedule Actions,Yes,Yes,No,No,Schedule automated reports
+Process Reports,Filter,Date Range,processes.reports,Header,Report Filters,Yes,Yes,No,No,Filter by date range
+Process Reports,Filter,Process Type,processes.reports,Header,Report Filters,Yes,Yes,No,No,Filter by process type
+Process Reports,Filter,Status Filter,processes.reports,Header,Report Filters,Yes,Yes,No,No,Filter by process status
+Process Dashboard,Page,Module Dashboard,processes.view,Main Content,Process Dashboard,Yes,Yes,Yes,Yes,Process module dashboard
+Process Dashboard,KPICard,Total Processes,processes.view,Dashboard,Process Metrics,Yes,Yes,Yes,Yes,Total process count
+Process Dashboard,KPICard,Success Rate,processes.analytics,Dashboard,Performance Metrics,Yes,Yes,No,No,Process success rate
+Process Dashboard,Section,Quick Actions,processes.access,Dashboard,Action Panel,Yes,Yes,Yes,Yes,Common process actions
+Process Dashboard,Section,Process Queue,processes.view,Dashboard,Queue Display,Yes,Yes,Yes,Yes,Processes in queue
+Process Management,Page,Process Administration,processes.manage,Main Content,Process Management,Yes,Yes,No,No,Administrative process management
+Process Management,Table,All Processes,processes.manage,Main Content,Process Display,Yes,Yes,No,No,System-wide process list
+Process Management,Button,Create Process,processes.create,Header,Management Actions,Yes,Yes,No,No,Create new process
+Process Management,Button,Import Process,processes.import,Header,Import Actions,Yes,Yes,No,No,Import process definition
+Process Management,Button,Export Process,processes.export,Table Row,Export Actions,Yes,Yes,No,No,Export process definition
+Process Management,Button,Monitor Process,processes.monitor,Table Row,Monitoring Actions,Yes,Yes,No,No,Monitor process execution
+Process Management,Button,Archive Process,processes.archive,Table Row,Archive Actions,Yes,Yes,No,No,Archive old process
+Process Management,Modal,Process Monitoring,processes.monitor,Modal,Monitor Display,Yes,Yes,No,No,Real-time process monitoring
+Process Management,Chart,Process Metrics,processes.analytics,Monitor Modal,Metrics Display,Yes,Yes,No,No,Process execution metrics
+Database Dropdowns,Dropdown,Process Status,processes.status,Form Elements,Status Selector,Yes,Yes,Yes,Yes,Change process status
+Database Dropdowns,Dropdown,Process Type,processes.type,Form Elements,Type Selector,Yes,Yes,No,No,Select process type
+Database Dropdowns,Dropdown,Process Priority,processes.priority,Form Elements,Priority Selector,Yes,Yes,No,No,Set process priority
+Database Dropdowns,Dropdown,Process Owner,processes.owner,Form Elements,Owner Selector,Yes,Yes,No,No,Assign process owner
+Database Dropdowns,Dropdown,Process Category,processes.category,Form Elements,Category Selector,Yes,Yes,No,No,Select process category

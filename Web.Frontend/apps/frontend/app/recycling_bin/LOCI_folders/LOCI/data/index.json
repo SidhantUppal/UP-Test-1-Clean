@@ -1,0 +1,12 @@
+{
+  "pages": {
+    "loci1": {
+      "file": "pages/loci1.json",
+      "elementCount": 10,
+      "lastUpdated": "2024-06-20T11:35:14Z"
+    }
+  },
+  "totalElements": 10,
+  "lastUpdated": "2024-06-20T11:35:14Z",
+  "version": "1.0.0"
+}

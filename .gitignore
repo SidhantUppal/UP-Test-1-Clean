@@ -1,0 +1,190 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Next.js build output (ALL subdirectories and files)
+.next/
+**/.next/
+
+# NX workspace cache (ALL subdirectories and files)
+.nx/
+**/.nx/
+
+# Build outputs
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# Environment files (sensitive)
+.env
+.env.local
+.env.*.local
+**/.env.local
+_your.env.md
+
+# Logs
+*.log
+logs/
+**/*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Local storage (mock services)
+storage/uploads/
+storage/documents/
+logs/emails/
+
+# IDE/Editor files
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+.vs/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Runtime files
+*.pid
+*.seed
+*.pid.lock
+.eslintcache
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+
+# Misc
+.cache/
+.parcel-cache/
+.turbo/
+.vercel
+.npm
+
+# Service logs
+apps/services/**/service.log
+apps/services/**/error.log
+apps/services/**/*.log
+
+# WORKSPACE LOCKFILE RULES (IMPORTANT!)
+# Only the root package-lock.json should exist
+# Block all service-specific lockfiles to prevent conflicts
+apps/**/package-lock.json
+services/**/package-lock.json
+scripts/package-lock.json
+libs/**/package-lock.json
+# Root package-lock.json is tracked (NOT ignored)
+
+# .NET / Visual Studio
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+[Dd]ebug/
+# Exception: Allow specific debug files in frontend components
+!Web.Frontend/apps/frontend/components/debug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+.vs/
+*.cache
+*.dll
+*.exe
+*.pdb
+*.dll.config
+*.cache
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/Properties/launchSettings.json
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# ASP.NET Core
+wwwroot/
+appsettings.Development.json
+appsettings.Local.json
+
+# Entity Framework
+*.edmx.diagram
+*.edmx.sql
+Migrations/
+
+# Database files  
+*.dbmdl
+*.jfm
+*.dbproj.schemaview
+*.dbproj.user
+*.publishsettings
+*.publishproj
+**/bin/
+**/obj/
+**/*.dbmdl
+**/*.jfm
+
+# NuGet Packages
+*.nupkg
+**/packages/*
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+
+# Claude settings
+.claude/settings.local.json
+.env
+package-lock.json
+/Web.Frontend/start-all-services.sh
+/azure-pipelines-staging-fixed.yml
+CICD_Steps.md
+CICD_Plan.md

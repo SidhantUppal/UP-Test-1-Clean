@@ -1,0 +1,25 @@
+﻿CREATE TABLE [V7].[DSECase] (
+    [DSECaseID]            INT             IDENTITY (1, 1) NOT NULL,
+    [UserAreaID]           INT             NOT NULL,
+    [EmployeeID]           INT             NOT NULL,
+    [DSECaseTypeID]        INT             NOT NULL,
+    [DSECaseStatusTypeID]  INT             NOT NULL,
+    [Comments]             NVARCHAR (1000) NULL,
+    [CreatedByUserID]      INT             NOT NULL,
+    [CreatedDate]          DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]     INT             NULL,
+    [ModifiedDate]     DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]     INT             NULL,
+    [ArchivedDate]         DATETIMEOFFSET (7) NULL,
+    [ManagerEmployeeID]    INT             NULL,
+    PRIMARY KEY CLUSTERED ([DSECaseID] ASC),
+    CONSTRAINT [FK_DSECase_ArchivedByUser] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_DSECase_CreatedByUser] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_DSECase_DSECaseStatusType] FOREIGN KEY ([DSECaseStatusTypeID]) REFERENCES [V7].[DSECaseStatusType] ([DSECaseStatusTypeID]),
+    CONSTRAINT [FK_DSECase_DSECaseType] FOREIGN KEY ([DSECaseTypeID]) REFERENCES [V7].[DSECaseType] ([DSECaseTypeID]),
+    CONSTRAINT [FK_DSECase_Employee] FOREIGN KEY ([EmployeeID]) REFERENCES [V7].[Employee] ([EmployeeID]),
+    CONSTRAINT [FK_DSECase_ModifiedByUser] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_DSECase_ManagerEmployee] FOREIGN KEY ([EmployeeID]) REFERENCES [V7].[Employee] ([EmployeeID]),
+    CONSTRAINT [FK_DSECase_UserArea] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+

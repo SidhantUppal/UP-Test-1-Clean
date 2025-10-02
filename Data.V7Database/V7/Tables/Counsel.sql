@@ -1,0 +1,25 @@
+﻿CREATE TABLE [V7].[Counsel] (
+    [CounselID]            INT            IDENTITY (1, 1) NOT NULL,
+    [CounselUserID]        INT            NOT NULL,
+    [CounselEmployeeID]    INT            NOT NULL,
+    [CounselChamberID]     INT            NULL,
+    [FullName]             NVARCHAR (50)  NOT NULL,
+    [Email]                NVARCHAR (100) NOT NULL,
+    [UserAreaID]           INT            NOT NULL,
+    [LastLoginDate]        DATETIMEOFFSET (7) NULL,
+    [CreatedByUserID]      INT            NOT NULL,
+    [CreatedDate]          DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]     INT            NULL,
+    [ModifiedDate]     DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]     INT            NULL,
+    [ArchivedDate]         DATETIMEOFFSET (7) NULL,
+    PRIMARY KEY CLUSTERED ([CounselID] ASC),
+    CONSTRAINT [FK_Counsel_ArchivedByUser] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_Counsel_CounselChamber] FOREIGN KEY ([CounselChamberID]) REFERENCES [V7].[CounselChamber] ([CounselChamberID]),
+    CONSTRAINT [FK_Counsel_CreatedByUser] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_Counsel_Employee] FOREIGN KEY ([CounselEmployeeID]) REFERENCES [V7].[Employee] ([EmployeeID]),
+    CONSTRAINT [FK_Counsel_ModifiedByUser] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_Counsel_User] FOREIGN KEY ([CounselUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_Counsel_UserArea] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+

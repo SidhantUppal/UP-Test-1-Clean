@@ -1,0 +1,98 @@
+"use client";
+
+import React from 'react';
+
+interface TaskOverdueAlertsWidgetProps {
+  id: string;
+  isEditMode: boolean;
+}
+
+export default function TaskOverdueAlertsWidget({ id, isEditMode }: TaskOverdueAlertsWidgetProps) {
+  // Mock overdue tasks data
+  const overdueTasks = [
+    {
+      id: 1,
+      title: 'Fire Safety Training',
+      assignee: 'Mike Davis',
+      daysOverdue: 3,
+      priority: 'High'
+    },
+    {
+      id: 2,
+      title: 'Equipment Maintenance Log',
+      assignee: 'Sarah Johnson',
+      daysOverdue: 1,
+      priority: 'Medium'
+    },
+    {
+      id: 3,
+      title: 'Contractor Document Review',
+      assignee: 'Emma Wilson',
+      daysOverdue: 5,
+      priority: 'Critical'
+    }
+  ];
+
+  const getPriorityColor = (priority: string) => {
+    switch (priority) {
+      case 'Critical':
+        return 'text-red-600 bg-red-100';
+      case 'High':
+        return 'text-orange-600 bg-orange-100';
+      case 'Medium':
+        return 'text-yellow-600 bg-yellow-100';
+      case 'Low':
+        return 'text-blue-600 bg-blue-100';
+      default:
+        return 'text-gray-600 bg-gray-100';
+    }
+  };
+
+  return (
+    <div className="h-full p-6 bg-white rounded-lg border border-red-200">
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center space-x-2">
+          <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+          <h3 className="text-lg font-semibold text-gray-900">Overdue Tasks</h3>
+        </div>
+        <span className="px-2 py-1 text-xs bg-red-100 text-red-800 rounded-full font-medium">
+          {overdueTasks.length} overdue
+        </span>
+      </div>
+      
+      <div className="space-y-3">
+        {overdueTasks.map((task) => (
+          <div key={task.id} className="p-3 bg-red-50 border border-red-200 rounded-lg hover:shadow-sm transition-all">
+            <div className="flex justify-between items-start mb-2">
+              <h4 className="text-sm font-medium text-gray-900 truncate flex-1">{task.title}</h4>
+              <span className={`text-xs px-2 py-1 rounded-full font-medium ml-2 ${getPriorityColor(task.priority)}`}>
+                {task.priority}
+              </span>
+            </div>
+            
+            <div className="flex justify-between items-center text-xs text-gray-600">
+              <span>Assigned to: {task.assignee}</span>
+              <span className="text-red-600 font-medium">
+                {task.daysOverdue} day{task.daysOverdue > 1 ? 's' : ''} overdue
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      {overdueTasks.length === 0 && (
+        <div className="text-center py-8 text-gray-500">
+          <div className="text-2xl mb-2">✅</div>
+          <p className="text-sm">No overdue tasks</p>
+          <p className="text-xs text-gray-400 mt-1">Great job staying on track!</p>
+        </div>
+      )}
+      
+      <div className="mt-4 pt-4 border-t border-gray-200">
+        <button className="w-full text-sm text-red-600 hover:text-red-800 font-medium">
+          View All Overdue Tasks →
+        </button>
+      </div>
+    </div>
+  );
+}

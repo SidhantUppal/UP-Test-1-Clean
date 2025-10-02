@@ -1,0 +1,77 @@
+Page,Element_Type,Element_Title,Permission_Required,Location,Parent_Component,Admin,Manager,Operator,Viewer,Notes
+Admin Dashboard,Dashboard,System Overview,admin.dashboard.view,Main Content,Admin Dashboard,Yes,No,No,No,Main admin dashboard
+Admin Dashboard,KPICard,Platform Health,admin.monitoring.view,Dashboard,System Metrics,Yes,No,No,No,Overall system health
+Admin Dashboard,KPICard,Active Users,admin.users.view,Dashboard,User Metrics,Yes,No,No,No,Current active users
+Admin Dashboard,KPICard,System Load,admin.monitoring.view,Dashboard,Performance Metrics,Yes,No,No,No,Server performance
+Admin Dashboard,Button,View All Alerts,admin.alerts.view,Header,Quick Actions,Yes,No,No,No,System alert management
+Admin Permissions,Page,Permissions Manager,admin.permissions.manage,Main Content,Permission Management,Yes,No,No,No,Full permission management
+Admin Permissions,Tab,System Permissions,admin.permissions.system,Tab Panel,Permission Tabs,Yes,No,No,No,System-level permissions
+Admin Permissions,Tab,Tenant Roles,admin.permissions.tenant,Tab Panel,Permission Tabs,Yes,No,No,No,Tenant-specific roles
+Admin Permissions,Tab,User Assignments,admin.permissions.users,Tab Panel,Permission Tabs,Yes,No,No,No,User role assignments
+Admin Permissions,Button,Create Role,admin.roles.create,Tab Content,Role Management,Yes,No,No,No,Create new roles
+Admin Permissions,Button,Edit Role,admin.roles.edit,Tab Content,Role Management,Yes,No,No,No,Modify existing roles
+Admin Permissions,Button,Delete Role,admin.roles.delete,Tab Content,Role Management,Yes,No,No,No,Remove roles
+Admin Permissions,Button,Assign Permission,admin.permissions.assign,Tab Content,Permission Assignment,Yes,No,No,No,Assign permissions to roles
+Admin Permissions,Button,Revoke Permission,admin.permissions.revoke,Tab Content,Permission Assignment,Yes,No,No,No,Remove permissions from roles
+Admin Permissions,Table,Permission List,admin.permissions.view,Tab Content,Permission Display,Yes,No,No,No,List all permissions
+Admin Permissions,Table,Role List,admin.roles.view,Tab Content,Role Display,Yes,No,No,No,List all roles
+Admin Permissions,Modal,Permission Details,admin.permissions.details,Modal,Permission Info,Yes,No,No,No,Detailed permission view
+Admin Permissions,Form,Role Form,admin.roles.form,Modal,Role Creation,Yes,No,No,No,Role creation/edit form
+Admin Users,Page,User Management,admin.users.manage,Main Content,User Management,Yes,No,No,No,System user management
+Admin Users,Table,User List,admin.users.view,Main Content,User Display,Yes,No,No,No,All system users
+Admin Users,Button,Create User,admin.users.create,Header,User Actions,Yes,No,No,No,Create new users
+Admin Users,Button,Edit User,admin.users.edit,Table Row,User Actions,Yes,No,No,No,Modify user details
+Admin Users,Button,Disable User,admin.users.disable,Table Row,User Actions,Yes,No,No,No,Deactivate users
+Admin Users,Button,Reset Password,admin.users.password,Table Row,User Actions,Yes,No,No,No,Password management
+Admin Users,Dropdown,Bulk Actions,admin.users.bulk,Header,Bulk Operations,Yes,No,No,No,Mass user operations
+Admin Users,Modal,User Details,admin.users.details,Modal,User Info,Yes,No,No,No,Detailed user view
+Admin Users,Form,User Form,admin.users.form,Modal,User Creation,Yes,No,No,No,User creation/edit form
+Admin Tenants,Page,Tenant Management,admin.tenants.manage,Main Content,Tenant Management,Yes,No,No,No,Client organization management
+Admin Tenants,Table,Tenant List,admin.tenants.view,Main Content,Tenant Display,Yes,No,No,No,All client organizations
+Admin Tenants,Button,Create Tenant,admin.tenants.create,Header,Tenant Actions,Yes,No,No,No,Create new tenants
+Admin Tenants,Button,Edit Tenant,admin.tenants.edit,Table Row,Tenant Actions,Yes,No,No,No,Modify tenant details
+Admin Tenants,Button,Suspend Tenant,admin.tenants.suspend,Table Row,Tenant Actions,Yes,No,No,No,Suspend tenant access
+Admin Tenants,Button,View Billing,admin.billing.view,Table Row,Tenant Actions,Yes,No,No,No,Tenant billing info
+Admin Tenants,Dropdown,Service Config,admin.tenants.services,Table Row,Service Management,Yes,No,No,No,Configure tenant services
+Admin Tenants,Modal,Tenant Details,admin.tenants.details,Modal,Tenant Info,Yes,No,No,No,Detailed tenant view
+Admin Tenants,Form,Tenant Form,admin.tenants.form,Modal,Tenant Creation,Yes,No,No,No,Tenant creation/edit form
+Admin Billing,Page,Billing Management,admin.billing.manage,Main Content,Billing Management,Yes,No,No,No,Financial management
+Admin Billing,KPICard,Monthly Revenue,admin.billing.revenue,Dashboard,Revenue Metrics,Yes,No,No,No,Revenue tracking
+Admin Billing,KPICard,Outstanding Invoices,admin.billing.invoices,Dashboard,Billing Metrics,Yes,No,No,No,Invoice management
+Admin Billing,Table,Payment History,admin.billing.payments,Main Content,Payment Display,Yes,No,No,No,Payment records
+Admin Billing,Button,Generate Invoice,admin.billing.invoice,Header,Billing Actions,Yes,No,No,No,Create invoices
+Admin Billing,Button,Process Payment,admin.billing.payment,Table Row,Payment Actions,Yes,No,No,No,Process payments
+Admin Billing,Button,Send Reminder,admin.billing.reminder,Table Row,Payment Actions,Yes,No,No,No,Payment reminders
+Admin Monitoring,Page,System Monitoring,admin.monitoring.view,Main Content,System Monitoring,Yes,No,No,No,System health monitoring
+Admin Monitoring,Chart,System Performance,admin.monitoring.performance,Dashboard,Performance Charts,Yes,No,No,No,Performance metrics
+Admin Monitoring,Chart,API Usage,admin.monitoring.api,Dashboard,Usage Charts,Yes,No,No,No,API usage statistics
+Admin Monitoring,Table,Error Logs,admin.monitoring.errors,Main Content,Error Display,Yes,No,No,No,System error logs
+Admin Monitoring,Button,Clear Logs,admin.monitoring.clear,Header,Log Actions,Yes,No,No,No,Clear system logs
+Admin Monitoring,Button,Export Logs,admin.monitoring.export,Header,Log Actions,Yes,No,No,No,Export log data
+Admin Monitoring,Alert,System Alerts,admin.monitoring.alerts,Sidebar,Alert Display,Yes,No,No,No,System notifications
+Admin Support,Page,Support System,admin.support.access,Main Content,Support Management,Yes,No,No,No,Support ticket management
+Admin Support,Table,Ticket List,admin.support.tickets,Main Content,Ticket Display,Yes,No,No,No,All support tickets
+Admin Support,Button,Create Ticket,admin.support.create,Header,Support Actions,Yes,No,No,No,Internal ticket creation
+Admin Support,Button,Assign Ticket,admin.support.assign,Table Row,Ticket Actions,Yes,No,No,No,Assign to support staff
+Admin Support,Button,Close Ticket,admin.support.close,Table Row,Ticket Actions,Yes,No,No,No,Close resolved tickets
+Admin Support,Modal,Ticket Details,admin.support.details,Modal,Ticket Info,Yes,No,No,No,Detailed ticket view
+Admin Analytics,Page,Platform Analytics,admin.analytics.view,Main Content,Analytics Dashboard,Yes,No,No,No,Platform-wide analytics
+Admin Analytics,Chart,User Engagement,admin.analytics.engagement,Dashboard,Engagement Charts,Yes,No,No,No,User activity metrics
+Admin Analytics,Chart,Feature Usage,admin.analytics.features,Dashboard,Usage Charts,Yes,No,No,No,Feature adoption rates
+Admin Analytics,Table,Tenant Stats,admin.analytics.tenants,Main Content,Tenant Analytics,Yes,No,No,No,Per-tenant statistics
+Admin Analytics,Button,Generate Report,admin.analytics.report,Header,Report Actions,Yes,No,No,No,Create analytics reports
+Admin Analytics,Button,Export Data,admin.analytics.export,Header,Data Actions,Yes,No,No,No,Export analytics data
+Admin Config,Page,System Configuration,admin.config.manage,Main Content,Configuration Management,Yes,No,No,No,System settings management
+Admin Config,Form,Global Settings,admin.config.global,Main Content,Global Config,Yes,No,No,No,Platform-wide settings
+Admin Config,Form,Service Config,admin.config.services,Tab Panel,Service Settings,Yes,No,No,No,Individual service settings
+Admin Config,Form,Security Settings,admin.config.security,Tab Panel,Security Config,Yes,No,No,No,Security configuration
+Admin Config,Button,Save Config,admin.config.save,Footer,Config Actions,Yes,No,No,No,Save configuration changes
+Admin Config,Button,Reset Config,admin.config.reset,Footer,Config Actions,Yes,No,No,No,Reset to defaults
+Admin Config,Button,Backup Config,admin.config.backup,Header,Config Actions,Yes,No,No,No,Backup current config
+Admin Audit,Page,Audit & Security,admin.audit.access,Main Content,Audit Management,Yes,No,No,No,Security audit interface
+Admin Audit,Table,Audit Log,admin.audit.log,Main Content,Audit Display,Yes,No,No,No,System audit trail
+Admin Audit,Table,Security Events,admin.audit.security,Tab Panel,Security Display,Yes,No,No,No,Security-related events
+Admin Audit,Button,Export Audit,admin.audit.export,Header,Audit Actions,Yes,No,No,No,Export audit data
+Admin Audit,Filter,Date Range,admin.audit.filter,Header,Audit Filters,Yes,No,No,No,Filter audit by date
+Admin Audit,Filter,Event Type,admin.audit.filter,Header,Audit Filters,Yes,No,No,No,Filter by event type
+Admin Audit,Filter,User Filter,admin.audit.filter,Header,Audit Filters,Yes,No,No,No,Filter by user activity

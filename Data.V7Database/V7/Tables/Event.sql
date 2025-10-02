@@ -1,0 +1,26 @@
+﻿CREATE TABLE [V7].[Event] (
+    [EventID]              INT            IDENTITY (1, 1) NOT NULL,
+    [UserAreaID]           INT            NULL,
+    [Title]                NVARCHAR (255) NOT NULL,
+    [Description]          NVARCHAR (MAX) NULL,
+    [LocationID]           INT            NULL,
+    [FromDate]             DATETIMEOFFSET (7) NULL,
+    [ToDate]               DATETIMEOFFSET (7) NULL,
+    [LiveFromDate]         DATETIMEOFFSET (7) NULL,
+    [LiveToDate]           DATETIMEOFFSET (7) NULL,
+    [CreatedByUserID]      INT            NOT NULL,
+    [CreatedDate]          DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID] INT            NULL,
+    [ModifiedDate]     DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]     INT            NULL,
+    [ArchivedDate]         DATETIMEOFFSET (7) NULL,
+    [SystemProductTypeID]  INT            NULL,
+    PRIMARY KEY CLUSTERED ([EventID] ASC),
+    CONSTRAINT [FK_Event_ArchivedByUser] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_Event_CreatedByUser] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_Event_ModifiedByUser] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_Event_Location] FOREIGN KEY ([LocationID]) REFERENCES [V7].[Location] ([LocationID]),
+    CONSTRAINT [FK_Event_SystemProductType] FOREIGN KEY ([SystemProductTypeID]) REFERENCES [V7].[SystemProductType] ([SystemProductTypeID]),
+    CONSTRAINT [FK_Event_UserArea] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+

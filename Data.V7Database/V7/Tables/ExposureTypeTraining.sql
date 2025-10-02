@@ -1,0 +1,26 @@
+﻿CREATE TABLE [V7].[ExposureTypeTraining] (
+    [ExposureTypeTrainingID]  INT      IDENTITY (1, 1) NOT NULL,
+    [ExposureTypeID]          INT      NOT NULL,
+    [CourseID]                INT      NULL,
+    [ChecklistID]             INT      NULL,
+    [FrequencyTypeID]         INT      NULL,
+    [Frequency]               INT      NULL,
+    [CreatedByUserID]         INT      NOT NULL,
+    [CreatedDate]             DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]    INT      NULL,
+    [ModifiedDate]        DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]        INT      NULL,
+    [ArchivedDate]            DATETIMEOFFSET (7) NULL,
+    [DocumentID]              INT      NULL,
+    [DocumentLinkTableTypeID] INT      NULL,
+    CONSTRAINT [PK__Exposure__8310BD54942727C3] PRIMARY KEY CLUSTERED ([ExposureTypeTrainingID] ASC),
+    CONSTRAINT [FK_ExposureTypeTraining_ArchivedBy] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_ExposureTypeTraining_ChecklistID] FOREIGN KEY ([ChecklistID]) REFERENCES [V7].[Checklist] ([ChecklistID]),
+    CONSTRAINT [FK_ExposureTypeTraining_CourseID] FOREIGN KEY ([CourseID]) REFERENCES [V7].[Course] ([CourseID]),
+    CONSTRAINT [FK_ExposureTypeTraining_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_ExposureTypeTraining_DocumentLinkTableTypeID] FOREIGN KEY ([DocumentLinkTableTypeID]) REFERENCES [V7].[DocumentLinkTableType] ([DocumentLinkTableTypeID]),
+    CONSTRAINT [FK_ExposureTypeTraining_ExposureTypeID] FOREIGN KEY ([ExposureTypeID]) REFERENCES [V7].[ExposureType] ([ExposureTypeID]),
+    CONSTRAINT [FK_ExposureTypeTraining_FrequencyTypeID] FOREIGN KEY ([FrequencyTypeID]) REFERENCES [V7].[FrequencyType] ([FrequencyTypeID]),
+    CONSTRAINT [FK_ExposureTypeTraining_ModifiedBy] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID])
+);
+

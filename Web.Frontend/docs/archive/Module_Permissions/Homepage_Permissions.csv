@@ -1,0 +1,80 @@
+Page,Element_Type,Element_Title,Permission_Required,Location,Parent_Component,Admin,Manager,Operator,Viewer,Notes
+Homepage,Dashboard,Admin Dashboard,admin.dashboard.view,Main Content,AdminHomeDashboard,Yes,No,No,No,System administration dashboard
+Homepage,KPICard,Total Tenants,admin.tenants.view,Main Content,Platform Metrics,Yes,No,No,No,Platform tenant count
+Homepage,KPICard,Active Tenants,admin.tenants.view,Main Content,Platform Metrics,Yes,No,No,No,Active tenant tracking
+Homepage,KPICard,Trial Tenants,admin.trials.view,Main Content,Platform Metrics,Yes,No,No,No,Trial account metrics
+Homepage,KPICard,Total Users,admin.users.view,Main Content,Platform Metrics,Yes,No,No,No,Platform user count
+Homepage,KPICard,System Uptime,admin.monitoring.view,Main Content,Platform Metrics,Yes,No,No,No,System availability
+Homepage,KPICard,API Calls 24h,admin.monitoring.view,Main Content,Platform Metrics,Yes,No,No,No,API usage statistics
+Homepage,KPICard,Error Rate,admin.monitoring.view,Main Content,Platform Metrics,Yes,No,No,No,System error tracking
+Homepage,KPICard,Monthly Revenue,admin.billing.view,Main Content,Financial Metrics,Yes,No,No,No,Revenue dashboard
+Homepage,KPICard,Annual Revenue,admin.billing.view,Main Content,Financial Metrics,Yes,No,No,No,Annual revenue tracking
+Homepage,KPICard,Trial Conversions,admin.billing.view,Main Content,Financial Metrics,Yes,No,No,No,Conversion rate metrics
+Homepage,KPICard,Churn Rate,admin.billing.view,Main Content,Financial Metrics,Yes,No,No,No,Customer retention
+Homepage,KPICard,Open Tickets,admin.support.view,Main Content,Support Metrics,Yes,No,No,No,Support ticket count
+Homepage,KPICard,Support Response Time,admin.support.view,Main Content,Support Metrics,Yes,No,No,No,Support performance
+Homepage,KPICard,Satisfaction Score,admin.support.view,Main Content,Support Metrics,Yes,No,No,No,Customer satisfaction
+Homepage,KPICard,Storage Used,admin.monitoring.view,Main Content,Infrastructure Metrics,Yes,No,No,No,Storage utilization
+Homepage,KPICard,Bandwidth Used,admin.monitoring.view,Main Content,Infrastructure Metrics,Yes,No,No,No,Network usage
+Homepage,KPICard,DB Connections,admin.monitoring.view,Main Content,Infrastructure Metrics,Yes,No,No,No,Database performance
+Homepage,Section,Recent System Activity,admin.activity.view,Main Content,Activity Feed,Yes,No,No,No,System activity log
+Homepage,Section,Service Health Status,admin.monitoring.view,Main Content,Health Dashboard,Yes,No,No,No,Service status overview
+Homepage,Button,View All Tenants,admin.tenants.manage,Header,Quick Actions,Yes,No,No,No,Tenant management access
+Homepage,Button,System Settings,admin.config.manage,Header,Quick Actions,Yes,No,No,No,Configuration management
+Homepage,Button,View Reports,admin.reports.view,Header,Quick Actions,Yes,No,No,No,System reports
+Homepage,Dashboard,Manager Dashboard,dashboard.view,Main Content,ManagerHomeDashboard,No,Yes,No,No,Operations management dashboard
+Homepage,KPICard,Active Projects,projects.view,Main Content,Project Metrics,No,Yes,Yes,Yes,Project tracking
+Homepage,KPICard,Team Members,users.view,Main Content,Team Metrics,No,Yes,Yes,No,Team overview
+Homepage,KPICard,Pending Tasks,tasks.view,Main Content,Task Metrics,No,Yes,Yes,Yes,Task management
+Homepage,KPICard,Compliance Score,compliance.view,Main Content,Compliance Metrics,No,Yes,Yes,Yes,Compliance tracking
+Homepage,KPICard,This Month Revenue,finance.view,Main Content,Financial Metrics,No,Yes,No,No,Revenue tracking
+Homepage,KPICard,Budget Utilization,budget.view,Main Content,Financial Metrics,No,Yes,No,No,Budget management
+Homepage,Section,Recent Activity,activity.view,Main Content,Activity Feed,No,Yes,Yes,Yes,Recent actions
+Homepage,Section,Team Performance,analytics.view,Main Content,Performance Dashboard,No,Yes,No,No,Team analytics
+Homepage,Section,Upcoming Deadlines,tasks.view,Main Content,Deadline Tracker,No,Yes,Yes,Yes,Deadline management
+Homepage,Button,Create Project,projects.create,Header,Quick Actions,No,Yes,No,No,Project creation
+Homepage,Button,Assign Tasks,tasks.assign,Header,Quick Actions,No,Yes,No,No,Task assignment
+Homepage,Button,View Reports,reports.view,Header,Quick Actions,No,Yes,No,No,Management reports
+Homepage,Dashboard,Operator Dashboard,dashboard.view,Main Content,OperatorHomeDashboard,No,No,Yes,No,Daily operations dashboard
+Homepage,KPICard,Today's Tasks,tasks.view,Main Content,Daily Metrics,No,No,Yes,Yes,Daily task list
+Homepage,KPICard,Pending Inspections,inspections.view,Main Content,Daily Metrics,No,No,Yes,Yes,Inspection queue
+Homepage,KPICard,Active Permits,permits.view,Main Content,Daily Metrics,No,No,Yes,Yes,Work permits
+Homepage,KPICard,Safety Incidents,incidents.view,Main Content,Safety Metrics,No,No,Yes,Yes,Incident tracking
+Homepage,KPICard,Equipment Status,assets.view,Main Content,Equipment Metrics,No,No,Yes,Yes,Asset status
+Homepage,KPICard,Contractor Status,contractors.view,Main Content,Personnel Metrics,No,No,Yes,Yes,Contractor tracking
+Homepage,Section,Work Queue,tasks.view,Main Content,Work Management,No,No,Yes,Yes,Work queue management
+Homepage,Section,Safety Alerts,safety.view,Main Content,Safety Dashboard,No,No,Yes,Yes,Safety notifications
+Homepage,Section,Equipment Alerts,assets.alerts,Main Content,Equipment Dashboard,No,No,Yes,Yes,Equipment notifications
+Homepage,Button,Log Inspection,inspections.create,Header,Quick Actions,No,No,Yes,No,Inspection logging
+Homepage,Button,Report Incident,incidents.create,Header,Quick Actions,No,No,Yes,No,Incident reporting
+Homepage,Button,Update Status,status.update,Header,Quick Actions,No,No,Yes,No,Status updates
+Homepage,Dashboard,Read-Only Dashboard,dashboard.view,Main Content,ReadOnlyHomeDashboard,No,No,No,Yes,View-only dashboard
+Homepage,KPICard,Project Overview,projects.view,Main Content,Overview Metrics,No,No,No,Yes,Project status view
+Homepage,KPICard,Document Status,documents.view,Main Content,Document Metrics,No,No,No,Yes,Document tracking
+Homepage,KPICard,Training Progress,training.view,Main Content,Training Metrics,No,No,No,Yes,Training status
+Homepage,KPICard,Compliance Status,compliance.view,Main Content,Compliance Metrics,No,No,No,Yes,Compliance overview
+Homepage,Section,Recent Updates,activity.view,Main Content,Activity Feed,No,No,No,Yes,Recent changes
+Homepage,Section,Announcements,announcements.view,Main Content,Communication,No,No,No,Yes,Company announcements
+Homepage,Section,My Documents,documents.view,Main Content,Document Access,No,No,No,Yes,Personal documents
+Homepage,Dashboard,Employee Dashboard,dashboard.view,Main Content,EmployeeHomeDashboard,No,Yes,Yes,Yes,Employee dashboard
+Homepage,KPICard,My Tasks,tasks.view,Main Content,Personal Metrics,No,Yes,Yes,Yes,Personal task list
+Homepage,KPICard,My Training,training.view,Main Content,Personal Metrics,No,Yes,Yes,Yes,Training progress
+Homepage,KPICard,My Documents,documents.view,Main Content,Personal Metrics,No,Yes,Yes,Yes,Document access
+Homepage,KPICard,Timesheet Hours,timesheet.view,Main Content,Personal Metrics,No,Yes,Yes,Yes,Time tracking
+Homepage,Section,My Schedule,schedule.view,Main Content,Schedule Management,No,Yes,Yes,Yes,Personal schedule
+Homepage,Section,My Notifications,notifications.view,Main Content,Communication,No,Yes,Yes,Yes,Personal notifications
+Homepage,Button,Submit Timesheet,timesheet.submit,Header,Quick Actions,No,Yes,Yes,Yes,Timesheet submission
+Homepage,Button,Request Leave,leave.request,Header,Quick Actions,No,Yes,Yes,Yes,Leave requests
+Homepage,Dashboard,Contractor Dashboard,dashboard.view,Main Content,ContractorHomeDashboard,No,No,Yes,Yes,Contractor-specific dashboard
+Homepage,KPICard,My Permits,permits.view,Main Content,Work Metrics,No,No,Yes,Yes,Assigned permits
+Homepage,KPICard,My Compliance,compliance.view,Main Content,Compliance Metrics,No,No,Yes,Yes,Compliance status
+Homepage,KPICard,Document Expiry,documents.expiry,Main Content,Document Metrics,No,No,Yes,Yes,Document renewal tracking
+Homepage,Section,Work Instructions,instructions.view,Main Content,Work Management,No,No,Yes,Yes,Work procedures
+Homepage,Section,Safety Briefings,safety.briefings,Main Content,Safety Management,No,No,Yes,Yes,Safety information
+Homepage,Button,Upload Documents,documents.upload,Header,Quick Actions,No,No,Yes,Yes,Document submission
+Homepage,Button,Report Issue,issues.create,Header,Quick Actions,No,No,Yes,Yes,Issue reporting
+Homepage,Dashboard,Tenant Custom Dashboard,dashboard.view,Main Content,TenantCustomDashboard,Yes,Yes,Yes,Yes,Organization-specific dashboard
+Homepage,Section,Custom Widgets,widgets.view,Main Content,Custom Content,Yes,Yes,Yes,Yes,Tenant-configured widgets
+Homepage,Section,Organization Metrics,org.metrics,Main Content,Organization Data,Yes,Yes,No,No,Org-specific metrics
+Homepage,Debugger,User Debugger,debug.user,Debug Section,Development Tools,Yes,No,No,No,Development user debugging
+Homepage,Debugger,Permission Debugger,debug.permissions,Debug Section,Development Tools,Yes,No,No,No,Development permission debugging

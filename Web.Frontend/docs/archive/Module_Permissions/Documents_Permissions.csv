@@ -1,0 +1,112 @@
+Page,Element_Type,Element_Title,Permission_Required,Location,Parent_Component,Admin,Manager,Operator,Viewer,Notes
+Documents Home,Page,Documents Dashboard,documents.view,Main Content,Documents Home,Yes,Yes,Yes,Yes,Main documents overview
+Documents Home,KPICard,Total Documents,documents.view,Dashboard,Document Metrics,Yes,Yes,Yes,Yes,Total document count
+Documents Home,KPICard,Pending Reviews,documents.review,Dashboard,Review Metrics,Yes,Yes,No,No,Documents awaiting review
+Documents Home,KPICard,Expiring Soon,documents.expiry,Dashboard,Expiry Metrics,Yes,Yes,Yes,Yes,Documents expiring soon
+Documents Home,KPICard,Storage Used,documents.storage,Dashboard,Storage Metrics,Yes,Yes,No,No,Storage utilization
+Documents Home,Button,Upload Document,documents.upload,Header,Quick Actions,Yes,Yes,Yes,No,Upload new document
+Documents Home,Button,Create Template,documents.create,Header,Quick Actions,Yes,Yes,No,No,Create document template
+Documents Home,Button,Advanced Search,documents.search,Header,Quick Actions,Yes,Yes,Yes,Yes,Advanced document search
+Documents Home,Section,Recent Uploads,documents.view,Main Content,Activity Feed,Yes,Yes,Yes,Yes,Recently uploaded documents
+Documents Home,Section,My Documents,documents.view,Main Content,Personal Documents,Yes,Yes,Yes,Yes,User's documents
+All Documents,Page,Document Library,documents.view,Main Content,Document Library,Yes,Yes,Yes,Yes,Complete document library
+All Documents,Table,Document List,documents.view,Main Content,Document Display,Yes,Yes,Yes,Yes,All documents table
+All Documents,Button,Upload New,documents.upload,Header,Action Buttons,Yes,Yes,Yes,No,Upload new documents
+All Documents,Button,Bulk Upload,documents.bulk,Header,Bulk Actions,Yes,Yes,No,No,Mass document upload
+All Documents,Button,Export List,documents.export,Header,Export Actions,Yes,Yes,No,No,Export document list
+All Documents,Button,View Document,documents.view,Table Row,Row Actions,Yes,Yes,Yes,Yes,View document content
+All Documents,Button,Download,documents.download,Table Row,Row Actions,Yes,Yes,Yes,Yes,Download document file
+All Documents,Button,Edit Metadata,documents.edit,Table Row,Row Actions,Yes,Yes,No,No,Edit document information
+All Documents,Button,Share Document,documents.share,Table Row,Row Actions,Yes,Yes,Yes,No,Share document with others
+All Documents,Button,Delete Document,documents.delete,Table Row,Row Actions,Yes,No,No,No,Remove document
+All Documents,Status,Approval Status,documents.view,Table Row,Status Display,Yes,Yes,Yes,Yes,Document approval status
+All Documents,Status,Version Status,documents.version,Table Row,Status Display,Yes,Yes,Yes,Yes,Document version info
+All Documents,Filter,Category Filter,documents.view,Header,Filter Controls,Yes,Yes,Yes,Yes,Filter by document category
+All Documents,Filter,Status Filter,documents.view,Header,Filter Controls,Yes,Yes,Yes,Yes,Filter by document status
+All Documents,Filter,Date Filter,documents.view,Header,Filter Controls,Yes,Yes,Yes,Yes,Filter by upload date
+All Documents,Search,Document Search,documents.search,Header,Search Controls,Yes,Yes,Yes,Yes,Search documents
+Assign Documents,Page,Document Assignment,documents.assign,Main Content,Assignment Management,Yes,Yes,No,No,Document assignment interface
+Assign Documents,Table,Available Documents,documents.view,Main Content,Document Selection,Yes,Yes,No,No,Documents available for assignment
+Assign Documents,Table,Users List,users.view,Main Content,User Selection,Yes,Yes,No,No,Users for document assignment
+Assign Documents,Button,Assign Selected,documents.assign,Header,Assignment Actions,Yes,Yes,No,No,Assign documents to users
+Assign Documents,Button,Bulk Assign,documents.assign,Header,Bulk Actions,Yes,Yes,No,No,Mass document assignment
+Assign Documents,Form,Assignment Rules,documents.assign,Assignment Panel,Assignment Config,Yes,Yes,No,No,Document assignment rules
+Assign Documents,Input,Due Date,documents.assign,Assignment Panel,Assignment Config,Yes,Yes,No,No,Document review due date
+Assign Documents,Dropdown,Assignment Type,documents.assign,Assignment Panel,Assignment Config,Yes,Yes,No,No,Type of document assignment
+Assign Documents,Checkbox,Require Acknowledgment,documents.assign,Assignment Panel,Assignment Config,Yes,Yes,No,No,Require user acknowledgment
+Assign Documents,Table,Assignment History,documents.assign,Tab Panel,History Display,Yes,Yes,No,No,Previous document assignments
+Required Documents,Page,Required Docs,documents.required,Main Content,Required Documents,Yes,Yes,Yes,Yes,Mandatory documents view
+Required Documents,Table,Required List,documents.required,Main Content,Document Display,Yes,Yes,Yes,Yes,List of required documents
+Required Documents,Status,Completion Status,documents.required,Table Row,Status Display,Yes,Yes,Yes,Yes,Document completion status
+Required Documents,Button,Upload Required,documents.upload,Table Row,Upload Actions,Yes,Yes,Yes,No,Upload required document
+Required Documents,Button,Request Extension,documents.extension,Table Row,Extension Actions,No,Yes,Yes,Yes,Request deadline extension
+Required Documents,Progress,Completion Progress,documents.required,Header,Progress Display,Yes,Yes,Yes,Yes,Overall completion progress
+Renewable Documents,Page,Document Renewals,documents.renewable,Main Content,Renewal Management,Yes,Yes,Yes,Yes,Document renewal tracking
+Renewable Documents,Table,Expiring Documents,documents.expiry,Main Content,Expiry Display,Yes,Yes,Yes,Yes,Documents expiring soon
+Renewable Documents,KPICard,Due This Month,documents.expiry,Dashboard,Expiry Metrics,Yes,Yes,Yes,Yes,Documents due this month
+Renewable Documents,KPICard,Overdue Documents,documents.overdue,Dashboard,Overdue Metrics,Yes,Yes,Yes,Yes,Overdue document renewals
+Renewable Documents,Button,Renew Document,documents.renew,Table Row,Renewal Actions,Yes,Yes,Yes,No,Renew expiring document
+Renewable Documents,Button,Set Reminder,documents.reminder,Table Row,Reminder Actions,Yes,Yes,Yes,Yes,Set renewal reminder
+Renewable Documents,Button,Bulk Renew,documents.bulk,Header,Bulk Actions,Yes,Yes,No,No,Mass document renewal
+Document Redactor,Page,Document Redaction,documents.redact,Main Content,Redaction Tool,Yes,No,No,No,Document redaction interface
+Document Redactor,Upload,Document Upload,documents.upload,Main Content,File Handler,Yes,No,No,No,Upload document for redaction
+Document Redactor,Canvas,Redaction Canvas,documents.redact,Main Content,Redaction Interface,Yes,No,No,No,Document redaction canvas
+Document Redactor,Tool,Redaction Tool,documents.redact,Toolbar,Redaction Tools,Yes,No,No,No,Redaction drawing tools
+Document Redactor,Button,Apply Redaction,documents.redact,Toolbar,Redaction Actions,Yes,No,No,No,Apply redaction marks
+Document Redactor,Button,Save Redacted,documents.save,Footer,Save Actions,Yes,No,No,No,Save redacted document
+Document Redactor,Button,Download Result,documents.download,Footer,Download Actions,Yes,No,No,No,Download redacted file
+Document Templates,Page,Template Library,documents.templates,Main Content,Template Management,Yes,Yes,Yes,Yes,Document template library
+Document Templates,Table,Template List,documents.templates,Main Content,Template Display,Yes,Yes,Yes,Yes,Available document templates
+Document Templates,Button,Create Template,documents.create,Header,Template Actions,Yes,Yes,No,No,Create new template
+Document Templates,Button,Use Template,documents.use,Table Row,Template Actions,Yes,Yes,Yes,No,Use existing template
+Document Templates,Button,Edit Template,documents.edit,Table Row,Template Actions,Yes,Yes,No,No,Edit template content
+Document Templates,Button,Clone Template,documents.clone,Table Row,Template Actions,Yes,Yes,No,No,Duplicate template
+Document Templates,Button,Delete Template,documents.delete,Table Row,Template Actions,Yes,No,No,No,Remove template
+Create Template,Page,Template Builder,documents.create,Main Content,Template Creation,Yes,Yes,No,No,Document template builder
+Create Template,Form,Template Details,documents.create,Main Content,Template Form,Yes,Yes,No,No,Template metadata form
+Create Template,Input,Template Name,documents.create,Form Section,Template Info,Yes,Yes,No,No,Template name field
+Create Template,Textarea,Description,documents.create,Form Section,Template Info,Yes,Yes,No,No,Template description
+Create Template,Dropdown,Document Type,documents.create,Form Section,Template Config,Yes,Yes,No,No,Select document type
+Create Template,Editor,Content Editor,documents.create,Form Section,Content Creation,Yes,Yes,No,No,Template content editor
+Create Template,Button,Add Field,documents.create,Editor Toolbar,Field Tools,Yes,Yes,No,No,Add template fields
+Create Template,Button,Preview Template,documents.create,Header,Preview Actions,Yes,Yes,No,No,Preview template
+Create Template,Button,Save Template,documents.create,Footer,Save Actions,Yes,Yes,No,No,Save template
+Document Analytics,Page,Document Analytics,documents.analytics,Main Content,Analytics Dashboard,Yes,Yes,No,No,Document usage analytics
+Document Analytics,Chart,Usage Trends,documents.analytics,Dashboard,Analytics Charts,Yes,Yes,No,No,Document usage trends
+Document Analytics,Chart,Category Distribution,documents.analytics,Dashboard,Distribution Charts,Yes,Yes,No,No,Document category breakdown
+Document Analytics,Table,Popular Documents,documents.analytics,Main Content,Popularity Display,Yes,Yes,No,No,Most accessed documents
+Document Analytics,Button,Generate Report,documents.reports,Header,Report Actions,Yes,Yes,No,No,Generate analytics report
+Document Analytics,Button,Export Data,documents.export,Header,Export Actions,Yes,Yes,No,No,Export analytics data
+Advanced Search,Page,Document Search,documents.search,Main Content,Search Interface,Yes,Yes,Yes,Yes,Advanced document search
+Advanced Search,Form,Search Criteria,documents.search,Main Content,Search Form,Yes,Yes,Yes,Yes,Document search form
+Advanced Search,Input,Search Keywords,documents.search,Search Form,Search Fields,Yes,Yes,Yes,Yes,Keyword search field
+Advanced Search,Dropdown,Document Type,documents.search,Search Form,Filter Fields,Yes,Yes,Yes,Yes,Filter by document type
+Advanced Search,Input,Date Range,documents.search,Search Form,Filter Fields,Yes,Yes,Yes,Yes,Search by date range
+Advanced Search,Dropdown,Category Filter,documents.search,Search Form,Filter Fields,Yes,Yes,Yes,Yes,Filter by category
+Advanced Search,Button,Search Documents,documents.search,Search Form,Search Actions,Yes,Yes,Yes,Yes,Execute search
+Advanced Search,Button,Save Search,documents.search,Header,Search Actions,Yes,Yes,Yes,Yes,Save search criteria
+Advanced Search,Table,Search Results,documents.view,Main Content,Results Display,Yes,Yes,Yes,Yes,Document search results
+Document Workflows,Page,Workflow Management,documents.workflows,Main Content,Workflow Dashboard,Yes,Yes,No,No,Document workflow management
+Document Workflows,Table,Active Workflows,documents.workflows,Main Content,Workflow Display,Yes,Yes,No,No,Currently active workflows
+Document Workflows,Button,Create Workflow,documents.workflows,Header,Workflow Actions,Yes,Yes,No,No,Create new workflow
+Document Workflows,Button,Edit Workflow,documents.workflows,Table Row,Workflow Actions,Yes,Yes,No,No,Edit existing workflow
+Document Workflows,Button,Start Workflow,documents.workflows,Table Row,Workflow Actions,Yes,Yes,No,No,Start workflow process
+Document Workflows,Status,Workflow Status,documents.workflows,Table Row,Status Display,Yes,Yes,No,No,Current workflow status
+Bulk Operations,Page,Bulk Document Ops,documents.bulk,Main Content,Bulk Operations,Yes,Yes,No,No,Mass document operations
+Bulk Operations,Table,Selected Documents,documents.view,Main Content,Selection Display,Yes,Yes,No,No,Documents selected for bulk ops
+Bulk Operations,Button,Select All,documents.bulk,Header,Selection Actions,Yes,Yes,No,No,Select all documents
+Bulk Operations,Button,Clear Selection,documents.bulk,Header,Selection Actions,Yes,Yes,No,No,Clear document selection
+Bulk Operations,Dropdown,Bulk Action,documents.bulk,Action Panel,Action Selector,Yes,Yes,No,No,Select bulk operation
+Bulk Operations,Button,Apply Action,documents.bulk,Action Panel,Action Buttons,Yes,Yes,No,No,Execute bulk operation
+Bulk Operations,Progress,Operation Progress,documents.bulk,Main Content,Progress Display,Yes,Yes,No,No,Bulk operation progress
+Document Scoring,Page,Document Scoring,documents.scoring,Main Content,Scoring Dashboard,Yes,Yes,No,No,Document scoring interface
+Document Scoring,Table,Scored Documents,documents.scoring,Main Content,Score Display,Yes,Yes,No,No,Documents with scores
+Document Scoring,Button,Score Document,documents.scoring,Table Row,Scoring Actions,Yes,Yes,No,No,Assign document score
+Document Scoring,Form,Scoring Criteria,documents.scoring,Scoring Panel,Criteria Form,Yes,Yes,No,No,Document scoring criteria
+Document Scoring,Input,Score Value,documents.scoring,Scoring Panel,Score Input,Yes,Yes,No,No,Document score value
+Document Scoring,Button,Apply Score,documents.scoring,Scoring Panel,Scoring Actions,Yes,Yes,No,No,Apply document score
+Database Dropdowns,Dropdown,Document Category,documents.category,Form Elements,Category Selector,Yes,Yes,Yes,Yes,Select document category
+Database Dropdowns,Dropdown,Document Status,documents.status,Form Elements,Status Selector,Yes,Yes,No,No,Change document status
+Database Dropdowns,Dropdown,Review Status,documents.review,Form Elements,Review Selector,Yes,Yes,No,No,Document review status
+Database Dropdowns,Dropdown,Priority Level,documents.priority,Form Elements,Priority Selector,Yes,Yes,No,No,Document priority level
+Database Dropdowns,Dropdown,Access Level,documents.access,Form Elements,Access Selector,Yes,Yes,No,No,Document access permissions

@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [NVQ]
+    AUTHORIZATION [dbo];
+

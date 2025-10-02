@@ -1,0 +1,25 @@
+﻿CREATE TABLE [V7].[ProcessStep] (
+    [ProcessStepID]       INT                IDENTITY (1, 1) NOT NULL,
+    [ProcessID]           INT                NOT NULL,
+    [NodeID]              NVARCHAR (100)     NOT NULL,
+    [NodeType]            NVARCHAR (50)      NOT NULL,
+    [NodeName]            NVARCHAR (255)     NOT NULL,
+    [Description]         NVARCHAR (MAX)     NULL,
+    [SequenceOrder]       INT                NOT NULL,
+    [StepConfig]          NVARCHAR (MAX)     NULL,
+    [IsConditional]       BIT                DEFAULT ((0)) NULL,
+    [ConditionExpression] NVARCHAR (MAX)     NULL,
+    [NextStepOnSuccess]   NVARCHAR (100)     NULL,
+    [NextStepOnFailure]   NVARCHAR (100)     NULL,
+    [GeneratesTask]       BIT                DEFAULT ((0)) NULL,
+    [TaskTypeID]          INT                NULL,
+    [TaskTemplate]        NVARCHAR (MAX)     NULL,
+    [CreatedByUserID]     INT                NOT NULL,
+    [CreatedDate]         DATETIMEOFFSET (7) DEFAULT (sysdatetimeoffset()) NOT NULL,
+    CONSTRAINT [PK_ProcessStep] PRIMARY KEY CLUSTERED ([ProcessStepID] ASC),
+    CONSTRAINT [CK_ProcessStep_NodeType] CHECK ([NodeType]='notification' OR [NodeType]='action' OR [NodeType]='decision' OR [NodeType]='check' OR [NodeType]='task'),
+    CONSTRAINT [FK_ProcessStep_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_ProcessStep_Process] FOREIGN KEY ([ProcessID]) REFERENCES [V7].[Process] ([ProcessID]),
+    CONSTRAINT [FK_ProcessStep_TaskType] FOREIGN KEY ([TaskTypeID]) REFERENCES [V7].[TaskType] ([TaskTypeID])
+);
+

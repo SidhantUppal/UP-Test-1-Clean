@@ -1,0 +1,339 @@
+{
+  "totalTables": 38,
+  "tables": [
+    {
+      "name": "V7.AnswerType",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.Attachment",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.AttachmentUserArea",
+      "columnCount": 3,
+      "hasSampleData": false,
+      "primaryKeys": [
+        "AttachmentUserAreaID"
+      ],
+      "identityColumns": [
+        "AttachmentUserAreaID"
+      ]
+    },
+    {
+      "name": "V7.AuditLog",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.CategoryType",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.ChecklistTemplate",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.ChecklistTemplateAssignment",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.ChecklistTemplateCategory",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.ChecklistTemplateEnrolment",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.Employee",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.FrequencyType",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.Location",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.LocationEmployee",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.OrgGroup",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.OrgGroupEmployee",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.SystemPermission",
+      "columnCount": 6,
+      "hasSampleData": false,
+      "primaryKeys": [
+        "PermissionID"
+      ],
+      "identityColumns": [
+        "PermissionID"
+      ]
+    },
+    {
+      "name": "V7.SystemRole",
+      "columnCount": 5,
+      "hasSampleData": false,
+      "primaryKeys": [
+        "RoleID"
+      ],
+      "identityColumns": [
+        "RoleID"
+      ]
+    },
+    {
+      "name": "V7.SystemRolePermission",
+      "columnCount": 2,
+      "hasSampleData": false,
+      "primaryKeys": [
+        "SystemRoleID"
+      ],
+      "identityColumns": [
+        "SystemRoleID"
+      ]
+    },
+    {
+      "name": "V7.Task",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.TaskAssignment",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.TaskSchedule",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.TaskScheduleAssignment",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.TaskType",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.TaskTypeUserArea",
+      "columnCount": 3,
+      "hasSampleData": false,
+      "primaryKeys": [
+        "TaskTypeUserAreaID"
+      ],
+      "identityColumns": [
+        "TaskTypeUserAreaID"
+      ]
+    },
+    {
+      "name": "V7.Tenant",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.TenantRole",
+      "columnCount": 6,
+      "hasSampleData": false,
+      "primaryKeys": [
+        "TenantRoleID"
+      ],
+      "identityColumns": [
+        "TenantRoleID"
+      ]
+    },
+    {
+      "name": "V7.TenantRolePermission",
+      "columnCount": 4,
+      "hasSampleData": false,
+      "primaryKeys": [
+        "TenantRolePermissionID"
+      ],
+      "identityColumns": [
+        "TenantRolePermissionID"
+      ]
+    },
+    {
+      "name": "V7.ThemeType",
+      "columnCount": 0,
+      "hasSampleData": false,
+      "primaryKeys": [],
+      "identityColumns": []
+    },
+    {
+      "name": "V7.User",
+      "columnCount": 17,
+      "hasSampleData": true,
+      "primaryKeys": [
+        "UserID"
+      ],
+      "identityColumns": [
+        "UserID"
+      ]
+    },
+    {
+      "name": "V7.UserArea",
+      "columnCount": 18,
+      "hasSampleData": true,
+      "primaryKeys": [
+        "UserAreaID"
+      ],
+      "identityColumns": [
+        "UserAreaID"
+      ]
+    },
+    {
+      "name": "V7.UserAreaContractor",
+      "columnCount": 10,
+      "hasSampleData": false,
+      "primaryKeys": [
+        "UserAreaContractorID"
+      ],
+      "identityColumns": [
+        "UserAreaContractorID"
+      ]
+    },
+    {
+      "name": "V7.UserAreaForm",
+      "columnCount": 16,
+      "hasSampleData": false,
+      "primaryKeys": [
+        "UserAreaFormID"
+      ],
+      "identityColumns": [
+        "UserAreaFormID"
+      ]
+    },
+    {
+      "name": "V7.UserAreaFormQuestion",
+      "columnCount": 20,
+      "hasSampleData": false,
+      "primaryKeys": [
+        "UserAreaFormQuestionID"
+      ],
+      "identityColumns": [
+        "UserAreaFormQuestionID"
+      ]
+    },
+    {
+      "name": "V7.UserAreaFormQuestionAnswer",
+      "columnCount": 15,
+      "hasSampleData": false,
+      "primaryKeys": [
+        "UserAreaFormQuestionAnswerID"
+      ],
+      "identityColumns": [
+        "UserAreaFormQuestionAnswerID"
+      ]
+    },
+    {
+      "name": "V7.UserAreaFormResponse",
+      "columnCount": 20,
+      "hasSampleData": false,
+      "primaryKeys": [
+        "UserAreaFormResponseID"
+      ],
+      "identityColumns": [
+        "UserAreaFormResponseID"
+      ]
+    },
+    {
+      "name": "V7.UserAreaFormSection",
+      "columnCount": 13,
+      "hasSampleData": false,
+      "primaryKeys": [
+        "UserAreaFormSectionID"
+      ],
+      "identityColumns": [
+        "UserAreaFormSectionID"
+      ]
+    },
+    {
+      "name": "V7.UserTenant",
+      "columnCount": 4,
+      "hasSampleData": false,
+      "primaryKeys": [
+        "UserTenantID"
+      ],
+      "identityColumns": [
+        "UserTenantID"
+      ]
+    },
+    {
+      "name": "V7.UserTenantRole",
+      "columnCount": 4,
+      "hasSampleData": false,
+      "primaryKeys": [
+        "UserTenantRoleID"
+      ],
+      "identityColumns": [
+        "UserTenantRoleID"
+      ]
+    }
+  ]
+}

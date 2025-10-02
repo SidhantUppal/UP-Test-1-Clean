@@ -1,0 +1,26 @@
+﻿CREATE TABLE [V7].[TextBlockSection] (
+    [TextBlockSectionID]         INT           IDENTITY (1, 1) NOT NULL,
+    [TextBlockTypeID]            INT           NOT NULL,
+    [Reference]                  NVARCHAR (50) NULL,
+    [OrderNum]                   INT           DEFAULT ((0)) NOT NULL,
+    [UserAreaID]                 INT           NULL,
+    [CreatedByUserID]            INT           NOT NULL,
+    [CreatedDate]                DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]       INT           NULL,
+    [ArchivedByUserID]           INT           NULL,
+    [TextBlockCollectionID]      INT           NULL,
+    [LegacySectionID]            INT           NULL,
+    [TemplateTextBlockSectionID] INT           NULL,
+    [Title] NVARCHAR (255) NULL,
+    [ModifiedDate] DATETIMEOFFSET (7) NULL,
+    [ArchivedDate] DATETIMEOFFSET (7) NULL,
+    PRIMARY KEY CLUSTERED ([TextBlockSectionID] ASC),
+    CONSTRAINT [FK_TextBlockSection_ArchivedBy] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_TextBlockSection_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_TextBlockSection_ModifiedBy] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_TextBlockSection_TemplateTextBlockSection] FOREIGN KEY ([TemplateTextBlockSectionID]) REFERENCES [V7].[TextBlockSection] ([TextBlockSectionID]),
+    CONSTRAINT [FK_TextBlockSection_TextBlockCollection] FOREIGN KEY ([TextBlockCollectionID]) REFERENCES [V7].[TextBlockCollection] ([TextBlockCollectionID]),
+    CONSTRAINT [FK_TextBlockSection_TextBlockType] FOREIGN KEY ([TextBlockTypeID]) REFERENCES [V7].[TextBlockType] ([TextBlockTypeID]),
+    CONSTRAINT [FK_TextBlockSection_UserArea] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+

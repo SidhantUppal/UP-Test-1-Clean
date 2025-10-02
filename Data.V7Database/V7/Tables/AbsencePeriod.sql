@@ -1,0 +1,26 @@
+﻿CREATE TABLE [V7].[AbsencePeriod] (
+    [AbsencePeriodID]       INT      IDENTITY (1, 1) NOT NULL,
+    [AbsenceID]             INT      NOT NULL,
+    [AbsenceDurationTypeID] INT      NOT NULL,
+    [AbsenceApprovalTypeID] INT      NOT NULL,
+    [UserAreaID]            INT      NOT NULL,
+    [IsAutomated]           BIT      DEFAULT ((0)) NOT NULL,
+    [AbsenceDate]           DATE     NOT NULL,
+    [CustomStartTime]       DATETIMEOFFSET (7) NULL,
+    [CustomEndTime]         DATETIMEOFFSET (7) NULL,
+    [CreatedByUserID]       INT      NOT NULL,
+    [CreatedDate]           DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]      INT      NULL,
+    [ModifiedDate]      DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]      INT      NULL,
+    [ArchivedDate]          DATETIMEOFFSET (7) NULL,
+    PRIMARY KEY CLUSTERED ([AbsencePeriodID] ASC),
+    CONSTRAINT [FK_AbsencePeriod_Absence] FOREIGN KEY ([AbsenceID]) REFERENCES [V7].[Absence] ([AbsenceID]),
+    CONSTRAINT [FK_AbsencePeriod_AbsenceApprovalType] FOREIGN KEY ([AbsenceApprovalTypeID]) REFERENCES [V7].[AbsenceApprovalType] ([AbsenceApprovalTypeID]),
+    CONSTRAINT [FK_AbsencePeriod_AbsenceDurationType] FOREIGN KEY ([AbsenceDurationTypeID]) REFERENCES [V7].[AbsenceDurationType] ([AbsenceDurationTypeID]),
+    CONSTRAINT [FK_AbsencePeriod_ArchivedBy] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_AbsencePeriod_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_AbsencePeriod_ModifiedBy] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_AbsencePeriod_UserArea] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+

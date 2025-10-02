@@ -1,0 +1,22 @@
+﻿CREATE TABLE [V7].[DSECaseTask] (
+    [DSECaseTaskID] INT IDENTITY (1, 1) NOT NULL,
+    [DSECaseID]     INT NULL,
+    [TaskID]        INT NULL,
+    [UserAreaID]    INT NULL,
+    PRIMARY KEY CLUSTERED ([DSECaseTaskID] ASC),
+    CONSTRAINT [FK_DSECaseTask_DSECase] FOREIGN KEY ([DSECaseID]) REFERENCES [V7].[DSECase] ([DSECaseID]),
+    CONSTRAINT [FK_DSECaseTask_Tas] FOREIGN KEY ([TaskID]) REFERENCES [V7].[BSSTask] ([TaskID]),
+    CONSTRAINT [FK_DSECaseTask_UserArea] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+
+
+GO
+CREATE NONCLUSTERED INDEX [IX_DSECaseTask_DSECaseID]
+    ON [V7].[DSECaseTask]([DSECaseID] ASC)
+    INCLUDE([DSECaseTaskID], [TaskID]);
+
+
+GO
+CREATE NONCLUSTERED INDEX [IX_DSECaseTask_DSECaseIDTaskID]
+    ON [V7].[DSECaseTask]([DSECaseID] ASC, [TaskID] ASC);
+

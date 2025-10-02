@@ -1,0 +1,137 @@
+{
+  "pageInfo": {
+    "pageId": "loci1",
+    "title": "LOCI Test Page 1",
+    "route": "/loci1",
+    "permission": "admin_access",
+    "lastScanned": "2024-06-20T11:35:14Z"
+  },
+  "elements": {
+    "ADM_LOC1_PG_V_ALL_000": {
+      "id": "ADM_LOC1_PG_V_ALL_000",
+      "pageId": "loci1",
+      "element": "PagePermission",
+      "status": "complete",
+      "type": ["P"],
+      "permission": "admin_access",
+      "info": {
+        "action": "Controls access to entire page",
+        "effects": ["Redirects unauthorized users", "Shows 403 error"],
+        "api": "GET /api/auth/check-page-access"
+      },
+      "connections": [],
+      "validation": null,
+      "dbRules": null,
+      "history": [
+        {
+          "date": "2024-06-20",
+          "change": "Initial page permission setup",
+          "by": "dev1"
+        }
+      ],
+      "filePath": "/apps/frontend/app/loci1/page.tsx",
+      "lineNumber": 131,
+      "lastUpdated": "2024-06-20T11:35:14Z"
+    },
+    "NAV_GLB_L_N_DSH_001": {
+      "id": "NAV_GLB_L_N_DSH_001",
+      "pageId": "loci1",
+      "element": "DashboardNavLink",
+      "status": "complete",
+      "type": ["N"],
+      "permission": "view_dashboard",
+      "info": {
+        "action": "Navigate to dashboard page",
+        "effects": ["Route change", "Load dashboard data"],
+        "api": null
+      },
+      "connections": [],
+      "validation": null,
+      "dbRules": null,
+      "history": [],
+      "filePath": "/apps/frontend/app/loci1/page.tsx",
+      "lineNumber": 144,
+      "lastUpdated": "2024-06-20T11:35:14Z"
+    },
+    "CHK_LOC1_B_D_ITM_001": {
+      "id": "CHK_LOC1_B_D_ITM_001",
+      "pageId": "loci1",
+      "element": "DeleteButton",
+      "status": "complete",
+      "type": ["P"],
+      "permission": "delete_checklist",
+      "currentUser": {
+        "role": "Manager",
+        "hasPermission": false
+      },
+      "info": {
+        "action": "Soft delete checklist from database",
+        "effects": ["Updates checklists table", "Creates audit log", "Notifies users"],
+        "api": "DELETE /api/checklists/:id"
+      },
+      "connections": ["CHK_LOC1_B_E_ITM_002", "CHK_LOC1_T_V_LST_008"],
+      "validation": null,
+      "dbRules": ["CASCADE_DELETE_ASSIGNMENTS", "AUDIT_LOG_ENTRY"],
+      "history": [
+        {
+          "date": "2024-01-15",
+          "change": "Initial implementation",
+          "by": "dev1"
+        },
+        {
+          "date": "2024-02-03",
+          "change": "Added soft delete",
+          "by": "dev2"
+        }
+      ],
+      "filePath": "/apps/frontend/app/loci1/page.tsx",
+      "lineNumber": 200,
+      "lastUpdated": "2024-06-20T11:35:14Z"
+    },
+    "CHK_LOC1_B_E_ITM_002": {
+      "id": "CHK_LOC1_B_E_ITM_002",
+      "pageId": "loci1",
+      "element": "EditButton",
+      "status": "complete",
+      "type": ["P", "M"],
+      "permission": "edit_checklist",
+      "currentUser": {
+        "role": "Manager",
+        "hasPermission": true
+      },
+      "info": {
+        "action": "Open checklist editor modal",
+        "effects": ["Loads checklist data", "Validates permissions", "Tracks changes"],
+        "api": "GET /api/checklists/:id, PUT /api/checklists/:id"
+      },
+      "connections": ["CHK_LOC1_B_D_ITM_001"],
+      "validation": ["CHECKLIST_NOT_LOCKED", "USER_HAS_ACCESS"],
+      "dbRules": null,
+      "history": [],
+      "filePath": "/apps/frontend/app/loci1/page.tsx",
+      "lineNumber": 220,
+      "lastUpdated": "2024-06-20T11:35:14Z"
+    },
+    "USR_LOC1_I_V_EML_004": {
+      "id": "USR_LOC1_I_V_EML_004",
+      "pageId": "loci1",
+      "element": "EmailInput",
+      "status": "partial",
+      "type": ["V"],
+      "permission": null,
+      "currentUser": null,
+      "info": {
+        "action": "Validates email format",
+        "effects": ["Shows error message", "Prevents form submission"],
+        "api": null
+      },
+      "connections": ["CHK_LOC1_F_S_ALL_007"],
+      "validation": ["EMAIL_FORMAT", "EMAIL_NOT_DUPLICATE"],
+      "dbRules": null,
+      "history": [],
+      "filePath": "/apps/frontend/app/loci1/page.tsx",
+      "lineNumber": 280,
+      "lastUpdated": "2024-06-20T11:35:14Z"
+    }
+  }
+}

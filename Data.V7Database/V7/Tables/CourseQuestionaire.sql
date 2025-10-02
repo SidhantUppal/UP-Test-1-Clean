@@ -1,0 +1,25 @@
+﻿CREATE TABLE [V7].[CourseQuestionaire] (
+    [CourseQuestionaireID] INT                IDENTITY (1, 1) NOT NULL,
+    [UserAreaID]           INT                NOT NULL,
+    [CourseID]             INT                NOT NULL,
+    [QuestionnaireName]    NVARCHAR (255)     NOT NULL,
+    [QuestionnaireType]    NVARCHAR (50)      DEFAULT ('Assessment') NULL,
+    [Instructions]         NVARCHAR (MAX)     NULL,
+    [TotalQuestions]       INT                DEFAULT ((0)) NULL,
+    [PassingScore]         DECIMAL (5, 2)     NULL,
+    [TimeLimit]            INT                NULL,
+    [RandomizeQuestions]   BIT                DEFAULT ((0)) NULL,
+    [ShowResults]          BIT                DEFAULT ((1)) NULL,
+    [IsActive]             BIT                DEFAULT ((1)) NULL,
+    [IsMandatory]          BIT                DEFAULT ((1)) NULL,
+    [CreatedByUserID]      INT                NOT NULL,
+    [CreatedDate]          DATETIMEOFFSET (7) DEFAULT (sysdatetimeoffset()) NOT NULL,
+    [ModifiedByUserID]     INT                NULL,
+    [ModifiedDate]     DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]     INT                NULL,
+    [ArchivedDate]         DATETIMEOFFSET (7) NULL,
+    PRIMARY KEY CLUSTERED ([CourseQuestionaireID] ASC),
+    CONSTRAINT [FK_CourseQuestionaire_Course] FOREIGN KEY ([CourseID]) REFERENCES [V7].[Course] ([CourseID]),
+    CONSTRAINT [FK_CourseQuestionaire_UserArea] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+

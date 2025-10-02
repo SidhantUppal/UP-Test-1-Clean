@@ -1,0 +1,26 @@
+﻿CREATE TABLE [V7].[WalkCheckpoint] (
+    [WalkCheckpointID]     INT            IDENTITY (1, 1) NOT NULL,
+    [LocationID]           INT            NULL,
+    [WalkID]               INT            NOT NULL,
+    [Description]          NVARCHAR (MAX) NOT NULL,
+    [PositiveText]         NVARCHAR (255) NULL,
+    [NegativeText]         NVARCHAR (255) NULL,
+    [ConfirmationTypes]    NVARCHAR (100) NOT NULL,
+    [OrderNum]             INT            DEFAULT ((0)) NOT NULL,
+    [ResponseTypeID]       INT            NOT NULL,
+    [TravelTime]           INT            NULL,
+    [Duration]             INT            NULL,
+    [CreatedByUserID]      INT            NOT NULL,
+    [CreatedDate]          DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID] INT            NULL,
+    [ModifiedDate]     DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]     INT            NULL,
+    [ArchivedDate]         DATETIMEOFFSET (7) NULL,
+    PRIMARY KEY CLUSTERED ([WalkCheckpointID] ASC),
+    CONSTRAINT [FK_WalkCheckpoint_ArchivedBy] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_WalkCheckpoint_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_WalkCheckpoint_LocationID] FOREIGN KEY ([LocationID]) REFERENCES [V7].[Location] ([LocationID]),
+    CONSTRAINT [FK_WalkCheckpoint_ModifiedBy] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_WalkCheckpoint_WalkID] FOREIGN KEY ([WalkID]) REFERENCES [V7].[Walk] ([WalkID])
+);
+

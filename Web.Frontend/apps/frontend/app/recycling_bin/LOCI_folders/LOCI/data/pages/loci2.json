@@ -1,0 +1,101 @@
+{
+  "pageInfo": {
+    "pageId": "loci2",
+    "title": "LOCI Test Page 2",
+    "route": "/loci2",
+    "permission": "admin_access",
+    "lastScanned": "2024-06-23T12:00:00Z"
+  },
+  "elements": {
+    "ADM_LOC2_PG_V_ALL_000": {
+      "id": "ADM_LOC2_PG_V_ALL_000",
+      "pageId": "loci2",
+      "element": "PagePermission",
+      "status": "complete",
+      "type": ["P"],
+      "permission": "admin_access",
+      "info": {
+        "action": "Controls access to entire page",
+        "effects": ["Redirects unauthorized users", "Shows 403 error"],
+        "api": "GET /api/auth/check-page-access"
+      },
+      "connections": [],
+      "validation": null,
+      "dbRules": null,
+      "history": [
+        {
+          "date": "2024-06-23",
+          "change": "Initial page permission setup for loci2",
+          "by": "claude"
+        }
+      ],
+      "filePath": "/apps/frontend/app/(main)/loci2/page.tsx",
+      "lineNumber": 104,
+      "lastUpdated": "2024-06-23T12:00:00Z"
+    },
+    "USR_LOC2_I_V_NAM_001": {
+      "id": "USR_LOC2_I_V_NAM_001",
+      "pageId": "loci2",
+      "element": "NameInput",
+      "status": "pending",
+      "type": ["V"],
+      "permission": "edit_profile",
+      "info": {
+        "action": "Validates and stores user full name",
+        "effects": ["Updates user profile", "Triggers validation"],
+        "api": "PATCH /api/users/:id"
+      },
+      "connections": ["USR_LOC2_B_S_PRF_004"],
+      "validation": {
+        "required": true,
+        "minLength": 2,
+        "maxLength": 100,
+        "pattern": "^[a-zA-Z\\s]+$"
+      },
+      "dbRules": ["NOT_NULL", "INDEX_SEARCHABLE"],
+      "history": [
+        {
+          "date": "2024-06-23",
+          "change": "Initial name input setup",
+          "by": "claude"
+        }
+      ],
+      "filePath": "/apps/frontend/app/(main)/loci2/page.tsx",
+      "lineNumber": 128,
+      "lastUpdated": "2024-06-23T12:00:00Z"
+    },
+    "USR_LOC2_B_S_PRF_004": {
+      "id": "USR_LOC2_B_S_PRF_004",
+      "pageId": "loci2",
+      "element": "SaveProfileButton",
+      "status": "pending",
+      "type": ["P", "DB"],
+      "permission": "edit_profile",
+      "currentUser": {
+        "role": "User",
+        "hasPermission": true
+      },
+      "info": {
+        "action": "Saves user profile changes to database",
+        "effects": ["Updates users table", "Creates audit log", "Shows success message"],
+        "api": "PATCH /api/users/:id"
+      },
+      "connections": ["USR_LOC2_I_V_NAM_001", "USR_LOC2_I_V_EML_002"],
+      "validation": {
+        "requiresValid": ["name", "email"],
+        "preventDefault": true
+      },
+      "dbRules": ["TRANSACTION_SAFE", "AUDIT_LOG_ENTRY"],
+      "history": [
+        {
+          "date": "2024-06-23",
+          "change": "Initial save button setup",
+          "by": "claude"
+        }
+      ],
+      "filePath": "/apps/frontend/app/(main)/loci2/page.tsx",
+      "lineNumber": 162,
+      "lastUpdated": "2024-06-23T12:00:00Z"
+    }
+  }
+}

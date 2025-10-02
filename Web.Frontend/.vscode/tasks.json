@@ -1,0 +1,38 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start T100 Development Environment",
+      "type": "shell",
+      "command": "${workspaceFolder}/start-dev-environment.bat",
+      "windows": {
+        "command": "${workspaceFolder}\\start-dev-environment.bat"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "focus": true
+      },
+      "problemMatcher": [],
+      "detail": "Starts Docker, SQL Server, runs migrations, seeds data, and starts all services"
+    },
+    {
+      "label": "Stop T100 Development Environment",
+      "type": "shell",
+      "command": "${workspaceFolder}/stop-dev-environment.bat",
+      "windows": {
+        "command": "${workspaceFolder}\\stop-dev-environment.bat"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": [],
+      "detail": "Stops all Docker containers"
+    }
+  ]
+}

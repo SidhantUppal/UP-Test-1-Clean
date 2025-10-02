@@ -1,0 +1,26 @@
+﻿CREATE TABLE [V7].[Role] (
+    [RoleID]                     INT            IDENTITY (1, 1) NOT NULL,
+    [DefaultModuleTypeID]        INT            NULL,
+    [UserAreaID]                 INT            NULL,
+    [IsAdministrator]            BIT            CONSTRAINT [DF__Role__IsReadOnly__047151E7] DEFAULT ((0)) NOT NULL,
+    [Description] NVARCHAR (255) NULL,
+    [CreatedByUserID]            INT            NOT NULL,
+    [CreatedDate]                DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]       INT            NULL,
+    [ModifiedDate]           DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]           INT            NULL,
+    [ArchivedDate]               DATETIMEOFFSET (7) NULL,
+    [OldID]                      INT            NULL,
+    [DefaultURL]                 NVARCHAR (255) NULL,
+    [DefaultSystemProductTypeID] INT            NULL,
+    [UserLimit]                  INT            NULL,
+    [IsSiteSearchDisabled]       BIT            DEFAULT ((0)) NOT NULL,
+    CONSTRAINT [PK__Role__8AFACE3A8ED3138F] PRIMARY KEY CLUSTERED ([RoleID] ASC),
+    CONSTRAINT [FK_Role_ArchivedByUserID] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_Role_CreatedByUserID] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_Role_ModifiedByUserID] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_Role_ModuleType] FOREIGN KEY ([DefaultModuleTypeID]) REFERENCES [V7].[ModuleType] ([ModuleTypeID]),
+    CONSTRAINT [FK_Role_SystemProductType] FOREIGN KEY ([DefaultSystemProductTypeID]) REFERENCES [V7].[SystemProductType] ([SystemProductTypeID]),
+    CONSTRAINT [FK_Role_UserAreaID] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+

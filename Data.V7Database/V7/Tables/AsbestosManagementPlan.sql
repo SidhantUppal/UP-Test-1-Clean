@@ -1,0 +1,26 @@
+﻿CREATE TABLE [V7].[AsbestosManagementPlan] (
+    [AsbestosManagementPlanID] INT             IDENTITY (1, 1) NOT NULL,
+    [UserAreaID]               INT             NOT NULL,
+    [LocationID]               INT             NOT NULL,
+    [SitePlanAttachmentID]     INT             NULL,
+    [LocationDetails]          NVARCHAR (4000) NULL,
+    [AsbestosRegister]         XML             NULL,
+    [AsbestosActionPlan]       XML             NULL,
+    [CommunicationPlan]        NVARCHAR (4000) NULL,
+    [CreatedByUserID]          INT             NOT NULL,
+    [CreatedDate]              DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]     INT             NULL,
+    [ModifiedDate]         DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]         INT             NULL,
+    [ArchivedDate]             DATETIMEOFFSET (7) NULL,
+    [SignatureText]            NVARCHAR (MAX)  NULL,
+    [SignatureDate]            DATE            NULL,
+    PRIMARY KEY CLUSTERED ([AsbestosManagementPlanID] ASC),
+    CONSTRAINT [FK_AsbestosManagementPlan_ArchivedBy] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_AsbestosManagementPlan_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_AsbestosManagementPlan_LocationID] FOREIGN KEY ([LocationID]) REFERENCES [V7].[Location] ([LocationID]),
+    CONSTRAINT [FK_AsbestosManagementPlan_ModifiedBy] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_AsbestosManagementPlan_SitePlanAttachmentID] FOREIGN KEY ([SitePlanAttachmentID]) REFERENCES [V7].[Attachment] ([AttachmentID]),
+    CONSTRAINT [FK_AsbestosManagementPlan_UserAreaID] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+

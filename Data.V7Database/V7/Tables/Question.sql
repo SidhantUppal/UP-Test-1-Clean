@@ -1,0 +1,55 @@
+﻿CREATE TABLE [V7].[Question] (
+    [QuestionID]                           INT            IDENTITY (1, 1) NOT NULL,
+    [UserAreaID]                           INT            NULL,
+    [ElementTypeID]                        INT            NOT NULL,
+    [AnswerTypeID]                         INT            NOT NULL,
+    [OptionListID]                         INT            NULL,
+    [QuestionnaireStaticDataTypeID]        INT            NULL,
+    [QuestionnaireSectionID]               INT            NOT NULL,
+    [OrderNum]                             INT            NOT NULL,
+    [IsScored]                             BIT            DEFAULT ((0)) NOT NULL,
+    [IsQuestionResponseRequiredAttachment] BIT            DEFAULT ((0)) NOT NULL,
+    [IsQuestionValidationRequired]         BIT            DEFAULT ((0)) NOT NULL,
+    [MaximumScore]                         INT            NULL,
+    [AttachmentID]                         INT            NULL,
+    [AllowComments]                        BIT            DEFAULT ((0)) NOT NULL,
+    [QuestionnaireTypeKeyFieldID]          INT            NULL,
+    [ParentID]                             INT            NULL,
+    [CreatedByUserID]                      INT            NOT NULL,
+    [CreatedDate]                          DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]                 INT            NULL,
+    [ArchivedByUserID]                     INT            NULL,
+    [IsReadOnly]                           BIT            DEFAULT ((0)) NOT NULL,
+    [IsNeededToPassed]                     BIT            DEFAULT ((0)) NOT NULL,
+    [ParentIDValues]                       NVARCHAR (255) NULL,
+    [IsMandatory]                          BIT            DEFAULT ((1)) NOT NULL,
+    [AllowFurtherActions]                  BIT            DEFAULT ((1)) NOT NULL,
+    [IsPastDateDenied]                     BIT            DEFAULT ((0)) NOT NULL,
+    [IsFutureDateDenied]                   BIT            DEFAULT ((0)) NOT NULL,
+    [OriginalQuestionID]                   INT            NULL,
+    [AnswerGridID]                         INT            NULL,
+    [Title] NVARCHAR (MAX) NULL,
+    [Description] NVARCHAR (MAX) NULL,
+    [ModifiedDate] DATETIMEOFFSET (7) NULL,
+    [ArchivedDate] DATETIMEOFFSET (7) NULL,
+    PRIMARY KEY CLUSTERED ([QuestionID] ASC),
+    CONSTRAINT [FK_Question_AnswerGrid] FOREIGN KEY ([AnswerGridID]) REFERENCES [V7].[AnswerGrid] ([AnswerGridID]),
+    CONSTRAINT [FK_Question_AnswerType] FOREIGN KEY ([AnswerTypeID]) REFERENCES [V7].[AnswerType] ([AnswerTypeID]),
+    CONSTRAINT [FK_Question_ArchivedBy] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_Question_AttachmentID] FOREIGN KEY ([AttachmentID]) REFERENCES [V7].[Attachment] ([AttachmentID]),
+    CONSTRAINT [FK_Question_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_Question_ElementType] FOREIGN KEY ([ElementTypeID]) REFERENCES [V7].[ElementType] ([ElementTypeID]),
+    CONSTRAINT [FK_Question_ModifiedBy] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_Question_OptionList] FOREIGN KEY ([OptionListID]) REFERENCES [V7].[OptionList] ([OptionListID]),
+    CONSTRAINT [FK_Question_ParentID] FOREIGN KEY ([ParentID]) REFERENCES [V7].[Question] ([QuestionID]),
+    CONSTRAINT [FK_Question_QuestionnaireSection] FOREIGN KEY ([QuestionnaireSectionID]) REFERENCES [V7].[QuestionnaireSection] ([QuestionnaireSectionID]),
+    CONSTRAINT [FK_Question_QuestionnaireTypeKeyFieldID] FOREIGN KEY ([QuestionnaireTypeKeyFieldID]) REFERENCES [V7].[QuestionnaireTypeKeyField] ([QuestionnaireTypeKeyFieldID]),
+    CONSTRAINT [FK_Question_UserArea] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+
+
+GO
+CREATE NONCLUSTERED INDEX [IX_Question_QuestionnaireSectionID]
+    ON [V7].[Question]([QuestionnaireSectionID] ASC, [ArchivedDate] ASC, [UserAreaID] ASC)
+    INCLUDE([ElementTypeID], [AnswerTypeID], [OptionListID], [QuestionnaireStaticDataTypeID], [OrderNum], [IsScored], [IsQuestionResponseRequiredAttachment], [IsQuestionValidationRequired], [MaximumScore], [AttachmentID], [AllowComments], [QuestionnaireTypeKeyFieldID], [ParentID], [CreatedByUserID], [CreatedDate], [ModifiedByUserID], [ModifiedDate]);
+

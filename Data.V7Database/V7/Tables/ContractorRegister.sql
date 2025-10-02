@@ -1,0 +1,26 @@
+﻿CREATE TABLE [V7].[ContractorRegister] (
+    [ContractorRegisterID] INT            IDENTITY (1, 1) NOT NULL,
+    [ContractorCompanyID]  INT            NOT NULL,
+    [EmployeeID]           INT            NULL,
+    [OnsiteFromDate]       DATETIMEOFFSET (7) NULL,
+    [OnsiteToDate]         DATETIMEOFFSET (7) NULL,
+    [IsLatest]             BIT            DEFAULT ((1)) NOT NULL,
+    [CreatedByUserID]      INT            NOT NULL,
+    [CreatedDate]          DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]     INT            NULL,
+    [ModifiedDate]     DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]     INT            NULL,
+    [ArchivedDate]         DATETIMEOFFSET (7) NULL,
+    [LocationID]           INT            NULL,
+    [WorkDetails]          NVARCHAR (MAX) NULL,
+    [IndividualName]       NVARCHAR (100) NULL,
+    [IndividualJobTitle]   NVARCHAR (100) NULL,
+    PRIMARY KEY CLUSTERED ([ContractorRegisterID] ASC),
+    CONSTRAINT [FK_ContractorRegister_ArchivedBy] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_ContractorRegister_ContractorCompany] FOREIGN KEY ([ContractorCompanyID]) REFERENCES [V7].[ContractorCompany] ([ContractorCompanyID]),
+    CONSTRAINT [FK_ContractorRegister_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_ContractorRegister_Employee] FOREIGN KEY ([EmployeeID]) REFERENCES [V7].[Employee] ([EmployeeID]),
+    CONSTRAINT [FK_ContractorRegister_Location] FOREIGN KEY ([LocationID]) REFERENCES [V7].[Location] ([LocationID]),
+    CONSTRAINT [FK_ContractorRegister_ModifiedBy] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID])
+);
+

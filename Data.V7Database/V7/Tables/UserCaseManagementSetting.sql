@@ -1,0 +1,28 @@
+﻿CREATE TABLE [V7].[UserCaseManagementSetting] (
+    [UserCaseManagementSettingID]        INT            IDENTITY (1, 1) NOT NULL,
+    [UserID]                             INT            NOT NULL,
+    [VisibleColumns]                     NVARCHAR (255) NULL,
+    [ShowAssociatedOpenCasesOnly]        BIT            DEFAULT ((0)) NOT NULL,
+    [EmailAdministratorOnCasePending]    BIT            DEFAULT ((0)) NOT NULL,
+    [EmailReporterOnCaseCreation]        BIT            DEFAULT ((0)) NOT NULL,
+    [EmailAssigneeOnCaseCreation]        BIT            DEFAULT ((0)) NOT NULL,
+    [EmailSubscriberOnCaseCreation]      BIT            DEFAULT ((0)) NOT NULL,
+    [EmailReporterOnCaseUpdate]          BIT            DEFAULT ((0)) NOT NULL,
+    [EmailAssigneeOnCaseUpdate]          BIT            DEFAULT ((0)) NOT NULL,
+    [EmailSubscriberOnCaseUpdate]        BIT            DEFAULT ((0)) NOT NULL,
+    [EmailReporterWhenNoteAdded]         BIT            DEFAULT ((0)) NOT NULL,
+    [EmailAssigneeWhenNoteAdded]         BIT            DEFAULT ((0)) NOT NULL,
+    [EmailSubscriberWhenNoteAdded]       BIT            DEFAULT ((0)) NOT NULL,
+    [EmailReporterWhenAttachmentAdded]   BIT            DEFAULT ((0)) NOT NULL,
+    [EmailAssigneeWhenAttachmentAdded]   BIT            DEFAULT ((0)) NOT NULL,
+    [EmailSubscriberWhenAttachmentAdded] BIT            DEFAULT ((0)) NOT NULL,
+    [CreatedByUserID]                    INT            NOT NULL,
+    [CreatedDate]                        DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]               INT            NULL,
+    [ModifiedDate]                   DATETIMEOFFSET (7) NULL,
+    PRIMARY KEY CLUSTERED ([UserCaseManagementSettingID] ASC),
+    CONSTRAINT [FK_UserCaseManagementSetting_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_UserCaseManagementSetting_ModifiedBy] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_UserCaseManagementSetting_User] FOREIGN KEY ([UserID]) REFERENCES [V7].[User] ([UserID])
+);
+

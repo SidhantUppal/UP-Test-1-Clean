@@ -1,0 +1,27 @@
+﻿CREATE TABLE [V7].[HRCaseEvent] (
+    [HRCaseEventID]        INT             IDENTITY (1, 1) NOT NULL,
+    [HRCaseID]             INT             NOT NULL,
+    [HRCaseMeetingID]      INT             NULL,
+    [HRCategoryID]         INT             NULL,
+    [EventType]            SMALLINT        NOT NULL,
+    [EventDate]            DATETIMEOFFSET (7) NOT NULL,
+    [ExpiryDate]           DATETIMEOFFSET (7) NULL,
+    [Title]                NVARCHAR (100)  NULL,
+    [Description]          NVARCHAR (2000) NULL,
+    [EventOutcomeType]     SMALLINT        NULL,
+    [EventLog]             NVARCHAR (256)  NULL,
+    [CreatedByUserID]      INT             NOT NULL,
+    [CreatedDate]          DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID] INT             NULL,
+    [ModifiedDate]     DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]     INT             NULL,
+    [ArchivedDate]         DATETIMEOFFSET (7) NULL,
+    PRIMARY KEY CLUSTERED ([HRCaseEventID] ASC),
+    CONSTRAINT [FK_HRCaseEvent_ArchivedByUser] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_HRCaseEvent_CreatedByUser] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_HRCaseEvent_HRCase] FOREIGN KEY ([HRCaseID]) REFERENCES [V7].[HRCase] ([HRCaseID]),
+    CONSTRAINT [FK_HRCaseEvent_HRCaseMeeting] FOREIGN KEY ([HRCaseMeetingID]) REFERENCES [V7].[HRCaseMeeting] ([HRCaseMeetingID]),
+    CONSTRAINT [FK_HRCaseEvent_HRCategory] FOREIGN KEY ([HRCategoryID]) REFERENCES [V7].[HRCategory] ([HRCategoryID]),
+    CONSTRAINT [FK_HRCaseEvent_ModifiedByUser] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID])
+);
+

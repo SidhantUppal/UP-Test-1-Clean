@@ -1,0 +1,161 @@
+{
+  "pageInfo": {
+    "pageId": "permissions",
+    "title": "3-Layer Permission Management",
+    "route": "/permissions",
+    "permission": "admin_permissions",
+    "lastScanned": "2025-07-04T15:30:00Z"
+  },
+  "elements": {
+    "PRM_MNG_B_S_SAV_001": {
+      "id": "PRM_MNG_B_S_SAV_001",
+      "pageId": "permissions",
+      "element": "SaveAllChangesButton",
+      "status": "complete",
+      "type": ["P", "V", "DB"],
+      "permission": "permissions.save.execute",
+      "currentUser": { 
+        "role": "admin", 
+        "hasPermission": true 
+      },
+      "info": {
+        "action": "Saves all permission changes to database",
+        "effects": ["Updates TenantServicePermissions", "Updates TenantPagePermissions", "Updates TenantElementPermissions"],
+        "api": "POST /api/permissions/bulk-update"
+      },
+      "connections": ["SRV_PRM_CHK_*", "PAG_PRM_CHK_*", "ELM_PRM_CHK_*"],
+      "validation": ["Validates tenant access", "Checks admin role", "Validates permission structure"],
+      "dbRules": ["Transaction safety", "Foreign key constraints", "Audit log creation"],
+      "history": [
+        {
+          "date": "2025-07-04",
+          "change": "Created save all permissions functionality",
+          "by": "claude"
+        }
+      ],
+      "filePath": "/apps/frontend/app/(main)/permissions/page.tsx",
+      "lineNumber": 45,
+      "lastUpdated": "2025-07-04T15:30:00Z"
+    },
+    "SRV_PRM_CHK_USERS-SERVICE_001": {
+      "id": "SRV_PRM_CHK_USERS-SERVICE_001",
+      "pageId": "permissions",
+      "element": "ServicePermissionCheckbox",
+      "status": "complete",
+      "type": ["P", "V"],
+      "permission": "permissions.services.toggle",
+      "info": {
+        "action": "Toggle microservice access for organisation",
+        "effects": ["Updates TenantServicePermissions table", "Affects service-level access"],
+        "api": "PUT /api/permissions/services/{tenantId}/{serviceName}"
+      },
+      "connections": ["PAG_PRM_CHK_*"],
+      "validation": ["Tenant ownership", "Service exists"],
+      "dbRules": ["Service dependency checks"],
+      "history": [
+        {
+          "date": "2025-07-04",
+          "change": "Created service permission toggle",
+          "by": "claude"
+        }
+      ],
+      "lastUpdated": "2025-07-04T15:30:00Z"
+    },
+    "PAG_PRM_CHK_ADMIN_001": {
+      "id": "PAG_PRM_CHK_ADMIN_001",
+      "pageId": "permissions",
+      "element": "PagePermissionCheckbox",
+      "status": "complete",
+      "type": ["P", "V"],
+      "permission": "permissions.pages.toggle",
+      "info": {
+        "action": "Toggle page/route access for role",
+        "effects": ["Updates TenantPagePermissions table", "Affects route-level access"],
+        "api": "PUT /api/permissions/pages/{tenantId}/{roleId}/{pageRoute}"
+      },
+      "connections": ["ELM_PRM_CHK_*"],
+      "validation": ["Role exists", "Page route valid"],
+      "dbRules": ["Role hierarchy checks"],
+      "history": [
+        {
+          "date": "2025-07-04",
+          "change": "Created page permission toggle",
+          "by": "claude"
+        }
+      ],
+      "lastUpdated": "2025-07-04T15:30:00Z"
+    },
+    "ELM_PRM_CHK_ADMIN_001": {
+      "id": "ELM_PRM_CHK_ADMIN_001",
+      "pageId": "permissions",
+      "element": "ElementPermissionCheckbox",
+      "status": "complete",
+      "type": ["P", "V", "C"],
+      "permission": "permissions.elements.toggle",
+      "info": {
+        "action": "Toggle LOCI element pattern access for role",
+        "effects": ["Updates TenantElementPermissions table", "Affects UI element visibility"],
+        "api": "PUT /api/permissions/elements/{tenantId}/{roleId}/{elementPattern}"
+      },
+      "connections": ["LOCI system", "Frontend element rendering"],
+      "validation": ["LOCI pattern valid", "Role exists"],
+      "dbRules": ["Pattern conflict resolution"],
+      "history": [
+        {
+          "date": "2025-07-04",
+          "change": "Created element permission toggle with LOCI integration",
+          "by": "claude"
+        }
+      ],
+      "lastUpdated": "2025-07-04T15:30:00Z"
+    },
+    "PAG_PRM_B_E_EDT_001": {
+      "id": "PAG_PRM_B_E_EDT_001",
+      "pageId": "permissions",
+      "element": "EditPagePermissionButton",
+      "status": "pending",
+      "type": ["P", "V"],
+      "permission": "permissions.pages.edit",
+      "info": {
+        "action": "Opens page permission editor modal",
+        "effects": ["Shows detailed permission configuration", "Allows access level changes"],
+        "api": "GET /api/permissions/pages/{tenantId}/{roleId}/{pageRoute}/details"
+      },
+      "connections": ["Page permission detail modal"],
+      "validation": ["Edit permissions"],
+      "dbRules": [],
+      "history": [
+        {
+          "date": "2025-07-04",
+          "change": "Placeholder for page permission editor",
+          "by": "claude"
+        }
+      ],
+      "lastUpdated": "2025-07-04T15:30:00Z"
+    },
+    "ELM_PRM_B_E_EDT_001": {
+      "id": "ELM_PRM_B_E_EDT_001",
+      "pageId": "permissions",
+      "element": "EditElementPermissionButton",
+      "status": "pending",
+      "type": ["P", "V", "C"],
+      "permission": "permissions.elements.edit",
+      "info": {
+        "action": "Opens element permission editor modal",
+        "effects": ["Shows LOCI pattern details", "Allows pattern modification"],
+        "api": "GET /api/permissions/elements/{tenantId}/{roleId}/{elementPattern}/details"
+      },
+      "connections": ["Element permission detail modal", "LOCI pattern validator"],
+      "validation": ["Edit permissions", "LOCI pattern syntax"],
+      "dbRules": [],
+      "history": [
+        {
+          "date": "2025-07-04",
+          "change": "Placeholder for element permission editor with LOCI integration",
+          "by": "claude"
+        }
+      ],
+      "lastUpdated": "2025-07-04T15:30:00Z"
+    }
+  }
+}

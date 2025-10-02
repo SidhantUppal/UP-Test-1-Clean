@@ -1,0 +1,27 @@
+﻿CREATE TABLE [V7].[ChecklistTemplateAssignment] (
+    [ChecklistTemplateAssignmentID] INT                IDENTITY (1, 1) NOT NULL,
+    [ChecklistTemplateID]           INT                NOT NULL,
+    [IssuingUserAreaID]             INT                NULL,
+    [AssignedUserAreaID]            INT                NOT NULL,
+    [EmployeeID]                    INT                NULL,
+    [LocationID]                    INT                NULL,
+    [OrgGroupID]                    INT                NULL,
+    [TaskScheduleID]                INT                NULL,
+    [ManagerEmployeeID]             INT                NULL,
+    [CreatedByUserID]               INT                NOT NULL,
+    [CreatedDate]                   DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]              INT                NULL,
+    [ModifiedDate]              DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]              INT                NULL,
+    [ArchivedDate]                  DATETIMEOFFSET (7) NULL,
+    PRIMARY KEY CLUSTERED ([ChecklistTemplateAssignmentID] ASC),
+    CONSTRAINT [FK_ChecklistTemplateAssignment_AssignedUserArea] FOREIGN KEY ([AssignedUserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID]),
+    CONSTRAINT [FK_ChecklistTemplateAssignment_ChecklistTemplate] FOREIGN KEY ([ChecklistTemplateID]) REFERENCES [V7].[ChecklistTemplate] ([ChecklistTemplateID]),
+    CONSTRAINT [FK_ChecklistTemplateAssignment_Employee] FOREIGN KEY ([EmployeeID]) REFERENCES [V7].[Employee] ([EmployeeID]),
+    CONSTRAINT [FK_ChecklistTemplateAssignment_IssuingUserArea] FOREIGN KEY ([IssuingUserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID]),
+    CONSTRAINT [FK_ChecklistTemplateAssignment_Location] FOREIGN KEY ([LocationID]) REFERENCES [V7].[Location] ([LocationID]),
+    CONSTRAINT [FK_ChecklistTemplateAssignment_ManagerEmployee] FOREIGN KEY ([ManagerEmployeeID]) REFERENCES [V7].[Employee] ([EmployeeID]),
+    CONSTRAINT [FK_ChecklistTemplateAssignment_OrgGroup] FOREIGN KEY ([OrgGroupID]) REFERENCES [V7].[OrgGroup] ([OrgGroupID]),
+    CONSTRAINT [FK_ChecklistTemplateAssignment_TaskSchedule] FOREIGN KEY ([TaskScheduleID]) REFERENCES [V7].[TaskSchedule] ([TaskScheduleID])
+);
+

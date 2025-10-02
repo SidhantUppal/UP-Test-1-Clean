@@ -1,0 +1,28 @@
+﻿CREATE TABLE [V7].[AssetInspectionAllianzImportFailure] (
+    [AssetInspectionAllianzImportFailureID] INT            IDENTITY (1, 1) NOT NULL,
+    [AssetInspectionAllianzImportID]        INT            NOT NULL,
+    [AllianzRecordID]                       NVARCHAR (20)  NOT NULL,
+    [AllianzReportID]                       NVARCHAR (20)  NOT NULL,
+    [UserAreaID]                            INT            NOT NULL,
+    [AssetInspectionStatusTypeID]           INT            NULL,
+    [MatchingAssetID]                       INT            NULL,
+    [MatchingLocationID]                    INT            NULL,
+    [IsProcessed]                           BIT            DEFAULT ((0)) NOT NULL,
+    [Notes]                                 NVARCHAR (MAX) NULL,
+    [CreatedByUserID]                       INT            NOT NULL,
+    [CreatedDate]                           DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]                  INT            NULL,
+    [ModifiedDate]                      DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]                      INT            NULL,
+    [ArchivedDate]                          DATETIMEOFFSET (7) NULL,
+    PRIMARY KEY CLUSTERED ([AssetInspectionAllianzImportFailureID] ASC),
+    CONSTRAINT [FK_AssetInspectionAllianzImportFailure_ArchivedBy] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_AssetInspectionAllianzImportFailure_Asset] FOREIGN KEY ([MatchingAssetID]) REFERENCES [V7].[Asset] ([AssetID]),
+    CONSTRAINT [FK_AssetInspectionAllianzImportFailure_AssetInspectionAllianzImport] FOREIGN KEY ([AssetInspectionAllianzImportID]) REFERENCES [V7].[AssetInspectionAllianzImport] ([AssetInspectionAllianzImportID]),
+    CONSTRAINT [FK_AssetInspectionAllianzImportFailure_AssetInspectionStatusType] FOREIGN KEY ([AssetInspectionStatusTypeID]) REFERENCES [V7].[AssetInspectionStatusType] ([AssetInspectionStatusTypeID]),
+    CONSTRAINT [FK_AssetInspectionAllianzImportFailure_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_AssetInspectionAllianzImportFailure_Location] FOREIGN KEY ([MatchingLocationID]) REFERENCES [V7].[Location] ([LocationID]),
+    CONSTRAINT [FK_AssetInspectionAllianzImportFailure_ModifiedBy] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_AssetInspectionAllianzImportFailure_UserArea] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+

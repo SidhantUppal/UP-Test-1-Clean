@@ -1,0 +1,262 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11012.119 d18.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Web.Frontend", "Web.Frontend\Web.Frontend.esproj", "{D1D634F8-7102-90DB-D1CE-CBF230753D70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Email", "Api.Email\Api.Email.csproj", "{703F0ACD-4726-4572-966D-2D55124122DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.SysAdmin", "Api.SysAdmin\Api.SysAdmin.csproj", "{6170FA85-BA8D-474C-A264-572D29D92097}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Tasks", "Api.Tasks\Api.Tasks.csproj", "{D19CC022-2600-4F7F-AECA-DA65CF8CE987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Incidents", "Api.Incidents\Api.Incidents.csproj", "{A1B2C3D4-E5F6-7890-ABCD-EF1234567891}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Gateway", "Api.Gateway\Api.Gateway.csproj", "{12345678-90AB-CDEF-1234-567890ABCDEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.StaticData", "Api.StaticData\Api.StaticData.csproj", "{ABCDEF12-3456-7890-ABCD-EF1234567890}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bus.Common", "Bus.Common\Bus.Common.csproj", "{4FCD280A-0A1B-445A-B5E7-1A9EE8DE4DAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bus.Authentication", "Bus.Authentication\Bus.Authentication.csproj", "{6F8BD880-48A8-4CA6-B451-0F35706352CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bus.Checklists", "Bus.Checklists\Bus.Checklists.csproj", "{F3A484E7-98B5-4DF7-AC4B-16E15BB0B278}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bus.Documents", "Bus.Documents\Bus.Documents.csproj", "{5386CC10-68A8-45DC-A1A8-10CDD19DB145}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bus.Incidents", "Bus.Incidents\Bus.Incidents.csproj", "{93D89CBC-D29C-4EB3-B183-23E8D0EAF3BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bus.ProcessSystem", "Bus.ProcessSystem\Bus.ProcessSystem.csproj", "{D1174470-1698-4E08-8B7D-4DDD7C1312F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bus.RiskAssessments", "Bus.RiskAssessments\Bus.RiskAssessments.csproj", "{D2592903-E557-490E-886E-1B8FE544655E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bus.StaticData", "Bus.StaticData\Bus.StaticData.csproj", "{728833B9-9431-4906-B9E9-85802D3FF01C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bus.Tasks", "Bus.Tasks\Bus.Tasks.csproj", "{3B2B8058-9213-4EA5-8538-FBE1F40020F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.ViewModels", "Data.ViewModels\Data.ViewModels.csproj", "{C9C8C087-69A5-46CD-BE68-4C55615B2CD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.EntityFramework", "Data.EntityFramework\Data.EntityFramework.csproj", "{BAE422CD-5142-4552-9EA0-4BD620EFA2E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bus.Core", "Bus.Core\Bus.Core.csproj", "{790DE184-8E78-4A55-8B05-CC925998221D}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Data.V7Database", "Data.V7Database\Data.V7Database.sqlproj", "{D8560B04-1FE6-47A6-B4C7-B4BAB4A74137}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIs", "APIs", "{F1E2D3C4-B5A6-9780-1234-567890ABCDEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business Logic", "Business Logic", "{A1B2C3D4-E5F6-7890-1234-567890ABCDEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Layer", "Data Layer", "{D1E2F3A4-B5C6-7890-1234-567890ABCDEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".claude", ".claude", "{3673286F-D19C-438F-94AB-FB9BBA481F36}"
+	ProjectSection(SolutionItems) = preProject
+		.claude\settings.local.json = .claude\settings.local.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".developer", ".developer", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		.developer\Local database connectivity issues with docker.txt = .developer\Local database connectivity issues with docker.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "static-data-agent", "static-data-agent", "{5168676B-14D8-45FD-90BE-43F2CFAF51FE}"
+	ProjectSection(SolutionItems) = preProject
+		.claude\agents\static-data-agent\acceptance.md = .claude\agents\static-data-agent\acceptance.md
+		.claude\agents\static-data-agent\agent.md = .claude\agents\static-data-agent\agent.md
+		.claude\agents\static-data-agent\report.md = .claude\agents\static-data-agent\report.md
+		.claude\agents\static-data-agent\task.md = .claude\agents\static-data-agent\task.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "agents", "agents", "{DABF4A0F-D709-4D3F-8FCC-519625575109}"
+	ProjectSection(SolutionItems) = preProject
+		.claude\agents\assets-service_rules.md = .claude\agents\assets-service_rules.md
+		.claude\agents\azure-db-integration-specialist.md = .claude\agents\azure-db-integration-specialist.md
+		.claude\agents\checklists-service_rules.md = .claude\agents\checklists-service_rules.md
+		.claude\agents\contractors-service_rules.md = .claude\agents\contractors-service_rules.md
+		.claude\agents\database-expert-analyzer.md = .claude\agents\database-expert-analyzer.md
+		.claude\agents\dev-engine-service_rules.md = .claude\agents\dev-engine-service_rules.md
+		.claude\agents\documents-service_rules.md = .claude\agents\documents-service_rules.md
+		.claude\agents\e-learning-service_rules.md = .claude\agents\e-learning-service_rules.md
+		.claude\agents\email-service_rules.md = .claude\agents\email-service_rules.md
+		.claude\agents\error-debugger.md = .claude\agents\error-debugger.md
+		.claude\agents\frontend-dev-incremental.md = .claude\agents\frontend-dev-incremental.md
+		.claude\agents\general-database-expert.md = .claude\agents\general-database-expert.md
+		.claude\agents\incident-manager_rules.md = .claude\agents\incident-manager_rules.md
+		.claude\agents\microservice-db-api-writer.md = .claude\agents\microservice-db-api-writer.md
+		.claude\agents\microservice-locked.md = .claude\agents\microservice-locked.md
+		.claude\agents\nvq-service_rules.md = .claude\agents\nvq-service_rules.md
+		.claude\agents\permits-service_rules.md = .claude\agents\permits-service_rules.md
+		.claude\agents\policies-service_rules.md = .claude\agents\policies-service_rules.md
+		.claude\agents\process-system_rules.md = .claude\agents\process-system_rules.md
+		.claude\agents\risk-assessments-service_rules.md = .claude\agents\risk-assessments-service_rules.md
+		.claude\agents\risk-web-service_rules.md = .claude\agents\risk-web-service_rules.md
+		.claude\agents\sys-admin-service_rules.md = .claude\agents\sys-admin-service_rules.md
+		.claude\agents\sysadmin-error-logger.md = .claude\agents\sysadmin-error-logger.md
+		.claude\agents\task-system-integrator.md = .claude\agents\task-system-integrator.md
+		.claude\agents\tasks-service_rules.md = .claude\agents\tasks-service_rules.md
+		.claude\agents\ux-consistency-analyzer.md = .claude\agents\ux-consistency-analyzer.md
+		.claude\agents\v7-database-expert.md = .claude\agents\v7-database-expert.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "merge", "merge", "{C0AD7290-3B72-42C2-B0C4-6CF60C71C9C4}"
+	ProjectSection(SolutionItems) = preProject
+		.developer\merge\merge-conflicts-helper.ps1 = .developer\merge\merge-conflicts-helper.ps1
+		.developer\merge\merge-conflicts-helper.sh = .developer\merge\merge-conflicts-helper.sh
+		.developer\merge\merge-restructure-fix.ps1 = .developer\merge\merge-restructure-fix.ps1
+		.developer\merge\merge-restructure-helper.ps1 = .developer\merge\merge-restructure-helper.ps1
+		.developer\merge\merge-restructure-helper.sh = .developer\merge\merge-restructure-helper.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core_md_files", "core_md_files", "{9F8E7D6C-5B4A-3F2E-1D0C-9E8F7A6B5C4D}"
+	ProjectSection(SolutionItems) = preProject
+		.claude\core_md_files\19th-August-Fix.md = .claude\core_md_files\19th-August-Fix.md
+		.claude\core_md_files\CLAUDE.md = .claude\core_md_files\CLAUDE.md
+		.claude\core_md_files\CLAUDE_AGENT_WORKFLOW.md = .claude\core_md_files\CLAUDE_AGENT_WORKFLOW.md
+		.claude\core_md_files\CODING_STANDARDS.md = .claude\core_md_files\CODING_STANDARDS.md
+		.claude\core_md_files\DOCUMENTATION_REORGANIZATION_PLAN.md = .claude\core_md_files\DOCUMENTATION_REORGANIZATION_PLAN.md
+		.claude\core_md_files\incidentModalCruding.md = .claude\core_md_files\incidentModalCruding.md
+		.claude\core_md_files\NEW_BADGE_SYSTEM.md = .claude\core_md_files\NEW_BADGE_SYSTEM.md
+		.claude\core_md_files\Org and Location wire up.md = .claude\core_md_files\Org and Location wire up.md
+		.claude\core_md_files\REACT_TO_DOTNET_MIGRATION_GUIDE.md = .claude\core_md_files\REACT_TO_DOTNET_MIGRATION_GUIDE.md
+		.claude\core_md_files\README.md = .claude\core_md_files\README.md
+		.claude\core_md_files\SETUP.md = .claude\core_md_files\SETUP.md
+		.claude\core_md_files\STARTUP_GUIDE.md = .claude\core_md_files\STARTUP_GUIDE.md
+		.claude\core_md_files\TASK_SYSTEM.md = .claude\core_md_files\TASK_SYSTEM.md
+		.claude\core_md_files\TEAM_PROCEDURES.md = .claude\core_md_files\TEAM_PROCEDURES.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dotnet migration guide", "dotnet migration guide", "{2F1E0D9C-8B7A-4E3F-9C2D-8F7E6A5B4C3D}"
+	ProjectSection(SolutionItems) = preProject
+		.claude\core_md_files\dotnet migration guide\00-MASTER-MIGRATION-GUIDE.md = .claude\core_md_files\dotnet migration guide\00-MASTER-MIGRATION-GUIDE.md
+		.claude\core_md_files\dotnet migration guide\01-DATABASE-MIGRATION-STEPS.md = .claude\core_md_files\dotnet migration guide\01-DATABASE-MIGRATION-STEPS.md
+		.claude\core_md_files\dotnet migration guide\02-FRONTEND-BACKEND-INTEGRATION.md = .claude\core_md_files\dotnet migration guide\02-FRONTEND-BACKEND-INTEGRATION.md
+		.claude\core_md_files\dotnet migration guide\03-BUSINESS-API-LAYER-IMPLEMENTATION.md = .claude\core_md_files\dotnet migration guide\03-BUSINESS-API-LAYER-IMPLEMENTATION.md
+		.claude\core_md_files\dotnet migration guide\04-PERMISSIONS-STATIC-DATA-SETUP.md = .claude\core_md_files\dotnet migration guide\04-PERMISSIONS-STATIC-DATA-SETUP.md
+		.claude\core_md_files\dotnet migration guide\05-AUTOMATION-BEST-PRACTICES.md = .claude\core_md_files\dotnet migration guide\05-AUTOMATION-BEST-PRACTICES.md
+		.claude\core_md_files\dotnet migration guide\README.md = .claude\core_md_files\dotnet migration guide\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1D634F8-7102-90DB-D1CE-CBF230753D70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1D634F8-7102-90DB-D1CE-CBF230753D70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1D634F8-7102-90DB-D1CE-CBF230753D70}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D1D634F8-7102-90DB-D1CE-CBF230753D70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1D634F8-7102-90DB-D1CE-CBF230753D70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1D634F8-7102-90DB-D1CE-CBF230753D70}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{703F0ACD-4726-4572-966D-2D55124122DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{703F0ACD-4726-4572-966D-2D55124122DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{703F0ACD-4726-4572-966D-2D55124122DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{703F0ACD-4726-4572-966D-2D55124122DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6170FA85-BA8D-474C-A264-572D29D92097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6170FA85-BA8D-474C-A264-572D29D92097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6170FA85-BA8D-474C-A264-572D29D92097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6170FA85-BA8D-474C-A264-572D29D92097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D19CC022-2600-4F7F-AECA-DA65CF8CE987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D19CC022-2600-4F7F-AECA-DA65CF8CE987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D19CC022-2600-4F7F-AECA-DA65CF8CE987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D19CC022-2600-4F7F-AECA-DA65CF8CE987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1B2C3D4-E5F6-7890-ABCD-EF1234567891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1B2C3D4-E5F6-7890-ABCD-EF1234567891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1B2C3D4-E5F6-7890-ABCD-EF1234567891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1B2C3D4-E5F6-7890-ABCD-EF1234567891}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12345678-90AB-CDEF-1234-567890ABCDEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12345678-90AB-CDEF-1234-567890ABCDEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12345678-90AB-CDEF-1234-567890ABCDEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12345678-90AB-CDEF-1234-567890ABCDEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABCDEF12-3456-7890-ABCD-EF1234567890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABCDEF12-3456-7890-ABCD-EF1234567890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABCDEF12-3456-7890-ABCD-EF1234567890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABCDEF12-3456-7890-ABCD-EF1234567890}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FCD280A-0A1B-445A-B5E7-1A9EE8DE4DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FCD280A-0A1B-445A-B5E7-1A9EE8DE4DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FCD280A-0A1B-445A-B5E7-1A9EE8DE4DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FCD280A-0A1B-445A-B5E7-1A9EE8DE4DAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F8BD880-48A8-4CA6-B451-0F35706352CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F8BD880-48A8-4CA6-B451-0F35706352CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F8BD880-48A8-4CA6-B451-0F35706352CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F8BD880-48A8-4CA6-B451-0F35706352CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3A484E7-98B5-4DF7-AC4B-16E15BB0B278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3A484E7-98B5-4DF7-AC4B-16E15BB0B278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3A484E7-98B5-4DF7-AC4B-16E15BB0B278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3A484E7-98B5-4DF7-AC4B-16E15BB0B278}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5386CC10-68A8-45DC-A1A8-10CDD19DB145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5386CC10-68A8-45DC-A1A8-10CDD19DB145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5386CC10-68A8-45DC-A1A8-10CDD19DB145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5386CC10-68A8-45DC-A1A8-10CDD19DB145}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93D89CBC-D29C-4EB3-B183-23E8D0EAF3BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93D89CBC-D29C-4EB3-B183-23E8D0EAF3BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93D89CBC-D29C-4EB3-B183-23E8D0EAF3BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93D89CBC-D29C-4EB3-B183-23E8D0EAF3BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1174470-1698-4E08-8B7D-4DDD7C1312F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1174470-1698-4E08-8B7D-4DDD7C1312F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1174470-1698-4E08-8B7D-4DDD7C1312F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1174470-1698-4E08-8B7D-4DDD7C1312F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2592903-E557-490E-886E-1B8FE544655E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2592903-E557-490E-886E-1B8FE544655E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2592903-E557-490E-886E-1B8FE544655E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2592903-E557-490E-886E-1B8FE544655E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{728833B9-9431-4906-B9E9-85802D3FF01C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{728833B9-9431-4906-B9E9-85802D3FF01C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{728833B9-9431-4906-B9E9-85802D3FF01C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{728833B9-9431-4906-B9E9-85802D3FF01C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B2B8058-9213-4EA5-8538-FBE1F40020F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B2B8058-9213-4EA5-8538-FBE1F40020F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B2B8058-9213-4EA5-8538-FBE1F40020F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B2B8058-9213-4EA5-8538-FBE1F40020F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9C8C087-69A5-46CD-BE68-4C55615B2CD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9C8C087-69A5-46CD-BE68-4C55615B2CD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9C8C087-69A5-46CD-BE68-4C55615B2CD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9C8C087-69A5-46CD-BE68-4C55615B2CD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAE422CD-5142-4552-9EA0-4BD620EFA2E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE422CD-5142-4552-9EA0-4BD620EFA2E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE422CD-5142-4552-9EA0-4BD620EFA2E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE422CD-5142-4552-9EA0-4BD620EFA2E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{790DE184-8E78-4A55-8B05-CC925998221D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{790DE184-8E78-4A55-8B05-CC925998221D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{790DE184-8E78-4A55-8B05-CC925998221D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{790DE184-8E78-4A55-8B05-CC925998221D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8560B04-1FE6-47A6-B4C7-B4BAB4A74137}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8560B04-1FE6-47A6-B4C7-B4BAB4A74137}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8560B04-1FE6-47A6-B4C7-B4BAB4A74137}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D8560B04-1FE6-47A6-B4C7-B4BAB4A74137}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8560B04-1FE6-47A6-B4C7-B4BAB4A74137}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8560B04-1FE6-47A6-B4C7-B4BAB4A74137}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{703F0ACD-4726-4572-966D-2D55124122DB} = {F1E2D3C4-B5A6-9780-1234-567890ABCDEF}
+		{6170FA85-BA8D-474C-A264-572D29D92097} = {F1E2D3C4-B5A6-9780-1234-567890ABCDEF}
+		{D19CC022-2600-4F7F-AECA-DA65CF8CE987} = {F1E2D3C4-B5A6-9780-1234-567890ABCDEF}
+		{A1B2C3D4-E5F6-7890-ABCD-EF1234567891} = {F1E2D3C4-B5A6-9780-1234-567890ABCDEF}
+		{12345678-90AB-CDEF-1234-567890ABCDEF} = {F1E2D3C4-B5A6-9780-1234-567890ABCDEF}
+		{ABCDEF12-3456-7890-ABCD-EF1234567890} = {F1E2D3C4-B5A6-9780-1234-567890ABCDEF}
+		{4FCD280A-0A1B-445A-B5E7-1A9EE8DE4DAE} = {A1B2C3D4-E5F6-7890-1234-567890ABCDEF}
+		{6F8BD880-48A8-4CA6-B451-0F35706352CE} = {A1B2C3D4-E5F6-7890-1234-567890ABCDEF}
+		{F3A484E7-98B5-4DF7-AC4B-16E15BB0B278} = {A1B2C3D4-E5F6-7890-1234-567890ABCDEF}
+		{5386CC10-68A8-45DC-A1A8-10CDD19DB145} = {A1B2C3D4-E5F6-7890-1234-567890ABCDEF}
+		{93D89CBC-D29C-4EB3-B183-23E8D0EAF3BE} = {A1B2C3D4-E5F6-7890-1234-567890ABCDEF}
+		{D1174470-1698-4E08-8B7D-4DDD7C1312F2} = {A1B2C3D4-E5F6-7890-1234-567890ABCDEF}
+		{D2592903-E557-490E-886E-1B8FE544655E} = {A1B2C3D4-E5F6-7890-1234-567890ABCDEF}
+		{728833B9-9431-4906-B9E9-85802D3FF01C} = {A1B2C3D4-E5F6-7890-1234-567890ABCDEF}
+		{3B2B8058-9213-4EA5-8538-FBE1F40020F3} = {A1B2C3D4-E5F6-7890-1234-567890ABCDEF}
+		{C9C8C087-69A5-46CD-BE68-4C55615B2CD1} = {D1E2F3A4-B5C6-7890-1234-567890ABCDEF}
+		{BAE422CD-5142-4552-9EA0-4BD620EFA2E3} = {D1E2F3A4-B5C6-7890-1234-567890ABCDEF}
+		{790DE184-8E78-4A55-8B05-CC925998221D} = {A1B2C3D4-E5F6-7890-1234-567890ABCDEF}
+		{D8560B04-1FE6-47A6-B4C7-B4BAB4A74137} = {D1E2F3A4-B5C6-7890-1234-567890ABCDEF}
+		{5168676B-14D8-45FD-90BE-43F2CFAF51FE} = {DABF4A0F-D709-4D3F-8FCC-519625575109}
+		{DABF4A0F-D709-4D3F-8FCC-519625575109} = {3673286F-D19C-438F-94AB-FB9BBA481F36}
+		{C0AD7290-3B72-42C2-B0C4-6CF60C71C9C4} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{9F8E7D6C-5B4A-3F2E-1D0C-9E8F7A6B5C4D} = {3673286F-D19C-438F-94AB-FB9BBA481F36}
+		{2F1E0D9C-8B7A-4E3F-9C2D-8F7E6A5B4C3D} = {9F8E7D6C-5B4A-3F2E-1D0C-9E8F7A6B5C4D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CCF8B6D0-2687-424B-83FB-46684A092C15}
+	EndGlobalSection
+EndGlobal

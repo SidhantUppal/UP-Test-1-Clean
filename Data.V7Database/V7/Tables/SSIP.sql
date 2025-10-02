@@ -1,0 +1,7 @@
+﻿CREATE TABLE [V7].[SSIP] (
+    [SSIPID] INT            NOT NULL,
+    [Name]   NVARCHAR (100) NOT NULL,
+    [Logo]   NVARCHAR (100) NOT NULL,
+    PRIMARY KEY CLUSTERED ([SSIPID] ASC)
+);
+

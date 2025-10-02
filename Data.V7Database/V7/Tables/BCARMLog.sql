@@ -1,0 +1,8 @@
+﻿CREATE TABLE [V7].[BCARMLog] (
+    [BCARMLogID] INT            IDENTITY (1, 1) NOT NULL,
+    [XmlRequest] NVARCHAR (MAX) NOT NULL,
+    [DateTime]   DATETIMEOFFSET (7) NOT NULL,
+    [IPAddress]  VARCHAR (40)   NULL,
+    PRIMARY KEY CLUSTERED ([BCARMLogID] ASC)
+);
+

@@ -1,0 +1,28 @@
+﻿CREATE TABLE [V7].[EmailMessage] (
+    [EmailMessageID]      INT             IDENTITY (1, 1) NOT NULL,
+    [MailboxUIDL]         NVARCHAR (255)  NOT NULL,
+    [MailboxAddress]      NVARCHAR (100)  NOT NULL,
+    [IsInbound]           BIT             DEFAULT ((0)) NOT NULL,
+    [InboundIsRead]       BIT             DEFAULT ((0)) NOT NULL,
+    [InboundFromAddress]  NVARCHAR (150)  NULL,
+    [IsOutboundDraft]     BIT             DEFAULT ((0)) NOT NULL,
+    [OutboundToAddresses] NVARCHAR (2265) NULL,
+    [Headers]             NVARCHAR (MAX)  NOT NULL,
+    [Subject]             NVARCHAR (150)  NOT NULL,
+    [HTMLBody]            NVARCHAR (MAX)  NOT NULL,
+    [TotalAttachments]    TINYINT         DEFAULT ((0)) NOT NULL,
+    [DateTime]            DATETIMEOFFSET (7) NULL,
+    [IsFollowUp]          BIT             DEFAULT ((0)) NOT NULL,
+    [IsDeleted]           BIT             DEFAULT ((0)) NOT NULL,
+    [CreatedByUserID]               INT           NOT NULL,
+    [CreatedDate]                   DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]              INT           NULL,
+    [ModifiedDate]                  DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]              INT           NULL,
+    [ArchivedDate]                  DATETIMEOFFSET (7) NULL,
+    PRIMARY KEY CLUSTERED ([EmailMessageID] ASC),
+    CONSTRAINT [FK_EmailMessage_ArchivedBy] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_EmailMessage_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_EmailMessage_ModifiedBy] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID])
+);
+

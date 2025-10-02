@@ -1,0 +1,27 @@
+﻿CREATE TABLE [V7].[SCORMPackage] (
+    [SCORMPackageID]               INT              IDENTITY (1, 1) NOT NULL,
+    [GUID]                         UNIQUEIDENTIFIER DEFAULT (newid()) NOT NULL,
+    [Name]                         NVARCHAR (150)   NOT NULL,
+    [Version]                      TINYINT          NOT NULL,
+    [IsLive]                       BIT              DEFAULT ((0)) NOT NULL,
+    [Data]                         NVARCHAR (MAX)   NULL,
+    [CreatedByUserID]              INT              NOT NULL,
+    [CreatedDate]                  DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]         INT              NULL,
+    [ModifiedDate]             DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]             INT              NULL,
+    [ArchivedDate]                 DATETIMEOFFSET (7) NULL,
+    [OriginalSCORMPackageID]       INT              NULL,
+    [StartupRelativePath]          NVARCHAR (150)   NULL,
+    [HasPracticeQuestions]         BIT              DEFAULT ((0)) NOT NULL,
+    [PassPercentage]               TINYINT          NULL,
+    [TotalExamQuestions]           TINYINT          DEFAULT ((0)) NOT NULL,
+    [ExamQuestionIdentifier]       NVARCHAR (50)    NULL,
+    [CheckForCompletionOnExitOnly] BIT              DEFAULT ((0)) NOT NULL,
+    PRIMARY KEY CLUSTERED ([SCORMPackageID] ASC),
+    CONSTRAINT [FK_SCORMPackage_ArchivedBy] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_SCORMPackage_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_SCORMPackage_ModifiedBy] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_SCORMPackage_OriginalID] FOREIGN KEY ([OriginalSCORMPackageID]) REFERENCES [V7].[SCORMPackage] ([SCORMPackageID])
+);
+

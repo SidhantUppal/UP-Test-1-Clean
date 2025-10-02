@@ -1,0 +1,85 @@
+Page,Element_Type,Element_Title,Permission_Required,Location,Parent_Component,Admin,Manager,Operator,Viewer,Notes
+Contractors Home,Page,Contractors Dashboard,contractors.view,Main Content,Contractors Home,Yes,Yes,Yes,Yes,Main contractors overview
+Contractors Home,KPICard,Active Contractors,contractors.view,Dashboard,Contractor Metrics,Yes,Yes,Yes,Yes,Currently active contractors
+Contractors Home,KPICard,Compliance Rate,contractors.compliance,Dashboard,Compliance Metrics,Yes,Yes,Yes,Yes,Overall compliance percentage
+Contractors Home,KPICard,Pending Approvals,contractors.approve,Dashboard,Approval Metrics,Yes,Yes,No,No,Contractors awaiting approval
+Contractors Home,KPICard,Expiring Documents,contractors.documents,Dashboard,Document Metrics,Yes,Yes,Yes,Yes,Documents expiring soon
+Contractors Home,Button,Add Contractor,contractors.create,Header,Quick Actions,Yes,Yes,No,No,Create new contractor
+Contractors Home,Button,View Reports,contractors.reports,Header,Quick Actions,Yes,Yes,No,No,Contractor reporting
+Contractors Home,Button,Compliance Check,contractors.compliance,Header,Quick Actions,Yes,Yes,Yes,No,Run compliance check
+Contractors Home,Section,Recent Activity,contractors.view,Main Content,Activity Feed,Yes,Yes,Yes,Yes,Recent contractor actions
+Contractors Home,Section,Urgent Actions,contractors.manage,Main Content,Action Items,Yes,Yes,No,No,Items requiring attention
+Manage Contractors,Page,Contractor Management,contractors.manage,Main Content,Management Dashboard,Yes,Yes,No,No,Administrative contractor management
+Manage Contractors,Table,Contractor List,contractors.view,Main Content,Contractor Table,Yes,Yes,Yes,Yes,All contractors list
+Manage Contractors,Button,Add New,contractors.create,Header,Action Buttons,Yes,Yes,No,No,Add new contractor
+Manage Contractors,Button,Import Contractors,contractors.import,Header,Import Actions,Yes,Yes,No,No,Bulk contractor import
+Manage Contractors,Button,Export List,contractors.export,Header,Export Actions,Yes,Yes,No,No,Export contractor data
+Manage Contractors,Button,Edit Contractor,contractors.edit,Table Row,Row Actions,Yes,Yes,No,No,Edit contractor details
+Manage Contractors,Button,View Profile,contractors.view,Table Row,Row Actions,Yes,Yes,Yes,Yes,View contractor profile
+Manage Contractors,Button,Approve,contractors.approve,Table Row,Row Actions,Yes,Yes,No,No,Approve contractor
+Manage Contractors,Button,Suspend,contractors.suspend,Table Row,Row Actions,Yes,Yes,No,No,Suspend contractor access
+Manage Contractors,Button,Delete,contractors.delete,Table Row,Row Actions,Yes,No,No,No,Remove contractor
+Manage Contractors,Status,Approval Status,contractors.view,Table Row,Status Display,Yes,Yes,Yes,Yes,Current approval status
+Manage Contractors,Status,Compliance Status,contractors.compliance,Table Row,Status Display,Yes,Yes,Yes,Yes,Compliance indicator
+Manage Contractors,Filter,Status Filter,contractors.view,Header,Filter Controls,Yes,Yes,Yes,Yes,Filter by status
+Manage Contractors,Filter,Category Filter,contractors.view,Header,Filter Controls,Yes,Yes,Yes,Yes,Filter by contractor type
+Manage Contractors,Search,Contractor Search,contractors.view,Header,Search Controls,Yes,Yes,Yes,Yes,Search contractors
+Contractor Compliance,Page,Compliance Dashboard,contractors.compliance,Main Content,Compliance Management,Yes,Yes,Yes,No,Contractor compliance overview
+Contractor Compliance,Chart,Compliance Trends,contractors.compliance,Dashboard,Compliance Charts,Yes,Yes,Yes,No,Compliance trend analysis
+Contractor Compliance,Table,Compliance Issues,contractors.compliance,Main Content,Issue Display,Yes,Yes,Yes,No,Current compliance issues
+Contractor Compliance,KPICard,Documents Due,contractors.documents,Dashboard,Document Metrics,Yes,Yes,Yes,No,Documents expiring
+Contractor Compliance,KPICard,Training Required,contractors.training,Dashboard,Training Metrics,Yes,Yes,Yes,No,Required training status
+Contractor Compliance,Button,Run Audit,contractors.audit,Header,Audit Actions,Yes,Yes,No,No,Perform compliance audit
+Contractor Compliance,Button,Generate Report,contractors.reports,Header,Report Actions,Yes,Yes,No,No,Generate compliance report
+Contractor Compliance,Button,Send Reminders,contractors.notify,Header,Notification Actions,Yes,Yes,No,No,Send compliance reminders
+Contractor Compliance,Modal,Issue Details,contractors.compliance,Modal,Issue Display,Yes,Yes,Yes,No,Detailed compliance issue view
+Contractor Compliance,Form,Issue Resolution,contractors.resolve,Modal,Resolution Form,Yes,Yes,No,No,Resolve compliance issues
+Add Contractor,Page,New Contractor,contractors.create,Main Content,Contractor Creation,Yes,Yes,No,No,Add new contractor form
+Add Contractor,Form,Basic Information,contractors.create,Main Content,Contractor Form,Yes,Yes,No,No,Contractor basic details
+Add Contractor,Input,Company Name,contractors.create,Form Section,Company Info,Yes,Yes,No,No,Contractor company name
+Add Contractor,Input,Contact Person,contractors.create,Form Section,Contact Info,Yes,Yes,No,No,Primary contact details
+Add Contractor,Input,Phone Number,contractors.create,Form Section,Contact Info,Yes,Yes,No,No,Contact phone number
+Add Contractor,Input,Email Address,contractors.create,Form Section,Contact Info,Yes,Yes,No,No,Contact email address
+Add Contractor,Dropdown,Contractor Type,contractors.create,Form Section,Classification,Yes,Yes,No,No,Type of contractor
+Add Contractor,Dropdown,Risk Level,contractors.create,Form Section,Risk Assessment,Yes,Yes,No,No,Assigned risk level
+Add Contractor,Upload,Insurance Documents,contractors.documents,Form Section,Document Upload,Yes,Yes,No,No,Upload insurance docs
+Add Contractor,Upload,Certificates,contractors.documents,Form Section,Document Upload,Yes,Yes,No,No,Upload certifications
+Add Contractor,Checkbox,Terms Accepted,contractors.create,Form Section,Agreement,Yes,Yes,No,No,Terms and conditions
+Add Contractor,Button,Save Draft,contractors.create,Footer,Save Actions,Yes,Yes,No,No,Save as draft
+Add Contractor,Button,Submit Application,contractors.create,Footer,Submit Actions,Yes,Yes,No,No,Submit for approval
+Add Contractor,Section,Document Checklist,contractors.documents,Form Section,Required Docs,Yes,Yes,No,No,Required document list
+Contractor Profile,Page,Contractor Details,contractors.view,Main Content,Profile Display,Yes,Yes,Yes,Yes,Individual contractor profile
+Contractor Profile,Section,Basic Information,contractors.view,Profile Content,Basic Info,Yes,Yes,Yes,Yes,Contractor basic details
+Contractor Profile,Section,Contact Details,contractors.view,Profile Content,Contact Info,Yes,Yes,Yes,Yes,Contact information
+Contractor Profile,Section,Documents,contractors.documents,Profile Content,Document List,Yes,Yes,Yes,Yes,Uploaded documents
+Contractor Profile,Section,Compliance History,contractors.compliance,Profile Content,Compliance Record,Yes,Yes,Yes,No,Historical compliance data
+Contractor Profile,Section,Work History,contractors.work,Profile Content,Work Record,Yes,Yes,Yes,Yes,Previous work assignments
+Contractor Profile,Button,Edit Details,contractors.edit,Header,Profile Actions,Yes,Yes,No,No,Edit contractor information
+Contractor Profile,Button,Upload Document,contractors.documents,Header,Document Actions,Yes,Yes,No,No,Add new documents
+Contractor Profile,Button,Send Message,contractors.communicate,Header,Communication Actions,Yes,Yes,Yes,No,Contact contractor
+Contractor Profile,Button,Assign Work,contractors.assign,Header,Assignment Actions,Yes,Yes,No,No,Assign work to contractor
+Contractor Profile,Status,Approval Status,contractors.view,Profile Header,Status Display,Yes,Yes,Yes,Yes,Current approval status
+Contractor Profile,Status,Compliance Status,contractors.compliance,Profile Header,Status Display,Yes,Yes,Yes,Yes,Compliance indicator
+Contractor Profile,Table,Document List,contractors.documents,Document Section,Document Display,Yes,Yes,Yes,Yes,List of contractor documents
+Contractor Profile,Button,Download Document,contractors.documents,Document Table,Document Actions,Yes,Yes,Yes,Yes,Download document files
+Contractor Profile,Button,Verify Document,contractors.verify,Document Table,Verification Actions,Yes,Yes,No,No,Verify document authenticity
+Contractor Profile,Status,Document Status,contractors.documents,Document Table,Status Display,Yes,Yes,Yes,Yes,Document verification status
+Permits to Work,Page,Work Permits,permits.view,Main Content,PTW Management,Yes,Yes,Yes,No,Contractor work permits
+Permits to Work,Table,Active Permits,permits.view,Main Content,Permit Display,Yes,Yes,Yes,No,Currently active permits
+Permits to Work,Button,Issue Permit,permits.create,Header,Permit Actions,Yes,Yes,No,No,Create new work permit
+Permits to Work,Button,Renew Permit,permits.renew,Table Row,Permit Actions,Yes,Yes,No,No,Renew existing permit
+Permits to Work,Button,Close Permit,permits.close,Table Row,Permit Actions,Yes,Yes,Yes,No,Close completed permit
+Permits to Work,Status,Permit Status,permits.view,Table Row,Status Display,Yes,Yes,Yes,No,Current permit status
+Permits to Work,Button,View Details,permits.view,Table Row,Permit Actions,Yes,Yes,Yes,No,View permit details
+Contractor Assignment,Modal,Work Assignment,contractors.assign,Modal,Assignment Form,Yes,Yes,No,No,Assign work to contractor
+Contractor Assignment,Dropdown,Project Selection,contractors.assign,Assignment Form,Project Selector,Yes,Yes,No,No,Select project for assignment
+Contractor Assignment,Dropdown,Task Type,contractors.assign,Assignment Form,Task Selector,Yes,Yes,No,No,Type of work to assign
+Contractor Assignment,Input,Start Date,contractors.assign,Assignment Form,Date Selection,Yes,Yes,No,No,Assignment start date
+Contractor Assignment,Input,End Date,contractors.assign,Assignment Form,Date Selection,Yes,Yes,No,No,Assignment end date
+Contractor Assignment,Textarea,Work Description,contractors.assign,Assignment Form,Work Details,Yes,Yes,No,No,Detailed work description
+Contractor Assignment,Button,Assign Work,contractors.assign,Assignment Form,Assignment Actions,Yes,Yes,No,No,Confirm work assignment
+Database Dropdowns,Dropdown,Contractor Status,contractors.status,Form Elements,Status Selector,Yes,Yes,Yes,Yes,Change contractor status
+Database Dropdowns,Dropdown,Risk Level,contractors.risk,Form Elements,Risk Selector,Yes,Yes,No,No,Assign risk classification
+Database Dropdowns,Dropdown,Approval Status,contractors.approve,Form Elements,Approval Selector,Yes,Yes,No,No,Change approval status
+Database Dropdowns,Dropdown,Document Type,contractors.documents,Form Elements,Document Selector,Yes,Yes,No,No,Select document type
+Database Dropdowns,Dropdown,Assignment Status,contractors.assign,Form Elements,Assignment Selector,Yes,Yes,No,No,Work assignment status

@@ -1,0 +1,478 @@
+version: '3.8'
+
+services:
+  # Shared SQL Server Database
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: t100-sql-server
+    environment:
+      SA_PASSWORD: "T100@2024!"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql-data:/var/opt/mssql
+    networks:
+      - t100-network
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P T100@2024! -Q 'SELECT 1' || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+
+  # Frontend (Next.js application)
+  frontend:
+    build: 
+      context: .
+      dockerfile: apps/frontend/Dockerfile
+    container_name: t100-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      NEXT_PUBLIC_API_URL: http://localhost:3001/api
+    # During development, frontend can call services directly or via e-learning gateway. Remove dependency on non-existent api-gateway.
+    depends_on: []
+    networks:
+      - t100-network
+
+  # API Gateway (not yet implemented) - removed to avoid broken reference
+
+  # Authentication Service (Infrastructure) - Not yet implemented
+  # auth-service:
+  #   build: ./apps/services/auth-service
+  #   container_name: t100-auth-service
+  #   environment:
+  #     NODE_ENV: production
+  #     PORT: 3003
+  #     DB_HOST: sql-server
+  #     DB_NAME: V7-Dev
+  #     DB_USER: sa
+  #     DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+  #   ports:
+  #     - "3003:3003"
+  #   depends_on:
+  #     sql-server:
+  #       condition: service_healthy
+  #   networks:
+  #     - t100-network
+
+  # Business Microservices
+  policies-service:
+    build: ./apps/services/policies-service
+    container_name: t100-policies-service
+    environment:
+      NODE_ENV: production
+      PORT: 3010
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+    ports:
+      - "3010:3010"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  checklists-service:
+    build: ./apps/services/checklists-service
+    container_name: t100-checklists-service
+    environment:
+      NODE_ENV: production
+      PORT: 3004
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+      CLAUDE_API_KEY: ${CLAUDE_API_KEY}
+    ports:
+      - "3004:3004"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  contractors-service:
+    build: ./apps/services/contractors-service
+    container_name: t100-contractors-service
+    environment:
+      NODE_ENV: production
+      PORT: 3005
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+    ports:
+      - "3005:3005"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  documents-service:
+    build: ./apps/services/documents-service
+    container_name: t100-documents-service
+    environment:
+      NODE_ENV: production
+      PORT: 3006
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+    ports:
+      - "3006:3006"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  permits-service:
+    build: ./apps/services/permits-service
+    container_name: t100-permits-service
+    environment:
+      NODE_ENV: production
+      PORT: 3007
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+    ports:
+      - "3007:3007"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  sys-admin-service:
+    build: ./apps/services/sys-admin-service
+    container_name: t100-sys-admin-service
+    environment:
+      NODE_ENV: production
+      PORT: 3012
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+    ports:
+      - "3012:3012"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  tasks-service:
+    build: ./apps/services/tasks-service
+    container_name: t100-tasks-service
+    environment:
+      NODE_ENV: production
+      PORT: 3008
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+    ports:
+      - "3008:3008"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  process-system:
+    build: ./apps/services/process-system
+    container_name: t100-process-system
+    environment:
+      NODE_ENV: production
+      PORT: 3009
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+    ports:
+      - "3009:3009"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  risk-web-service:
+    build: ./apps/services/risk-web-service
+    container_name: t100-risk-web-service
+    environment:
+      NODE_ENV: production
+      PORT: 3024
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+    ports:
+      - "3024:3024"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  email-service:
+    build: ./apps/services/email-service
+    container_name: t100-email-service
+    environment:
+      NODE_ENV: production
+      PORT: 3011
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+      EMAIL_PROVIDER: smtp
+      FROM_EMAIL: noreply@t100platform.com
+      LOG_LEVEL: info
+    ports:
+      - "3011:3011"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  assets-service:
+    build: ./apps/services/assets-service
+    container_name: t100-assets-service
+    environment:
+      NODE_ENV: production
+      PORT: 3013
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+      DOCUMENTS_SERVICE_URL: http://documents-service:3006
+    ports:
+      - "3013:3013"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+      documents-service:
+        condition: service_started
+    networks:
+      - t100-network
+
+  incident-manager:
+    build: ./apps/services/incident-manager
+    container_name: t100-incident-manager
+    environment:
+      NODE_ENV: production
+      PORT: 3014
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+    ports:
+      - "3014:3014"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  risk-assessments-service:
+    build: ./apps/services/risk-assessments-service
+    container_name: t100-risk-assessments-service
+    environment:
+      NODE_ENV: production
+      PORT: 3015
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+    ports:
+      - "3015:3015"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  # E-Learning Services
+  elearning-api-gateway:
+    build: ./e-learning/apps/services/api-gateway
+    container_name: t100-elearning-api-gateway
+    environment:
+      NODE_ENV: production
+      PORT: 3016
+      AUTH_SERVICE_URL: http://elearning-auth-service:3017
+      STUDENTS_SERVICE_URL: http://elearning-students-service:3018
+      COURSES_SERVICE_URL: http://elearning-courses-service:3019
+      CONTENT_SERVICE_URL: http://elearning-content-service:3020
+      ASSESSMENT_SERVICE_URL: http://elearning-assessment-service:3021
+      ANALYTICS_SERVICE_URL: http://elearning-analytics-service:3022
+      CERTIFICATES_SERVICE_URL: http://elearning-certificates-service:3023
+    ports:
+      - "3016:3016"
+    depends_on:
+      - elearning-auth-service
+    networks:
+      - t100-network
+
+  elearning-auth-service:
+    build: ./e-learning/apps/services/auth-service
+    container_name: t100-elearning-auth-service
+    environment:
+      NODE_ENV: production
+      PORT: 3017
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+      JWT_SECRET: ${JWT_SECRET:-elearning-secret-key-2024}
+      JWT_EXPIRES_IN: "24h"
+    ports:
+      - "3017:3017"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  elearning-students-service:
+    build: ./e-learning/apps/services/students-service
+    container_name: t100-elearning-students-service
+    environment:
+      NODE_ENV: production
+      PORT: 3018
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+    ports:
+      - "3018:3018"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  elearning-courses-service:
+    build: ./e-learning/apps/services/courses-service
+    container_name: t100-elearning-courses-service
+    environment:
+      NODE_ENV: production
+      PORT: 3019
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+    ports:
+      - "3019:3019"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  elearning-content-service:
+    build: ./e-learning/apps/services/content-service
+    container_name: t100-elearning-content-service
+    environment:
+      NODE_ENV: production
+      PORT: 3020
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+    ports:
+      - "3020:3020"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  elearning-assessment-service:
+    build: ./e-learning/apps/services/assessment-service
+    container_name: t100-elearning-assessment-service
+    environment:
+      NODE_ENV: production
+      PORT: 3021
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+    ports:
+      - "3021:3021"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  elearning-analytics-service:
+    build: ./e-learning/apps/services/analytics-service
+    container_name: t100-elearning-analytics-service
+    environment:
+      NODE_ENV: production
+      PORT: 3022
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+    ports:
+      - "3022:3022"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  elearning-certificates-service:
+    build: ./e-learning/apps/services/certificates-service
+    container_name: t100-elearning-certificates-service
+    environment:
+      NODE_ENV: production
+      PORT: 3023
+      DB_HOST: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+    ports:
+      - "3023:3023"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+  # Dev Engine Service - Permission Management
+  dev-engine-service:
+    build: ./apps/services/dev-engine-service
+    container_name: t100-dev-engine-service
+    environment:
+      NODE_ENV: production
+      PORT: 3025
+      DB_SERVER: sql-server
+      DB_NAME: V7-Dev
+      DB_USER: sa
+      DB_PASSWORD: ${DB_PASSWORD:-T100@2024!}
+    ports:
+      - "3025:3025"
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    networks:
+      - t100-network
+
+volumes:
+  sql-data:
+    driver: local
+
+networks:
+  t100-network:
+    driver: bridge

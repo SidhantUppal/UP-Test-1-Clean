@@ -1,0 +1,47 @@
+// {{ResourceName}} Type Definitions
+// Generated from API Generator
+
+export interface {{ResourceName}} {
+  {{lowercase ResourceName}}ID: number;
+  userAreaID: number;
+  {{#each fields}}
+  {{lowercase name}}{{#unless required}}?{{/unless}}: {{#if (eq type 'string')}}string{{/if}}{{#if (eq type 'number')}}number{{/if}}{{#if (eq type 'boolean')}}boolean{{/if}}{{#if (eq type 'Date')}}Date{{/if}}{{#if (eq type 'text')}}string{{/if}};
+  {{/each}}
+  createdByUserID: number;
+  createdDate: Date;
+  ModifiedByUserID?: number;
+  ModifiedDate?: Date;
+  archivedByUserID?: number;
+  archivedDate?: Date;
+}
+
+export interface Create{{ResourceName}}DTO {
+  {{#each fields}}
+  {{lowercase name}}{{#unless required}}?{{/unless}}: {{#if (eq type 'string')}}string{{/if}}{{#if (eq type 'number')}}number{{/if}}{{#if (eq type 'boolean')}}boolean{{/if}}{{#if (eq type 'Date')}}Date | string{{/if}}{{#if (eq type 'text')}}string{{/if}};
+  {{/each}}
+}
+
+export interface Update{{ResourceName}}DTO {
+  {{#each fields}}
+  {{lowercase name}}?: {{#if (eq type 'string')}}string{{/if}}{{#if (eq type 'number')}}number{{/if}}{{#if (eq type 'boolean')}}boolean{{/if}}{{#if (eq type 'Date')}}Date | string{{/if}}{{#if (eq type 'text')}}string{{/if}};
+  {{/each}}
+}
+
+export interface {{ResourceName}}ListParams {
+  page?: number;
+  limit?: number;
+  search?: string;
+  sortBy?: keyof {{ResourceName}};
+  sortOrder?: 'ASC' | 'DESC';
+}
+
+export interface {{ResourceName}}ListResponse {
+  success: boolean;
+  data: {{ResourceName}}[];
+  pagination: {
+    total: number;
+    page: number;
+    limit: number;
+    totalPages: number;
+  };
+}

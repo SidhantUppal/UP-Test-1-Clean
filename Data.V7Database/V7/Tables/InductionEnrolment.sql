@@ -1,0 +1,25 @@
+﻿CREATE TABLE [V7].[InductionEnrolment] (
+    [InductionEnrolmentID]  INT            IDENTITY (1, 1) NOT NULL,
+    [InductionAllocationID] INT            NOT NULL,
+    [InductionBundleItemID] INT            NOT NULL,
+    [UserAreaID]            INT            NOT NULL,
+    [IsPassed]              BIT            NULL,
+    [StartDate]             DATETIMEOFFSET (7) NULL,
+    [CompletedDate]         DATETIMEOFFSET (7) NULL,
+    [CompletedByFullName]   NVARCHAR (100) NULL,
+    [CompletedBySignature]  NVARCHAR (MAX) NULL,
+    [CreatedByUserID]       INT            NOT NULL,
+    [CreatedDate]           DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]  INT            NULL,
+    [ModifiedDate]      DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]      INT            NULL,
+    [ArchivedDate]          DATETIMEOFFSET (7) NULL,
+    PRIMARY KEY CLUSTERED ([InductionEnrolmentID] ASC),
+    CONSTRAINT [FK_InductionAllocation_InductionAllocation] FOREIGN KEY ([InductionAllocationID]) REFERENCES [V7].[InductionAllocation] ([InductionAllocationID]),
+    CONSTRAINT [FK_InductionEnrolment_ArchivedBy] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_InductionEnrolment_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_InductionEnrolment_InductionBundleItem] FOREIGN KEY ([InductionBundleItemID]) REFERENCES [V7].[InductionBundleItem] ([InductionBundleItemID]),
+    CONSTRAINT [FK_InductionEnrolment_ModifiedBy] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_InductionEnrolment_UserArea] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+

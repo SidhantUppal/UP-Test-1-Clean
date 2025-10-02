@@ -1,0 +1,5220 @@
+{
+  "timestamp": "2025-07-04T15:00:29.451Z",
+  "connection": "Azure SQL (Original)",
+  "tables": [
+    {
+      "SchemaName": "V7",
+      "TableName": "AnswerType",
+      "object_id": 1781581385
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "Attachment",
+      "object_id": 1749581271
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "AttachmentUserArea",
+      "object_id": 1589580701,
+      "columns": [
+        {
+          "ColumnName": "AttachmentUserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "AttachmentID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "UserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "AuditLog",
+      "object_id": 2005582183
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "CategoryType",
+      "object_id": 1717581157
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "ChecklistTemplate",
+      "object_id": 306100131
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "ChecklistTemplateAssignment",
+      "object_id": 338100245
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "ChecklistTemplateCategory",
+      "object_id": 2037582297
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "ChecklistTemplateEnrolment",
+      "object_id": 1557580587
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "Employee",
+      "object_id": 2069582411
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "FrequencyType",
+      "object_id": 1941581955
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "Location",
+      "object_id": 242099903
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "LocationEmployee",
+      "object_id": 50099219
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "OrgGroup",
+      "object_id": 1909581841
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "OrgGroupEmployee",
+      "object_id": 1669580986
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "SystemPermission",
+      "object_id": 814625945,
+      "columns": [
+        {
+          "ColumnName": "PermissionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "Name",
+          "DataType": "nvarchar",
+          "max_length": 200,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "DisplayName",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Layer",
+          "DataType": "nvarchar",
+          "max_length": 40,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Module",
+          "DataType": "nvarchar",
+          "max_length": 100,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Description",
+          "DataType": "nvarchar",
+          "max_length": 1000,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "SystemRole",
+      "object_id": 862626116,
+      "columns": [
+        {
+          "ColumnName": "RoleID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "Name",
+          "DataType": "nvarchar",
+          "max_length": 200,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "DisplayName",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Category",
+          "DataType": "nvarchar",
+          "max_length": 100,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsSystemRole",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "SystemRolePermission",
+      "object_id": 926626344,
+      "columns": [
+        {
+          "ColumnName": "SystemRoleID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "PermissionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "Task",
+      "object_id": 178099675
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "TaskAssignment",
+      "object_id": 1637580872
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "TaskSchedule",
+      "object_id": 1813581499
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "TaskScheduleAssignment",
+      "object_id": 1877581727
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "TaskType",
+      "object_id": 146099561
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "TaskTypeUserArea",
+      "object_id": 98099390,
+      "columns": [
+        {
+          "ColumnName": "TaskTypeUserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "TaskTypeID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "UserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "Tenant",
+      "object_id": 750625717
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "TenantRole",
+      "object_id": 974626515,
+      "columns": [
+        {
+          "ColumnName": "TenantRoleID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "TenantID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Name",
+          "DataType": "nvarchar",
+          "max_length": 200,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "DisplayName",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ParentSystemRoleID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsCustomRole",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "TenantRolePermission",
+      "object_id": 1070626857,
+      "columns": [
+        {
+          "ColumnName": "TenantRolePermissionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "TenantID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "PermissionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsGranted",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "ThemeType",
+      "object_id": 2133582639
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "User",
+      "object_id": 1845581613,
+      "columns": [
+        {
+          "ColumnName": "UserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "GUID",
+          "DataType": "uniqueidentifier",
+          "max_length": 16,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "MasterUserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "FullName",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Email",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsMobileAppUser",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "HasReadDisclaimer",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsLocked",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "LockedMessage",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "LastLoginDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "AzureADObjectId",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": [
+        {
+          "UserID": 1,
+          "GUID": "1DA1BB51-4880-449B-848A-D1CF3A4AFFE7",
+          "MasterUserAreaID": 1,
+          "FullName": "Admin User",
+          "Email": null,
+          "IsMobileAppUser": true,
+          "HasReadDisclaimer": false,
+          "IsLocked": false,
+          "LockedMessage": null,
+          "LastLoginDate": null,
+          "CreatedByUserID": 1,
+          "CreatedDate": "2025-06-26T11:50:23.249Z",
+          "ModifiedByUserID": null,
+          "ModifiedDate": null,
+          "ArchivedByUserID": null,
+          "ArchivedDate": null,
+          "AzureADObjectId": null
+        }
+      ]
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "UserArea",
+      "object_id": 402100473,
+      "columns": [
+        {
+          "ColumnName": "UserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "ThemeTypeID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "GUID",
+          "DataType": "uniqueidentifier",
+          "max_length": 16,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Title",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Description",
+          "DataType": "nvarchar",
+          "max_length": -1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Prefix",
+          "DataType": "nvarchar",
+          "max_length": 20,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsDemo",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ExpiryDate",
+          "DataType": "date",
+          "max_length": 3,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "BaseURL",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "SSOLoginURL",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "MobileIdentityAPIInstanceID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "UploadedFileMBLimit",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": [
+        {
+          "UserAreaID": 1,
+          "ThemeTypeID": 1,
+          "GUID": "C6728746-D9CF-4727-99D8-47B59E3E8D25",
+          "Title": "Demo Area",
+          "Description": null,
+          "Prefix": null,
+          "IsDemo": false,
+          "ExpiryDate": null,
+          "BaseURL": null,
+          "SSOLoginURL": null,
+          "MobileIdentityAPIInstanceID": null,
+          "UploadedFileMBLimit": null,
+          "CreatedByUserID": 1,
+          "CreatedDate": "2025-06-26T11:59:57.297Z",
+          "ModifiedByUserID": null,
+          "ModifiedDate": null,
+          "ArchivedByUserID": null,
+          "ArchivedDate": null
+        }
+      ]
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "UserAreaContractor",
+      "object_id": 274100017,
+      "columns": [
+        {
+          "ColumnName": "UserAreaContractorID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "UserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ContractorUserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsActive",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "UserAreaForm",
+      "object_id": 210099789,
+      "columns": [
+        {
+          "ColumnName": "UserAreaFormID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "OriginalUserAreaFormID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Version",
+          "DataType": "tinyint",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Status",
+          "DataType": "nvarchar",
+          "max_length": 40,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "UserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Reference",
+          "DataType": "nvarchar",
+          "max_length": 100,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Title",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Description",
+          "DataType": "nvarchar",
+          "max_length": -1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsEnabledForWeb",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsEnabledForApp",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "UserAreaFormQuestion",
+      "object_id": 370100359,
+      "columns": [
+        {
+          "ColumnName": "UserAreaFormQuestionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "OriginalUserAreaFormQuestionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "UserAreaFormSectionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "AnswerTypeID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Title",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Description",
+          "DataType": "nvarchar",
+          "max_length": -1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ConfigData",
+          "DataType": "nvarchar",
+          "max_length": -1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ParentIDAnswerValues",
+          "DataType": "nvarchar",
+          "max_length": -1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "AnswerTypeOptionsTable",
+          "DataType": "nvarchar",
+          "max_length": 100,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "AnswerTypeOptionsList",
+          "DataType": "nvarchar",
+          "max_length": -1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "OrderNum",
+          "DataType": "tinyint",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Weighting",
+          "DataType": "tinyint",
+          "max_length": 1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "MaxScore",
+          "DataType": "tinyint",
+          "max_length": 1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsMandatory",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "UserAreaFormQuestionAnswer",
+      "object_id": 2101582525,
+      "columns": [
+        {
+          "ColumnName": "UserAreaFormQuestionAnswerID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "OriginalUserAreaFormQuestionAnswerID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "UserAreaFormQuestionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "AnswerText",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "OrderNum",
+          "DataType": "tinyint",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Weighting",
+          "DataType": "tinyint",
+          "max_length": 1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ScoreValue",
+          "DataType": "tinyint",
+          "max_length": 1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "JumpToOriginalUserAreaFormSectionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ConfigData",
+          "DataType": "nvarchar",
+          "max_length": -1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "UserAreaFormResponse",
+      "object_id": 1973582069,
+      "columns": [
+        {
+          "ColumnName": "UserAreaFormResponseID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "OriginalUserAreaFormResponseID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Version",
+          "DataType": "tinyint",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Status",
+          "DataType": "nvarchar",
+          "max_length": 40,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "UserAreaFormID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "UserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "EmployeeID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "LocationID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "OrgGroupID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Reference",
+          "DataType": "nvarchar",
+          "max_length": 200,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "QuestionResponseData",
+          "DataType": "nvarchar",
+          "max_length": -1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "AttachmentIDList",
+          "DataType": "nvarchar",
+          "max_length": 2000,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "TaskIDList",
+          "DataType": "nvarchar",
+          "max_length": 2000,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "SubmissionDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "UserAreaFormSection",
+      "object_id": 18099105,
+      "columns": [
+        {
+          "ColumnName": "UserAreaFormSectionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "OriginalUserAreaFormSectionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "UserAreaFormID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Reference",
+          "DataType": "nvarchar",
+          "max_length": 100,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Title",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "HelpText",
+          "DataType": "nvarchar",
+          "max_length": 2000,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "OrderNum",
+          "DataType": "tinyint",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "UserTenant",
+      "object_id": 1150627142,
+      "columns": [
+        {
+          "ColumnName": "UserTenantID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "UserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "TenantID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Status",
+          "DataType": "nvarchar",
+          "max_length": 40,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "UserTenantRole",
+      "object_id": 1230627427,
+      "columns": [
+        {
+          "ColumnName": "UserTenantRoleID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "UserTenantID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "TenantRoleID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "AssignedAt",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    }
+  ],
+  "permissionTables": [
+    {
+      "SchemaName": "V7",
+      "TableName": "AttachmentUserArea",
+      "object_id": 1589580701,
+      "columns": [
+        {
+          "ColumnName": "AttachmentUserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "AttachmentID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "UserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "SystemPermission",
+      "object_id": 814625945,
+      "columns": [
+        {
+          "ColumnName": "PermissionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "Name",
+          "DataType": "nvarchar",
+          "max_length": 200,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "DisplayName",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Layer",
+          "DataType": "nvarchar",
+          "max_length": 40,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Module",
+          "DataType": "nvarchar",
+          "max_length": 100,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Description",
+          "DataType": "nvarchar",
+          "max_length": 1000,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "SystemRole",
+      "object_id": 862626116,
+      "columns": [
+        {
+          "ColumnName": "RoleID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "Name",
+          "DataType": "nvarchar",
+          "max_length": 200,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "DisplayName",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Category",
+          "DataType": "nvarchar",
+          "max_length": 100,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsSystemRole",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "SystemRolePermission",
+      "object_id": 926626344,
+      "columns": [
+        {
+          "ColumnName": "SystemRoleID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "PermissionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "TaskTypeUserArea",
+      "object_id": 98099390,
+      "columns": [
+        {
+          "ColumnName": "TaskTypeUserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "TaskTypeID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "UserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "TenantRole",
+      "object_id": 974626515,
+      "columns": [
+        {
+          "ColumnName": "TenantRoleID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "TenantID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Name",
+          "DataType": "nvarchar",
+          "max_length": 200,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "DisplayName",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ParentSystemRoleID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsCustomRole",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "TenantRolePermission",
+      "object_id": 1070626857,
+      "columns": [
+        {
+          "ColumnName": "TenantRolePermissionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "TenantID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "PermissionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsGranted",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "User",
+      "object_id": 1845581613,
+      "columns": [
+        {
+          "ColumnName": "UserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "GUID",
+          "DataType": "uniqueidentifier",
+          "max_length": 16,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "MasterUserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "FullName",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Email",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsMobileAppUser",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "HasReadDisclaimer",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsLocked",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "LockedMessage",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "LastLoginDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "AzureADObjectId",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": [
+        {
+          "UserID": 1,
+          "GUID": "1DA1BB51-4880-449B-848A-D1CF3A4AFFE7",
+          "MasterUserAreaID": 1,
+          "FullName": "Admin User",
+          "Email": null,
+          "IsMobileAppUser": true,
+          "HasReadDisclaimer": false,
+          "IsLocked": false,
+          "LockedMessage": null,
+          "LastLoginDate": null,
+          "CreatedByUserID": 1,
+          "CreatedDate": "2025-06-26T11:50:23.249Z",
+          "ModifiedByUserID": null,
+          "ModifiedDate": null,
+          "ArchivedByUserID": null,
+          "ArchivedDate": null,
+          "AzureADObjectId": null
+        }
+      ]
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "UserArea",
+      "object_id": 402100473,
+      "columns": [
+        {
+          "ColumnName": "UserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "ThemeTypeID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "GUID",
+          "DataType": "uniqueidentifier",
+          "max_length": 16,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Title",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Description",
+          "DataType": "nvarchar",
+          "max_length": -1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Prefix",
+          "DataType": "nvarchar",
+          "max_length": 20,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsDemo",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ExpiryDate",
+          "DataType": "date",
+          "max_length": 3,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "BaseURL",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "SSOLoginURL",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "MobileIdentityAPIInstanceID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "UploadedFileMBLimit",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": [
+        {
+          "UserAreaID": 1,
+          "ThemeTypeID": 1,
+          "GUID": "C6728746-D9CF-4727-99D8-47B59E3E8D25",
+          "Title": "Demo Area",
+          "Description": null,
+          "Prefix": null,
+          "IsDemo": false,
+          "ExpiryDate": null,
+          "BaseURL": null,
+          "SSOLoginURL": null,
+          "MobileIdentityAPIInstanceID": null,
+          "UploadedFileMBLimit": null,
+          "CreatedByUserID": 1,
+          "CreatedDate": "2025-06-26T11:59:57.297Z",
+          "ModifiedByUserID": null,
+          "ModifiedDate": null,
+          "ArchivedByUserID": null,
+          "ArchivedDate": null
+        }
+      ]
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "UserAreaContractor",
+      "object_id": 274100017,
+      "columns": [
+        {
+          "ColumnName": "UserAreaContractorID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "UserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ContractorUserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsActive",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "UserAreaForm",
+      "object_id": 210099789,
+      "columns": [
+        {
+          "ColumnName": "UserAreaFormID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "OriginalUserAreaFormID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Version",
+          "DataType": "tinyint",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Status",
+          "DataType": "nvarchar",
+          "max_length": 40,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "UserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Reference",
+          "DataType": "nvarchar",
+          "max_length": 100,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Title",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Description",
+          "DataType": "nvarchar",
+          "max_length": -1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsEnabledForWeb",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsEnabledForApp",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "UserAreaFormQuestion",
+      "object_id": 370100359,
+      "columns": [
+        {
+          "ColumnName": "UserAreaFormQuestionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "OriginalUserAreaFormQuestionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "UserAreaFormSectionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "AnswerTypeID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Title",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Description",
+          "DataType": "nvarchar",
+          "max_length": -1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ConfigData",
+          "DataType": "nvarchar",
+          "max_length": -1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ParentIDAnswerValues",
+          "DataType": "nvarchar",
+          "max_length": -1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "AnswerTypeOptionsTable",
+          "DataType": "nvarchar",
+          "max_length": 100,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "AnswerTypeOptionsList",
+          "DataType": "nvarchar",
+          "max_length": -1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "OrderNum",
+          "DataType": "tinyint",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Weighting",
+          "DataType": "tinyint",
+          "max_length": 1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "MaxScore",
+          "DataType": "tinyint",
+          "max_length": 1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "IsMandatory",
+          "DataType": "bit",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "UserAreaFormQuestionAnswer",
+      "object_id": 2101582525,
+      "columns": [
+        {
+          "ColumnName": "UserAreaFormQuestionAnswerID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "OriginalUserAreaFormQuestionAnswerID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "UserAreaFormQuestionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "AnswerText",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "OrderNum",
+          "DataType": "tinyint",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Weighting",
+          "DataType": "tinyint",
+          "max_length": 1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ScoreValue",
+          "DataType": "tinyint",
+          "max_length": 1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "JumpToOriginalUserAreaFormSectionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ConfigData",
+          "DataType": "nvarchar",
+          "max_length": -1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "UserAreaFormResponse",
+      "object_id": 1973582069,
+      "columns": [
+        {
+          "ColumnName": "UserAreaFormResponseID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "OriginalUserAreaFormResponseID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Version",
+          "DataType": "tinyint",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Status",
+          "DataType": "nvarchar",
+          "max_length": 40,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "UserAreaFormID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "UserAreaID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "EmployeeID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "LocationID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "OrgGroupID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Reference",
+          "DataType": "nvarchar",
+          "max_length": 200,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "QuestionResponseData",
+          "DataType": "nvarchar",
+          "max_length": -1,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "AttachmentIDList",
+          "DataType": "nvarchar",
+          "max_length": 2000,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "TaskIDList",
+          "DataType": "nvarchar",
+          "max_length": 2000,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "SubmissionDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "UserAreaFormSection",
+      "object_id": 18099105,
+      "columns": [
+        {
+          "ColumnName": "UserAreaFormSectionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "OriginalUserAreaFormSectionID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "UserAreaFormID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Reference",
+          "DataType": "nvarchar",
+          "max_length": 100,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Title",
+          "DataType": "nvarchar",
+          "max_length": 510,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "HelpText",
+          "DataType": "nvarchar",
+          "max_length": 2000,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "OrderNum",
+          "DataType": "tinyint",
+          "max_length": 1,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "CreatedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ModifiedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedByUserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "ArchivedDate",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "UserTenant",
+      "object_id": 1150627142,
+      "columns": [
+        {
+          "ColumnName": "UserTenantID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "UserID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "TenantID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "Status",
+          "DataType": "nvarchar",
+          "max_length": 40,
+          "is_nullable": true,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    },
+    {
+      "SchemaName": "V7",
+      "TableName": "UserTenantRole",
+      "object_id": 1230627427,
+      "columns": [
+        {
+          "ColumnName": "UserTenantRoleID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": true,
+          "IsPrimaryKey": 1
+        },
+        {
+          "ColumnName": "UserTenantID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "TenantRoleID",
+          "DataType": "int",
+          "max_length": 4,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        },
+        {
+          "ColumnName": "AssignedAt",
+          "DataType": "datetimeoffset",
+          "max_length": 10,
+          "is_nullable": false,
+          "is_identity": false,
+          "IsPrimaryKey": 0
+        }
+      ],
+      "sampleData": []
+    }
+  ],
+  "allColumns": [
+    {
+      "ColumnName": "AttachmentUserAreaID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": true,
+      "IsPrimaryKey": 1
+    },
+    {
+      "ColumnName": "AttachmentID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UserAreaID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "PermissionID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": true,
+      "IsPrimaryKey": 1
+    },
+    {
+      "ColumnName": "Name",
+      "DataType": "nvarchar",
+      "max_length": 200,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "DisplayName",
+      "DataType": "nvarchar",
+      "max_length": 510,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Layer",
+      "DataType": "nvarchar",
+      "max_length": 40,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Module",
+      "DataType": "nvarchar",
+      "max_length": 100,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Description",
+      "DataType": "nvarchar",
+      "max_length": 1000,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "RoleID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": true,
+      "IsPrimaryKey": 1
+    },
+    {
+      "ColumnName": "Name",
+      "DataType": "nvarchar",
+      "max_length": 200,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "DisplayName",
+      "DataType": "nvarchar",
+      "max_length": 510,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Category",
+      "DataType": "nvarchar",
+      "max_length": 100,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "IsSystemRole",
+      "DataType": "bit",
+      "max_length": 1,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "SystemRoleID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": true,
+      "IsPrimaryKey": 1
+    },
+    {
+      "ColumnName": "PermissionID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "TaskTypeUserAreaID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": true,
+      "IsPrimaryKey": 1
+    },
+    {
+      "ColumnName": "TaskTypeID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UserAreaID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "TenantRoleID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": true,
+      "IsPrimaryKey": 1
+    },
+    {
+      "ColumnName": "TenantID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Name",
+      "DataType": "nvarchar",
+      "max_length": 200,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "DisplayName",
+      "DataType": "nvarchar",
+      "max_length": 510,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ParentSystemRoleID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "IsCustomRole",
+      "DataType": "bit",
+      "max_length": 1,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "TenantRolePermissionID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": true,
+      "IsPrimaryKey": 1
+    },
+    {
+      "ColumnName": "TenantID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "PermissionID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "IsGranted",
+      "DataType": "bit",
+      "max_length": 1,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": true,
+      "IsPrimaryKey": 1
+    },
+    {
+      "ColumnName": "GUID",
+      "DataType": "uniqueidentifier",
+      "max_length": 16,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "MasterUserAreaID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "FullName",
+      "DataType": "nvarchar",
+      "max_length": 510,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Email",
+      "DataType": "nvarchar",
+      "max_length": 510,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "IsMobileAppUser",
+      "DataType": "bit",
+      "max_length": 1,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "HasReadDisclaimer",
+      "DataType": "bit",
+      "max_length": 1,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "IsLocked",
+      "DataType": "bit",
+      "max_length": 1,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "LockedMessage",
+      "DataType": "nvarchar",
+      "max_length": 510,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "LastLoginDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "CreatedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "CreatedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ModifiedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ModifiedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ArchivedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ArchivedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "AzureADObjectId",
+      "DataType": "nvarchar",
+      "max_length": 510,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UserAreaID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": true,
+      "IsPrimaryKey": 1
+    },
+    {
+      "ColumnName": "ThemeTypeID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "GUID",
+      "DataType": "uniqueidentifier",
+      "max_length": 16,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Title",
+      "DataType": "nvarchar",
+      "max_length": 510,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Description",
+      "DataType": "nvarchar",
+      "max_length": -1,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Prefix",
+      "DataType": "nvarchar",
+      "max_length": 20,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "IsDemo",
+      "DataType": "bit",
+      "max_length": 1,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ExpiryDate",
+      "DataType": "date",
+      "max_length": 3,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "BaseURL",
+      "DataType": "nvarchar",
+      "max_length": 510,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "SSOLoginURL",
+      "DataType": "nvarchar",
+      "max_length": 510,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "MobileIdentityAPIInstanceID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UploadedFileMBLimit",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "CreatedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "CreatedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ModifiedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ModifiedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ArchivedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ArchivedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UserAreaContractorID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": true,
+      "IsPrimaryKey": 1
+    },
+    {
+      "ColumnName": "UserAreaID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ContractorUserAreaID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "IsActive",
+      "DataType": "bit",
+      "max_length": 1,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "CreatedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "CreatedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ModifiedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ModifiedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ArchivedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ArchivedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UserAreaFormID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": true,
+      "IsPrimaryKey": 1
+    },
+    {
+      "ColumnName": "OriginalUserAreaFormID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Version",
+      "DataType": "tinyint",
+      "max_length": 1,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Status",
+      "DataType": "nvarchar",
+      "max_length": 40,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UserAreaID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Reference",
+      "DataType": "nvarchar",
+      "max_length": 100,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Title",
+      "DataType": "nvarchar",
+      "max_length": 510,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Description",
+      "DataType": "nvarchar",
+      "max_length": -1,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "IsEnabledForWeb",
+      "DataType": "bit",
+      "max_length": 1,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "IsEnabledForApp",
+      "DataType": "bit",
+      "max_length": 1,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "CreatedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "CreatedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ModifiedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ModifiedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ArchivedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ArchivedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UserAreaFormQuestionID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": true,
+      "IsPrimaryKey": 1
+    },
+    {
+      "ColumnName": "OriginalUserAreaFormQuestionID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UserAreaFormSectionID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "AnswerTypeID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Title",
+      "DataType": "nvarchar",
+      "max_length": 510,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Description",
+      "DataType": "nvarchar",
+      "max_length": -1,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ConfigData",
+      "DataType": "nvarchar",
+      "max_length": -1,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ParentIDAnswerValues",
+      "DataType": "nvarchar",
+      "max_length": -1,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "AnswerTypeOptionsTable",
+      "DataType": "nvarchar",
+      "max_length": 100,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "AnswerTypeOptionsList",
+      "DataType": "nvarchar",
+      "max_length": -1,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "OrderNum",
+      "DataType": "tinyint",
+      "max_length": 1,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Weighting",
+      "DataType": "tinyint",
+      "max_length": 1,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "MaxScore",
+      "DataType": "tinyint",
+      "max_length": 1,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "IsMandatory",
+      "DataType": "bit",
+      "max_length": 1,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "CreatedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "CreatedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ModifiedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ModifiedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ArchivedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ArchivedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UserAreaFormQuestionAnswerID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": true,
+      "IsPrimaryKey": 1
+    },
+    {
+      "ColumnName": "OriginalUserAreaFormQuestionAnswerID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UserAreaFormQuestionID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "AnswerText",
+      "DataType": "nvarchar",
+      "max_length": 510,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "OrderNum",
+      "DataType": "tinyint",
+      "max_length": 1,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Weighting",
+      "DataType": "tinyint",
+      "max_length": 1,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ScoreValue",
+      "DataType": "tinyint",
+      "max_length": 1,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "JumpToOriginalUserAreaFormSectionID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ConfigData",
+      "DataType": "nvarchar",
+      "max_length": -1,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "CreatedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "CreatedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ModifiedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ModifiedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ArchivedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ArchivedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UserAreaFormResponseID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": true,
+      "IsPrimaryKey": 1
+    },
+    {
+      "ColumnName": "OriginalUserAreaFormResponseID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Version",
+      "DataType": "tinyint",
+      "max_length": 1,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Status",
+      "DataType": "nvarchar",
+      "max_length": 40,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UserAreaFormID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UserAreaID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "EmployeeID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "LocationID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "OrgGroupID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Reference",
+      "DataType": "nvarchar",
+      "max_length": 200,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "QuestionResponseData",
+      "DataType": "nvarchar",
+      "max_length": -1,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "AttachmentIDList",
+      "DataType": "nvarchar",
+      "max_length": 2000,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "TaskIDList",
+      "DataType": "nvarchar",
+      "max_length": 2000,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "SubmissionDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "CreatedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "CreatedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ModifiedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ModifiedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ArchivedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ArchivedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UserAreaFormSectionID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": true,
+      "IsPrimaryKey": 1
+    },
+    {
+      "ColumnName": "OriginalUserAreaFormSectionID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UserAreaFormID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Reference",
+      "DataType": "nvarchar",
+      "max_length": 100,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Title",
+      "DataType": "nvarchar",
+      "max_length": 510,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "HelpText",
+      "DataType": "nvarchar",
+      "max_length": 2000,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "OrderNum",
+      "DataType": "tinyint",
+      "max_length": 1,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "CreatedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "CreatedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ModifiedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ModifiedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ArchivedByUserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "ArchivedDate",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UserTenantID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": true,
+      "IsPrimaryKey": 1
+    },
+    {
+      "ColumnName": "UserID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "TenantID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "Status",
+      "DataType": "nvarchar",
+      "max_length": 40,
+      "is_nullable": true,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "UserTenantRoleID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": true,
+      "IsPrimaryKey": 1
+    },
+    {
+      "ColumnName": "UserTenantID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "TenantRoleID",
+      "DataType": "int",
+      "max_length": 4,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    },
+    {
+      "ColumnName": "AssignedAt",
+      "DataType": "datetimeoffset",
+      "max_length": 10,
+      "is_nullable": false,
+      "is_identity": false,
+      "IsPrimaryKey": 0
+    }
+  ],
+  "foreignKeys": [
+    {
+      "ForeignKeyName": "FK_Attachment_ArchivedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "Attachment",
+      "ParentColumn": "ArchivedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_Attachment_CreatedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "Attachment",
+      "ParentColumn": "CreatedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_Attachment_ModifiedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "Attachment",
+      "ParentColumn": "ModifiedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_AttachmentUserArea_Attachment",
+      "ParentSchema": "V7",
+      "ParentTable": "AttachmentUserArea",
+      "ParentColumn": "AttachmentID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "Attachment",
+      "ReferencedColumn": "AttachmentID"
+    },
+    {
+      "ForeignKeyName": "FK_AttachmentUserArea_UserArea",
+      "ParentSchema": "V7",
+      "ParentTable": "AttachmentUserArea",
+      "ParentColumn": "UserAreaID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserArea",
+      "ReferencedColumn": "UserAreaID"
+    },
+    {
+      "ForeignKeyName": "FK_AuditLog_User",
+      "ParentSchema": "V7",
+      "ParentTable": "AuditLog",
+      "ParentColumn": "UserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_AuditLog_UserArea",
+      "ParentSchema": "V7",
+      "ParentTable": "AuditLog",
+      "ParentColumn": "UserAreaID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserArea",
+      "ReferencedColumn": "UserAreaID"
+    },
+    {
+      "ForeignKeyName": "FK_ChecklistTemplate_ArchivedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "ChecklistTemplate",
+      "ParentColumn": "ArchivedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_ChecklistTemplate_CreatedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "ChecklistTemplate",
+      "ParentColumn": "CreatedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_ChecklistTemplate_ModifiedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "ChecklistTemplate",
+      "ParentColumn": "ModifiedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_ChecklistTemplate_OriginalUserAreaForm",
+      "ParentSchema": "V7",
+      "ParentTable": "ChecklistTemplate",
+      "ParentColumn": "OriginalUserAreaFormID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserAreaForm",
+      "ReferencedColumn": "UserAreaFormID"
+    },
+    {
+      "ForeignKeyName": "FK_ChecklistTemplate_UserArea",
+      "ParentSchema": "V7",
+      "ParentTable": "ChecklistTemplate",
+      "ParentColumn": "UserAreaID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserArea",
+      "ReferencedColumn": "UserAreaID"
+    },
+    {
+      "ForeignKeyName": "FK_ChecklistTemplateAssignment_AssignedUserArea",
+      "ParentSchema": "V7",
+      "ParentTable": "ChecklistTemplateAssignment",
+      "ParentColumn": "AssignedUserAreaID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserArea",
+      "ReferencedColumn": "UserAreaID"
+    },
+    {
+      "ForeignKeyName": "FK_ChecklistTemplateAssignment_IssuingUserArea",
+      "ParentSchema": "V7",
+      "ParentTable": "ChecklistTemplateAssignment",
+      "ParentColumn": "IssuingUserAreaID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserArea",
+      "ReferencedColumn": "UserAreaID"
+    },
+    {
+      "ForeignKeyName": "FK_ChecklistTemplateEnrolment_OriginalUserAreaFormResponse",
+      "ParentSchema": "V7",
+      "ParentTable": "ChecklistTemplateEnrolment",
+      "ParentColumn": "OriginalUserAreaFormResponseID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserAreaFormResponse",
+      "ReferencedColumn": "UserAreaFormResponseID"
+    },
+    {
+      "ForeignKeyName": "FK_Employee_ArchivedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "Employee",
+      "ParentColumn": "ArchivedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_Employee_CreatedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "Employee",
+      "ParentColumn": "CreatedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_Employee_ModifiedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "Employee",
+      "ParentColumn": "ModifiedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_Employee_User",
+      "ParentSchema": "V7",
+      "ParentTable": "Employee",
+      "ParentColumn": "UserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_Employee_UserArea",
+      "ParentSchema": "V7",
+      "ParentTable": "Employee",
+      "ParentColumn": "UserAreaID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserArea",
+      "ReferencedColumn": "UserAreaID"
+    },
+    {
+      "ForeignKeyName": "FK_Location_ArchivedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "Location",
+      "ParentColumn": "ArchivedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_Location_CreatedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "Location",
+      "ParentColumn": "CreatedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_Location_ModifiedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "Location",
+      "ParentColumn": "ModifiedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_Location_UserArea",
+      "ParentSchema": "V7",
+      "ParentTable": "Location",
+      "ParentColumn": "UserAreaID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserArea",
+      "ReferencedColumn": "UserAreaID"
+    },
+    {
+      "ForeignKeyName": "FK_OrgGroup_ArchivedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "OrgGroup",
+      "ParentColumn": "ArchivedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_OrgGroup_CreatedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "OrgGroup",
+      "ParentColumn": "CreatedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_OrgGroup_ModifiedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "OrgGroup",
+      "ParentColumn": "ModifiedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_OrgGroup_UserArea",
+      "ParentSchema": "V7",
+      "ParentTable": "OrgGroup",
+      "ParentColumn": "UserAreaID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserArea",
+      "ReferencedColumn": "UserAreaID"
+    },
+    {
+      "ForeignKeyName": "FK_SystemRolePermission_SystemPermission",
+      "ParentSchema": "V7",
+      "ParentTable": "SystemRolePermission",
+      "ParentColumn": "PermissionID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "SystemPermission",
+      "ReferencedColumn": "PermissionID"
+    },
+    {
+      "ForeignKeyName": "FK_Task_ArchivedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "Task",
+      "ParentColumn": "ArchivedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_Task_CreatedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "Task",
+      "ParentColumn": "CreatedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_Task_ModifiedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "Task",
+      "ParentColumn": "ModifiedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_Task_UserArea",
+      "ParentSchema": "V7",
+      "ParentTable": "Task",
+      "ParentColumn": "UserAreaID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserArea",
+      "ReferencedColumn": "UserAreaID"
+    },
+    {
+      "ForeignKeyName": "FK_TaskSchedule_ArchivedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "TaskSchedule",
+      "ParentColumn": "ArchivedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_TaskSchedule_CreatedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "TaskSchedule",
+      "ParentColumn": "CreatedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_TaskSchedule_ModifiedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "TaskSchedule",
+      "ParentColumn": "ModifiedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_TaskSchedule_UserArea",
+      "ParentSchema": "V7",
+      "ParentTable": "TaskSchedule",
+      "ParentColumn": "UserAreaID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserArea",
+      "ReferencedColumn": "UserAreaID"
+    },
+    {
+      "ForeignKeyName": "FK_TaskTypeUserArea_TaskType",
+      "ParentSchema": "V7",
+      "ParentTable": "TaskTypeUserArea",
+      "ParentColumn": "TaskTypeID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "TaskType",
+      "ReferencedColumn": "TaskTypeID"
+    },
+    {
+      "ForeignKeyName": "FK_TaskTypeUserArea_UserArea",
+      "ParentSchema": "V7",
+      "ParentTable": "TaskTypeUserArea",
+      "ParentColumn": "UserAreaID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserArea",
+      "ReferencedColumn": "UserAreaID"
+    },
+    {
+      "ForeignKeyName": "FK_TenantRole_Tenant",
+      "ParentSchema": "V7",
+      "ParentTable": "TenantRole",
+      "ParentColumn": "TenantID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "Tenant",
+      "ReferencedColumn": "TenantID"
+    },
+    {
+      "ForeignKeyName": "FK_TenantRolePermission_SystemPermission",
+      "ParentSchema": "V7",
+      "ParentTable": "TenantRolePermission",
+      "ParentColumn": "PermissionID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "SystemPermission",
+      "ReferencedColumn": "PermissionID"
+    },
+    {
+      "ForeignKeyName": "FK_TenantRolePermission_Tenant",
+      "ParentSchema": "V7",
+      "ParentTable": "TenantRolePermission",
+      "ParentColumn": "TenantID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "Tenant",
+      "ReferencedColumn": "TenantID"
+    },
+    {
+      "ForeignKeyName": "FK_User_ArchivedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "User",
+      "ParentColumn": "ArchivedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_User_CreatedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "User",
+      "ParentColumn": "CreatedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_User_ModifiedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "User",
+      "ParentColumn": "ModifiedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_User_UserArea",
+      "ParentSchema": "V7",
+      "ParentTable": "User",
+      "ParentColumn": "MasterUserAreaID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserArea",
+      "ReferencedColumn": "UserAreaID"
+    },
+    {
+      "ForeignKeyName": "FK_UserArea_ArchivedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserArea",
+      "ParentColumn": "ArchivedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserArea_CreatedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserArea",
+      "ParentColumn": "CreatedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserArea_ModifiedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserArea",
+      "ParentColumn": "ModifiedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserArea_ThemeType",
+      "ParentSchema": "V7",
+      "ParentTable": "UserArea",
+      "ParentColumn": "ThemeTypeID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "ThemeType",
+      "ReferencedColumn": "ThemeTypeID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaContractor_ArchivedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaContractor",
+      "ParentColumn": "ArchivedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaContractor_CreatedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaContractor",
+      "ParentColumn": "CreatedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaContractor_Employee",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaContractor",
+      "ParentColumn": "ContractorUserAreaID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserArea",
+      "ReferencedColumn": "UserAreaID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaContractor_ModifiedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaContractor",
+      "ParentColumn": "ModifiedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaContractor_UserArea",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaContractor",
+      "ParentColumn": "UserAreaID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserArea",
+      "ReferencedColumn": "UserAreaID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaForm_ArchivedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaForm",
+      "ParentColumn": "ArchivedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaForm_CreatedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaForm",
+      "ParentColumn": "CreatedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaForm_ModifiedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaForm",
+      "ParentColumn": "ModifiedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaForm_UserArea",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaForm",
+      "ParentColumn": "UserAreaID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserArea",
+      "ReferencedColumn": "UserAreaID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormQuestion_AnswerType",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormQuestion",
+      "ParentColumn": "AnswerTypeID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "AnswerType",
+      "ReferencedColumn": "AnswerTypeID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormQuestion_ArchivedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormQuestion",
+      "ParentColumn": "ArchivedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormQuestion_CreatedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormQuestion",
+      "ParentColumn": "CreatedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormQuestion_ModifiedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormQuestion",
+      "ParentColumn": "ModifiedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormQuestion_UserAreaFormSection",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormQuestion",
+      "ParentColumn": "UserAreaFormSectionID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserAreaFormSection",
+      "ReferencedColumn": "UserAreaFormSectionID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormQuestionAnswer_ArchivedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormQuestionAnswer",
+      "ParentColumn": "ArchivedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormQuestionAnswer_CreatedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormQuestionAnswer",
+      "ParentColumn": "CreatedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormQuestionAnswer_ModifiedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormQuestionAnswer",
+      "ParentColumn": "ModifiedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormQuestionAnswer_OriginalUserAreaFormSection",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormQuestionAnswer",
+      "ParentColumn": "JumpToOriginalUserAreaFormSectionID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserAreaFormSection",
+      "ReferencedColumn": "UserAreaFormSectionID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormQuestionAnswer_UserAreaFormQuestion",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormQuestionAnswer",
+      "ParentColumn": "UserAreaFormQuestionID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserAreaFormQuestion",
+      "ReferencedColumn": "UserAreaFormQuestionID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormResponse_ArchivedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormResponse",
+      "ParentColumn": "ArchivedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormResponse_CreatedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormResponse",
+      "ParentColumn": "CreatedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormResponse_Employee",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormResponse",
+      "ParentColumn": "EmployeeID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "Employee",
+      "ReferencedColumn": "EmployeeID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormResponse_Location",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormResponse",
+      "ParentColumn": "LocationID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "Location",
+      "ReferencedColumn": "LocationID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormResponse_ModifiedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormResponse",
+      "ParentColumn": "ModifiedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormResponse_OrgGroup",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormResponse",
+      "ParentColumn": "OrgGroupID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "OrgGroup",
+      "ReferencedColumn": "OrgGroupID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormResponse_UserArea",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormResponse",
+      "ParentColumn": "UserAreaID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserArea",
+      "ReferencedColumn": "UserAreaID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormResponse_UserAreaForm",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormResponse",
+      "ParentColumn": "UserAreaFormID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserAreaForm",
+      "ReferencedColumn": "UserAreaFormID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormSection_ArchivedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormSection",
+      "ParentColumn": "ArchivedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormSection_CreatedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormSection",
+      "ParentColumn": "CreatedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormSection_ModifiedBy",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormSection",
+      "ParentColumn": "ModifiedByUserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserAreaFormSection_UserAreaForm",
+      "ParentSchema": "V7",
+      "ParentTable": "UserAreaFormSection",
+      "ParentColumn": "UserAreaFormID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserAreaForm",
+      "ReferencedColumn": "UserAreaFormID"
+    },
+    {
+      "ForeignKeyName": "FK_UserTenant_Tenant",
+      "ParentSchema": "V7",
+      "ParentTable": "UserTenant",
+      "ParentColumn": "TenantID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "Tenant",
+      "ReferencedColumn": "TenantID"
+    },
+    {
+      "ForeignKeyName": "FK_UserTenant_User",
+      "ParentSchema": "V7",
+      "ParentTable": "UserTenant",
+      "ParentColumn": "UserID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "User",
+      "ReferencedColumn": "UserID"
+    },
+    {
+      "ForeignKeyName": "FK_UserTenantRole_TenantRole",
+      "ParentSchema": "V7",
+      "ParentTable": "UserTenantRole",
+      "ParentColumn": "TenantRoleID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "TenantRole",
+      "ReferencedColumn": "TenantRoleID"
+    },
+    {
+      "ForeignKeyName": "FK_UserTenantRole_UserTenant",
+      "ParentSchema": "V7",
+      "ParentTable": "UserTenantRole",
+      "ParentColumn": "UserTenantID",
+      "ReferencedSchema": "V7",
+      "ReferencedTable": "UserTenant",
+      "ReferencedColumn": "UserTenantID"
+    }
+  ]
+}

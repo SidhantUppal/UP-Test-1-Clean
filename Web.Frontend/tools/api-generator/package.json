@@ -1,0 +1,32 @@
+{
+  "name": "@t100/api-generator",
+  "version": "1.0.0",
+  "description": "API Generator and Discovery Tool for Portal-V7",
+  "type": "module",
+  "main": "src/cli.js",
+  "scripts": {
+    "scan": "node src/cli.js scan",
+    "generate": "node src/cli.js generate",
+    "sync": "node src/cli.js sync",
+    "watch": "node src/cli.js watch",
+    "test": "node src/cli.js test"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.24.0",
+    "@babel/traverse": "^7.24.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@typescript-eslint/typescript-estree": "^7.0.0",
+    "chalk": "^5.3.0",
+    "chokidar": "^3.6.0",
+    "commander": "^12.0.0",
+    "dotenv": "^16.4.0",
+    "handlebars": "^4.7.8",
+    "mssql": "^11.0.0",
+    "ora": "^8.0.1",
+    "prettier": "^3.2.0",
+    "typescript": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0"
+  }
+}

@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/1.0.2752196">
+  <PropertyGroup>
+    <StartupCommand>npm run dev</StartupCommand>
+    <ShouldRunNpmInstall>true</ShouldRunNpmInstall>
+    <ShouldRunBuildScript>false</ShouldRunBuildScript>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove=".vscode\**" />
+    <None Remove="apps\services\**" />
+    <TypeScriptConfiguration Remove=".vscode\**" />
+    <TypeScriptConfiguration Remove="apps\services\**" />
+    <None Remove="node_modules\**" />
+    <None Remove=".next\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="apps\frontend\components\" />
+    <Folder Include="apps\frontend\lib\" />
+  </ItemGroup>
+</Project>

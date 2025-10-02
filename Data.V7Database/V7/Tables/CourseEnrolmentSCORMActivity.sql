@@ -1,0 +1,26 @@
+﻿CREATE TABLE [V7].[CourseEnrolmentSCORMActivity] (
+    [CourseEnrolmentSCORMActivityID] INT                IDENTITY (1, 1) NOT NULL,
+    [UserAreaID]                     INT                NOT NULL,
+    [CourseEnrolmentID]              INT                NOT NULL,
+    [ActivityID]                     NVARCHAR (255)     NOT NULL,
+    [ActivityTitle]                  NVARCHAR (500)     NULL,
+    [CompletionStatus]               NVARCHAR (50)      NULL,
+    [SuccessStatus]                  NVARCHAR (50)      NULL,
+    [ProgressMeasure]                DECIMAL (5, 2)     NULL,
+    [ScoreRaw]                       DECIMAL (10, 2)    NULL,
+    [ScoreMin]                       DECIMAL (10, 2)    NULL,
+    [ScoreMax]                       DECIMAL (10, 2)    NULL,
+    [ScoreScaled]                    DECIMAL (5, 2)     NULL,
+    [TotalTime]                      NVARCHAR (50)      NULL,
+    [SessionTime]                    NVARCHAR (50)      NULL,
+    [Location]                       NVARCHAR (500)     NULL,
+    [SuspendData]                    NVARCHAR (MAX)     NULL,
+    [CreatedByUserID]                INT                NOT NULL,
+    [CreatedDate]                    DATETIMEOFFSET (7) DEFAULT (sysdatetimeoffset()) NOT NULL,
+    [ModifiedByUserID]               INT                NULL,
+    [ModifiedDate]               DATETIMEOFFSET (7) NULL,
+    PRIMARY KEY CLUSTERED ([CourseEnrolmentSCORMActivityID] ASC),
+    CONSTRAINT [FK_CourseEnrolmentSCORMActivity_Enrolment] FOREIGN KEY ([CourseEnrolmentID]) REFERENCES [V7].[CourseEnrolment] ([CourseEnrolmentID]),
+    CONSTRAINT [FK_CourseEnrolmentSCORMActivity_UserArea] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+

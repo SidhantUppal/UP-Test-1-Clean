@@ -1,0 +1,26 @@
+﻿CREATE TABLE [V7].[AttachmentBackup] (
+    [AttachmentID]         INT            IDENTITY (1, 1) NOT NULL,
+    [AttachmentGuidName]   NVARCHAR (250) NULL,
+    [UserAreaID]           INT            NOT NULL,
+    [FolderID]             INT            NOT NULL,
+    [FileName]             NVARCHAR (255) NOT NULL,
+    [FileSize]             INT            NOT NULL,
+    [ContentType]          NVARCHAR (255) NOT NULL,
+    [AttachmentTypeID]     INT            NOT NULL,
+    [V5FileID]             INT            NULL,
+    [IsPublic]             BIT            NOT NULL,
+    [CreatedByUserID]      INT            NOT NULL,
+    [CreatedDate]          DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID] INT            NULL,
+    [ModifiedDate]     DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]     INT            NULL,
+    [ArchivedDate]         DATETIMEOFFSET (7) NULL,
+    PRIMARY KEY CLUSTERED ([AttachmentID] ASC),
+    CONSTRAINT [FK_AttachmentBackup_ArchivedBy] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_AttachmentBackup_AttachmentType] FOREIGN KEY ([AttachmentTypeID]) REFERENCES [V7].[AttachmentType] ([AttachmentTypeID]),
+    CONSTRAINT [FK_AttachmentBackup_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_AttachmentBackup_Folder] FOREIGN KEY ([FolderID]) REFERENCES [V7].[Folder] ([FolderID]),
+    CONSTRAINT [FK_AttachmentBackup_ModifiedBy] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_AttachmentBackup_UserArea] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+

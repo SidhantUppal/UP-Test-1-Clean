@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  # SQL Server for development
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: t100-sql-server-dev
+    environment:
+      SA_PASSWORD: "Dev@2024!"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql-data-dev:/var/opt/mssql
+    networks:
+      - t100-dev-network
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Dev@2024! -Q 'SELECT 1' || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  sql-data-dev:
+    driver: local
+
+networks:
+  t100-dev-network:
+    driver: bridge

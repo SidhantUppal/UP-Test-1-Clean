@@ -1,0 +1,188 @@
+import sql from 'mssql';
+import { getConnection } from '../database.js';
+
+export class {{ResourceName}}Repository {
+  constructor() {
+    this.tableName = '{{tableName}}';
+    this.idField = '{{idField}}';
+  }
+
+  async getAll(userAreaId, options) {
+    const pool = await getConnection();
+    const { page, limit, search, sortBy, sortOrder } = options;
+    const offset = (page - 1) * limit;
+
+    // Count total records
+    const countQuery = `
+      SELECT COUNT(*) as total
+      FROM ${this.tableName}
+      WHERE UserAreaID = @userAreaId 
+        AND ArchivedDate IS NULL
+        ${search ? `AND (Name LIKE @search OR Description LIKE @search)` : ''}
+    `;
+
+    const countResult = await pool.request()
+      .input('userAreaId', sql.Int, userAreaId)
+      .input('search', sql.NVarChar, `%${search}%`)
+      .query(countQuery);
+
+    const total = countResult.recordset[0].total;
+
+    // Get paginated data
+    const dataQuery = `
+      SELECT *
+      FROM ${this.tableName}
+      WHERE UserAreaID = @userAreaId 
+        AND ArchivedDate IS NULL
+        ${search ? `AND (Name LIKE @search OR Description LIKE @search)` : ''}
+      ORDER BY ${sortBy} ${sortOrder}
+      OFFSET @offset ROWS 
+      FETCH NEXT @limit ROWS ONLY
+    `;
+
+    const dataResult = await pool.request()
+      .input('userAreaId', sql.Int, userAreaId)
+      .input('search', sql.NVarChar, `%${search}%`)
+      .input('offset', sql.Int, offset)
+      .input('limit', sql.Int, limit)
+      .query(dataQuery);
+
+    return {
+      data: dataResult.recordset,
+      pagination: {
+        total,
+        page,
+        limit,
+        totalPages: Math.ceil(total / limit)
+      }
+    };
+  }
+
+  async getById(userAreaId, id) {
+    const pool = await getConnection();
+    
+    const query = `
+      SELECT *
+      FROM ${this.tableName}
+      WHERE UserAreaID = @userAreaId 
+        AND ${this.idField} = @id
+        AND ArchivedDate IS NULL
+    `;
+
+    const result = await pool.request()
+      .input('userAreaId', sql.Int, userAreaId)
+      .input('id', sql.Int, id)
+      .query(query);
+
+    return result.recordset[0] || null;
+  }
+
+  async create(userAreaId, userId, data) {
+    const pool = await getConnection();
+    
+    const fields = [
+      'UserAreaID',
+      {{#each fields}}
+      '{{name}}',
+      {{/each}}
+      'CreatedByUserID',
+      'CreatedDate',
+      'ModifiedByUserID',
+      'ModifiedDate'
+    ];
+
+    const values = [
+      '@userAreaId',
+      {{#each fields}}
+      '@{{lowercase name}}',
+      {{/each}}
+      '@userId',
+      'SYSDATETIMEOFFSET()',
+      '@userId',
+      'SYSDATETIMEOFFSET()'
+    ];
+
+    const query = `
+      INSERT INTO ${this.tableName} (${fields.join(', ')})
+      OUTPUT INSERTED.*
+      VALUES (${values.join(', ')})
+    `;
+
+    const request = pool.request()
+      .input('userAreaId', sql.Int, userAreaId)
+      .input('userId', sql.Int, userId);
+
+    // Add field inputs
+    {{#each fields}}
+    request.input('{{lowercase name}}', sql.{{sqlType type}}, data.{{lowercase name}});
+    {{/each}}
+
+    const result = await request.query(query);
+    return result.recordset[0];
+  }
+
+  async update(userAreaId, userId, id, data) {
+    const pool = await getConnection();
+    
+    // Check if record exists
+    const exists = await this.getById(userAreaId, id);
+    if (!exists) {
+      return null;
+    }
+
+    const setClause = [
+      {{#each fields}}
+      '{{name}} = @{{lowercase name}}',
+      {{/each}}
+      'ModifiedByUserID = @userId',
+      'ModifiedDate = SYSDATETIMEOFFSET()'
+    ];
+
+    const query = `
+      UPDATE ${this.tableName}
+      SET ${setClause.join(', ')}
+      OUTPUT INSERTED.*
+      WHERE UserAreaID = @userAreaId 
+        AND ${this.idField} = @id
+        AND ArchivedDate IS NULL
+    `;
+
+    const request = pool.request()
+      .input('userAreaId', sql.Int, userAreaId)
+      .input('userId', sql.Int, userId)
+      .input('id', sql.Int, id);
+
+    // Add field inputs
+    {{#each fields}}
+    request.input('{{lowercase name}}', sql.{{sqlType type}}, data.{{lowercase name}});
+    {{/each}}
+
+    const result = await request.query(query);
+    return result.recordset[0];
+  }
+
+  async delete(userAreaId, userId, id) {
+    const pool = await getConnection();
+    
+    // Soft delete - set ArchivedDate
+    const query = `
+      UPDATE ${this.tableName}
+      SET ArchivedDate = SYSDATETIMEOFFSET(),
+          ArchivedByUserID = @userId
+      OUTPUT INSERTED.*
+      WHERE UserAreaID = @userAreaId 
+        AND ${this.idField} = @id
+        AND ArchivedDate IS NULL
+    `;
+
+    const result = await pool.request()
+      .input('userAreaId', sql.Int, userAreaId)
+      .input('userId', sql.Int, userId)
+      .input('id', sql.Int, id)
+      .query(query);
+
+    return result.recordset[0] || null;
+  }
+}
+
+export default {{ResourceName}}Repository;

@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-07-04T14:12:37.854Z",
+  "database": "V7",
+  "server": "YOUR_DATABASE_SERVER.database.windows.net",
+  "tables": [],
+  "permissionRelatedTables": [],
+  "permissionColumns": [],
+  "analysis": {},
+  "error": {
+    "message": "Cannot open server 'YOUR_DATABASE_SERVER' requested by the login. Client with IP address '212.105.145.202' is not allowed to access the server.  To enable access, use the Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.",
+    "code": "ELOGIN",
+    "stack": "ConnectionError: Cannot open server 'YOUR_DATABASE_SERVER' requested by the login. Client with IP address '212.105.145.202' is not allowed to access the server.  To enable access, use the Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.\n    at /mnt/c/Users/Neil Shotton/Documents/GitHub/T100_Clean/node_modules/mssql/lib/tedious/connection-pool.js:85:17\n    at Connection.onConnect (/mnt/c/Users/Neil Shotton/Documents/GitHub/T100_Clean/node_modules/tedious/lib/connection.js:849:9)\n    at Object.onceWrapper (node:events:633:26)\n    at Connection.emit (node:events:518:28)\n    at Connection.emit (/mnt/c/Users/Neil Shotton/Documents/GitHub/T100_Clean/node_modules/tedious/lib/connection.js:970:18)\n    at /mnt/c/Users/Neil Shotton/Documents/GitHub/T100_Clean/node_modules/tedious/lib/connection.js:2369:18\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}

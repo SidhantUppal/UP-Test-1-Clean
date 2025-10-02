@@ -1,0 +1,28 @@
+﻿CREATE TABLE [V7].[TribunalCase] (
+    [TribunalCaseID]           INT            IDENTITY (1, 1) NOT NULL,
+    [TribunalCaseStatusTypeID] INT            NOT NULL,
+    [UserAreaID]               INT            NOT NULL,
+    [ManagerEmployeeID]        INT            NULL,
+    [ClaimantEmployeeID]       INT            NULL,
+    [Claimant]                 NVARCHAR (255) NULL,
+    [Respondant]               NVARCHAR (255) NULL,
+    [Reference]                NVARCHAR (40)  NULL,
+    [SetupDate]                DATETIMEOFFSET (7) NULL,
+    [HearingDate]              DATETIMEOFFSET (7) NULL,
+    [ClosedDate]               DATETIMEOFFSET (7) NULL,
+    [CreatedByUserID]          INT            NOT NULL,
+    [CreatedDate]              DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]     INT            NULL,
+    [ModifiedDate]         DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]         INT            NULL,
+    [ArchivedDate]             DATETIMEOFFSET (7) NULL,
+    PRIMARY KEY CLUSTERED ([TribunalCaseID] ASC),
+    CONSTRAINT [FK_TribunalCase_ArchivedByUser] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_TribunalCase_ClaimantEmployee] FOREIGN KEY ([ClaimantEmployeeID]) REFERENCES [V7].[Employee] ([EmployeeID]),
+    CONSTRAINT [FK_TribunalCase_CreatedByUser] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_TribunalCase_ModifiedByUser] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_TribunalCase_ManagerEmployee] FOREIGN KEY ([ManagerEmployeeID]) REFERENCES [V7].[Employee] ([EmployeeID]),
+    CONSTRAINT [FK_TribunalCase_TribunalCaseStatusType] FOREIGN KEY ([TribunalCaseStatusTypeID]) REFERENCES [V7].[TribunalCaseStatusType] ([TribunalCaseStatusTypeID]),
+    CONSTRAINT [FK_TribunalCase_UserArea] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+

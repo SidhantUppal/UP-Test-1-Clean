@@ -1,0 +1,257 @@
+/* LOCI System Custom Styles */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
+
+/* Custom color palette */
+@layer utilities {
+  .bg-loci-dark {
+    background-color: #0A0A0F;
+  }
+  
+  .bg-loci-darker {
+    background-color: #12121A;
+  }
+  
+  .text-loci-cyan {
+    color: #00F5FF;
+  }
+  
+  .text-loci-magenta {
+    color: #FF00F5;
+  }
+  
+  .text-loci-success {
+    color: #00FF88;
+  }
+  
+  .text-loci-warning {
+    color: #FFB800;
+  }
+  
+  .text-loci-error {
+    color: #FF0055;
+  }
+  
+  .text-loci-text-secondary {
+    color: #8B8B9F;
+  }
+  
+  .border-loci-border {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .bg-loci-glass {
+    background: rgba(18, 18, 26, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  .shadow-loci-glow-cyan {
+    box-shadow: 
+      0 0 20px rgba(0, 245, 255, 0.5),
+      inset 0 0 20px rgba(0, 245, 255, 0.1);
+  }
+  
+  .shadow-loci-glow-magenta {
+    box-shadow: 
+      0 0 20px rgba(255, 0, 245, 0.5),
+      inset 0 0 20px rgba(255, 0, 245, 0.1);
+  }
+  
+  .shadow-loci-card {
+    box-shadow: 0 8px 32px rgba(0, 245, 255, 0.1);
+  }
+}
+
+/* Animated gradient background */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-loci-gradient {
+  background: linear-gradient(45deg, #00F5FF, #FF00F5);
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Glassmorphic card styles */
+.loci-glass-card {
+  background: rgba(18, 18, 26, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 245, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.loci-glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 12px 40px rgba(0, 245, 255, 0.2),
+    0 0 20px rgba(0, 245, 255, 0.1);
+}
+
+/* Neon button styles */
+.loci-neon-button {
+  position: relative;
+  padding: 12px 24px;
+  background: transparent;
+  border: 1px solid #00F5FF;
+  color: #00F5FF;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.loci-neon-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.loci-neon-button:hover::before {
+  left: 100%;
+}
+
+.loci-neon-button:hover {
+  color: #0A0A0F;
+  background: #00F5FF;
+  box-shadow: 
+    0 0 20px rgba(0, 245, 255, 0.8),
+    inset 0 0 20px rgba(0, 245, 255, 0.2);
+}
+
+/* Matrix rain effect container */
+.loci-matrix-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.loci-matrix-text {
+  font-family: 'JetBrains Mono', monospace;
+  color: #00FF88;
+  text-shadow: 0 0 5px #00FF88;
+  opacity: 0.8;
+}
+
+/* Activity matrix visualization */
+.loci-activity-matrix {
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  gap: 2px;
+}
+
+.loci-activity-cell {
+  width: 8px;
+  height: 8px;
+  background: #1A1A2E;
+  transition: all 0.3s ease;
+}
+
+.loci-activity-cell.active {
+  background: #00F5FF;
+  box-shadow: 0 0 4px #00F5FF;
+}
+
+/* Circuit board connections */
+.loci-circuit-line {
+  stroke: #00F5FF;
+  stroke-width: 2;
+  fill: none;
+  filter: drop-shadow(0 0 3px #00F5FF);
+}
+
+/* Data stream animation */
+@keyframes data-flow {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.loci-data-stream {
+  position: absolute;
+  height: 2px;
+  width: 50px;
+  background: linear-gradient(90deg, transparent, #00F5FF, transparent);
+  animation: data-flow 2s linear infinite;
+}
+
+/* Pulse animation for status indicators */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+.loci-pulse {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Custom scrollbar for LOCI system */
+.loci-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.loci-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.loci-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 245, 255, 0.3);
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.loci-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 245, 255, 0.5);
+}
+
+/* Typography classes */
+.loci-font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.loci-font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Hover glow effect for interactive elements */
+.loci-hover-glow {
+  transition: all 0.3s ease;
+}
+
+.loci-hover-glow:hover {
+  text-shadow: 0 0 10px currentColor;
+}

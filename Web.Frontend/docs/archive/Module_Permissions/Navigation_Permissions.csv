@@ -1,0 +1,103 @@
+Page,Element_Type,Element_Title,Permission_Required,Location,Parent_Component,Admin,Manager,Operator,Viewer,Notes
+Top Navigation,Dropdown,Admin,admin.access,Top Bar,System Menu,Yes,No,No,No,System administration access
+Top Navigation,Link,Dashboard,admin.dashboard.view,Top Bar,Admin Dropdown,Yes,No,No,No,Admin system dashboard
+Top Navigation,Link,Tenant Management,admin.tenants.manage,Top Bar,Admin Dropdown,Yes,No,No,No,Manage tenant accounts
+Top Navigation,Link,Admin Users,admin.users.manage,Top Bar,Admin Dropdown,Yes,No,No,No,System user management
+Top Navigation,Link,Trial Management,admin.trials.manage,Top Bar,Admin Dropdown,Yes,No,No,No,Trial account management
+Top Navigation,Link,Partner Portal,admin.partners.manage,Top Bar,Admin Dropdown,Yes,No,No,No,Partner portal access
+Top Navigation,Link,System Monitoring,admin.monitoring.view,Top Bar,Admin Dropdown,Yes,No,No,No,System health monitoring
+Top Navigation,Link,Billing & Revenue,admin.billing.view,Top Bar,Admin Dropdown,Yes,No,No,No,Billing system access
+Top Navigation,Link,Support System,admin.support.access,Top Bar,Admin Dropdown,Yes,No,No,No,Support ticket system
+Top Navigation,Link,LORIS Analytics,admin.analytics.view,Top Bar,Admin Dropdown,Yes,No,No,No,Advanced analytics
+Top Navigation,Link,Configuration,admin.config.manage,Top Bar,Admin Dropdown,Yes,No,No,No,System configuration
+Top Navigation,Link,Audit & Security,admin.audit.access,Top Bar,Admin Dropdown,Yes,No,No,No,Security audit logs
+Top Navigation,Dropdown,Modules,modules.access,Top Bar,System Menu,Yes,Yes,Yes,Yes,Quick module access
+Top Navigation,Link,Dashboard,dashboard.view,Top Bar,Modules Dropdown,Yes,Yes,Yes,Yes,Main dashboard
+Top Navigation,Link,Checklists,checklists.view,Top Bar,Modules Dropdown,Yes,Yes,Yes,Yes,Checklists module
+Top Navigation,Link,Contractors,contractors.view,Top Bar,Modules Dropdown,Yes,Yes,Yes,Yes,Contractors module
+Top Navigation,Link,Contractor View,contractors.view,Top Bar,Modules Dropdown,Yes,Yes,Yes,Yes,Alternative contractor view
+Top Navigation,Link,Permits,permits.view,Top Bar,Modules Dropdown,Yes,Yes,Yes,Yes,Permits module
+Top Navigation,Link,Risk Assessments,risk-assessments.view,Top Bar,Modules Dropdown,Yes,Yes,Yes,Yes,Risk assessment module
+Top Navigation,Link,Tasks,tasks.view,Top Bar,Modules Dropdown,Yes,Yes,Yes,Yes,Task management
+Top Navigation,Link,Processes,processes.view,Top Bar,Modules Dropdown,Yes,Yes,Yes,Yes,Process automation
+Top Navigation,Link,Documents,documents.view,Top Bar,Modules Dropdown,Yes,Yes,Yes,Yes,Document management
+Top Navigation,Link,Assets,assets.view,Top Bar,Modules Dropdown,Yes,Yes,Yes,Yes,Asset management
+Top Navigation,Link,Incidents,incidents.view,Top Bar,Modules Dropdown,Yes,Yes,Yes,Yes,Incident reporting
+Top Navigation,Link,E-Learning,elearning.view,Top Bar,Modules Dropdown,Yes,Yes,Yes,Yes,Training portal
+Top Navigation,Input,Search Box,search.access,Top Bar,Search,Yes,Yes,Yes,Yes,Global search functionality
+Top Navigation,Dropdown,User Profile,profile.access,Top Bar,User Menu,Yes,Yes,Yes,Yes,User account access
+Top Navigation,Link,Profile,profile.view,Top Bar,User Dropdown,Yes,Yes,Yes,Yes,User profile page
+Top Navigation,Link,Settings,settings.view,Top Bar,User Dropdown,Yes,Yes,Yes,Yes,User settings page
+Top Navigation,Link,Permissions,permissions.view,Top Bar,User Dropdown,Yes,Yes,No,No,Permission management
+Top Navigation,Link,Logout,logout.access,Top Bar,User Dropdown,Yes,Yes,Yes,Yes,Logout functionality
+Main Navigation,Link,Dashboard,dashboard.view,Main Nav,Root,Yes,Yes,Yes,Yes,Main dashboard icon
+Main Navigation,Dropdown,Checklists,checklists.access,Main Nav,Root,Yes,Yes,Yes,Yes,Checklists dropdown
+Main Navigation,Link,Checklists Home,checklists.view,Main Nav,Checklists Dropdown,Yes,Yes,Yes,Yes,Home page
+Main Navigation,Link,Create Checklist,checklists.create,Main Nav,Checklists Dropdown,Yes,Yes,No,No,Create new checklist
+Main Navigation,Link,My Checklists,checklists.view,Main Nav,Checklists Dropdown,Yes,Yes,Yes,Yes,User's checklists
+Main Navigation,Link,Manage Checklists,checklists.manage,Main Nav,Checklists Dropdown,Yes,Yes,No,No,Admin management
+Main Navigation,Link,Assign Checklists,checklists.assign,Main Nav,Checklists Dropdown,Yes,Yes,No,No,Assignment management
+Main Navigation,Link,Reports,checklists.reports,Main Nav,Checklists Dropdown,Yes,Yes,No,No,Reporting dashboard
+Main Navigation,Link,Dashboard,checklists.view,Main Nav,Checklists Dropdown,Yes,Yes,Yes,Yes,Module dashboard
+Main Navigation,Dropdown,Contractors,contractors.access,Main Nav,Root,Yes,Yes,Yes,Yes,Contractors dropdown
+Main Navigation,Link,Home,contractors.view,Main Nav,Contractors Dropdown,Yes,Yes,Yes,Yes,Contractors home
+Main Navigation,Link,Manage Contractors,contractors.manage,Main Nav,Contractors Dropdown,Yes,Yes,No,No,Admin management
+Main Navigation,Link,Contractor Compliance,contractors.compliance,Main Nav,Contractors Dropdown,Yes,Yes,Yes,No,Compliance tracking
+Main Navigation,Link,Add Contractor,contractors.create,Main Nav,Contractors Dropdown,Yes,Yes,No,No,Create new contractor
+Main Navigation,Link,Permits to Work,permits.view,Main Nav,Contractors Dropdown,Yes,Yes,Yes,No,Work permits
+Main Navigation,Dropdown,Documents,documents.access,Main Nav,Root,Yes,Yes,Yes,Yes,Documents dropdown
+Main Navigation,Link,Document Home,documents.view,Main Nav,Documents Dropdown,Yes,Yes,Yes,Yes,Documents home
+Main Navigation,Link,All Documents,documents.view,Main Nav,Documents Dropdown,Yes,Yes,Yes,Yes,Document library
+Main Navigation,Link,Assign Documents,documents.assign,Main Nav,Documents Dropdown,Yes,Yes,No,No,Document assignment
+Main Navigation,Link,Required Documents,documents.view,Main Nav,Documents Dropdown,Yes,Yes,Yes,Yes,Required docs view
+Main Navigation,Link,Renewable Docs,documents.view,Main Nav,Documents Dropdown,Yes,Yes,Yes,Yes,Renewal tracking
+Main Navigation,Link,Redactor,documents.redact,Main Nav,Documents Dropdown,Yes,No,No,No,Document redaction
+Main Navigation,Link,Templates,documents.view,Main Nav,Documents Dropdown,Yes,Yes,Yes,Yes,Document templates
+Main Navigation,Link,Create Template,documents.create,Main Nav,Documents Dropdown,Yes,Yes,No,No,Template creation
+Main Navigation,Link,Analytics,documents.analytics,Main Nav,Documents Dropdown,Yes,Yes,No,No,Document analytics
+Main Navigation,Link,Advanced Search,documents.search,Main Nav,Documents Dropdown,Yes,Yes,Yes,Yes,Search functionality
+Main Navigation,Link,Workflows,documents.workflows,Main Nav,Documents Dropdown,Yes,Yes,No,No,Workflow management
+Main Navigation,Link,Bulk Operations,documents.bulk,Main Nav,Documents Dropdown,Yes,Yes,No,No,Bulk document ops
+Main Navigation,Link,Doc Scoring,documents.scoring,Main Nav,Documents Dropdown,Yes,Yes,No,No,Document scoring
+Main Navigation,Dropdown,Permits,permits.access,Main Nav,Root,Yes,Yes,Yes,Yes,Permits dropdown
+Main Navigation,Link,Home,permits.view,Main Nav,Permits Dropdown,Yes,Yes,Yes,Yes,Permits home
+Main Navigation,Link,Build Permit Template,permits.create,Main Nav,Permits Dropdown,Yes,Yes,No,No,Template builder
+Main Navigation,Link,Issue Permit,permits.issue,Main Nav,Permits Dropdown,Yes,Yes,Yes,No,Issue new permit
+Main Navigation,Link,Pending Approvals,permits.approve,Main Nav,Permits Dropdown,Yes,Yes,No,No,Approval queue
+Main Navigation,Link,LOTO's,permits.loto,Main Nav,Permits Dropdown,Yes,Yes,Yes,No,Lockout/tagout
+Main Navigation,Link,Tasks,tasks.view,Main Nav,Root,Yes,Yes,Yes,Yes,Task management link
+Main Navigation,Dropdown,Assets,assets.access,Main Nav,Root,Yes,Yes,Yes,Yes,Assets dropdown
+Main Navigation,Link,Assets Home,assets.view,Main Nav,Assets Dropdown,Yes,Yes,Yes,Yes,Assets home
+Main Navigation,Link,Manage Assets,assets.view,Main Nav,Assets Dropdown,Yes,Yes,Yes,No,Asset management
+Main Navigation,Link,Add New Asset,assets.create,Main Nav,Assets Dropdown,Yes,Yes,No,No,Create new asset
+Main Navigation,Link,Log Inspection,assets.inspect,Main Nav,Assets Dropdown,Yes,Yes,Yes,No,Inspection logging
+Main Navigation,Link,Inspection History,assets.view,Main Nav,Assets Dropdown,Yes,Yes,Yes,Yes,Inspection records
+Main Navigation,Link,Inspection Reminders,assets.view,Main Nav,Assets Dropdown,Yes,Yes,Yes,Yes,Reminder system
+Main Navigation,Dropdown,Processes,processes.access,Main Nav,Root,Yes,Yes,Yes,Yes,Processes dropdown
+Main Navigation,Link,Process Home,processes.view,Main Nav,Processes Dropdown,Yes,Yes,Yes,Yes,Processes home
+Main Navigation,Link,Build Process,processes.builder.access,Main Nav,Processes Dropdown,Yes,Yes,No,No,Process builder
+Main Navigation,Link,My Processes,processes.view,Main Nav,Processes Dropdown,Yes,Yes,Yes,Yes,User processes
+Main Navigation,Link,Templates,processes.view,Main Nav,Processes Dropdown,Yes,Yes,Yes,Yes,Process templates
+Main Navigation,Link,Reports,analytics.view,Main Nav,Processes Dropdown,Yes,Yes,No,No,Process analytics
+Main Navigation,Link,Dashboard,processes.view,Main Nav,Processes Dropdown,Yes,Yes,Yes,Yes,Process dashboard
+Main Navigation,Dropdown,Incidents,incidents.access,Main Nav,Root,Yes,Yes,Yes,Yes,Incidents dropdown
+Main Navigation,Link,Dashboard,incidents.view,Main Nav,Incidents Dropdown,Yes,Yes,Yes,Yes,Incidents dashboard
+Main Navigation,Link,New Incident,incidents.create,Main Nav,Incidents Dropdown,Yes,Yes,Yes,No,Create incident
+Main Navigation,Link,Incomplete Forms,incidents.view,Main Nav,Incidents Dropdown,Yes,Yes,Yes,No,Incomplete incidents
+Main Navigation,Link,Manage Incidents,incidents.manage,Main Nav,Incidents Dropdown,Yes,Yes,No,No,Admin management
+Main Navigation,Link,RIDDOR,incidents.riddor,Main Nav,Incidents Dropdown,Yes,Yes,No,No,RIDDOR reporting
+Main Navigation,Link,Form Builder,incidents.builder,Main Nav,Incidents Dropdown,Yes,No,No,No,Form builder tool
+Main Navigation,Link,Reports,incidents.reports,Main Nav,Incidents Dropdown,Yes,Yes,No,No,Incident reports
+Main Navigation,Dropdown,E-Learning,elearning.access,Main Nav,Root,Yes,Yes,Yes,Yes,E-Learning dropdown
+Main Navigation,Link,Learning Dashboard,elearning.view,Main Nav,E-Learning Dropdown,Yes,Yes,Yes,Yes,Learning home
+Main Navigation,Link,Browse Courses,elearning.view,Main Nav,E-Learning Dropdown,Yes,Yes,Yes,Yes,Course catalog
+Main Navigation,Link,My Courses,elearning.view,Main Nav,E-Learning Dropdown,Yes,Yes,Yes,Yes,User courses
+Main Navigation,Link,Create Course,elearning.create,Main Nav,E-Learning Dropdown,Yes,Yes,No,No,Course creation
+Main Navigation,Link,Manage Courses,elearning.manage,Main Nav,E-Learning Dropdown,Yes,Yes,No,No,Course management
+Main Navigation,Link,Learning Analytics,elearning.analytics,Main Nav,E-Learning Dropdown,Yes,Yes,No,No,Learning metrics
+Main Navigation,Link,Student Management,elearning.admin,Main Nav,E-Learning Dropdown,Yes,No,No,No,Student admin
+Main Navigation,Link,Certificates,elearning.admin,Main Nav,E-Learning Dropdown,Yes,Yes,No,No,Certificate management
+Main Navigation,Link,Reports,elearning.admin,Main Nav,E-Learning Dropdown,Yes,Yes,No,No,Learning reports
+Sidebar,Link,Tasks,tasks.view,Sidebar,Global Items,Yes,Yes,Yes,Yes,Global task access
+Sidebar,Link,Alerts,alerts.view,Sidebar,Global Items,Yes,Yes,Yes,Yes,System alerts
+Sidebar,Link,Dock Pack,dock-pack.view,Sidebar,Global Items,Yes,Yes,Yes,Yes,Dock pack module

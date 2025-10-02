@@ -1,0 +1,642 @@
+[
+  {
+    "Name": "Health and Safety at Work etc. Act 1974",
+    "Link": "https://www.legislation.gov.uk/ukpga/1974/37/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 1974. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Health and Safety (Offences) Act 2008",
+    "Link": "https://www.legislation.gov.uk/ukpga/2008/20/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 2008. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Factories Act 1961",
+    "Link": "https://www.legislation.gov.uk/ukpga/1961/34/contents",
+    "IndustryName": "Manufacturing",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 1961. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Offices, Shops and Railway Premises Act 1963",
+    "Link": "https://www.legislation.gov.uk/ukpga/1963/41/contents",
+    "IndustryName": "Retail",
+    "RiskLevel": "Medium",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 1963. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Fire Precautions Act 1971",
+    "Link": "https://www.legislation.gov.uk/ukpga/1971/40/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Fire Safety legislation from 1971. Requires compliance review.",
+    "LegislationType": "Fire Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Regulatory Reform (Fire Safety) Order 2005",
+    "Link": "https://www.legislation.gov.uk/uksi/2005/1541/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Fire Safety legislation from 2005. Requires compliance review.",
+    "LegislationType": "Fire Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Environmental Protection Act 1990",
+    "Link": "https://www.legislation.gov.uk/ukpga/1990/43/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Environmental legislation from 1990. Requires compliance review.",
+    "LegislationType": "Environmental",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Environment Act 1995",
+    "Link": "https://www.legislation.gov.uk/ukpga/1995/25/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Environmental legislation from 1995. Requires compliance review.",
+    "LegislationType": "Environmental",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Environment Act 2021",
+    "Link": "https://www.legislation.gov.uk/ukpga/2021/30/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Environmental legislation from 2021. Requires compliance review.",
+    "LegislationType": "Environmental",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Clean Air Act 1993",
+    "Link": "https://www.legislation.gov.uk/ukpga/1993/11/contents",
+    "IndustryName": "Manufacturing",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Environmental legislation from 1993. Requires compliance review.",
+    "LegislationType": "Environmental",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Water Resources Act 1991",
+    "Link": "https://www.legislation.gov.uk/ukpga/1991/57/contents",
+    "IndustryName": "Manufacturing",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Environmental legislation from 1991. Requires compliance review.",
+    "LegislationType": "Environmental",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Water Industry Act 1991",
+    "Link": "https://www.legislation.gov.uk/ukpga/1991/56/contents",
+    "IndustryName": "Utilities",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Environmental legislation from 1991. Requires compliance review.",
+    "LegislationType": "Environmental",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Water Act 2003",
+    "Link": "https://www.legislation.gov.uk/ukpga/2003/37/contents",
+    "IndustryName": "Utilities",
+    "RiskLevel": "Medium",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Environmental legislation from 2003. Requires compliance review.",
+    "LegislationType": "Environmental",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Water Act 2014",
+    "Link": "https://www.legislation.gov.uk/ukpga/2014/21/contents",
+    "IndustryName": "Utilities",
+    "RiskLevel": "Medium",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Environmental legislation from 2014. Requires compliance review.",
+    "LegislationType": "Environmental",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Climate Change Act 2008",
+    "Link": "https://www.legislation.gov.uk/ukpga/2008/27/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Environmental legislation from 2008. Requires compliance review.",
+    "LegislationType": "Environmental",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Pollution Prevention and Control Act 1999",
+    "Link": "https://www.legislation.gov.uk/ukpga/1999/24/contents",
+    "IndustryName": "Manufacturing",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Environmental legislation from 1999. Requires compliance review.",
+    "LegislationType": "Environmental",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Control of Substances Hazardous to Health Regulations 2002 (COSHH)",
+    "Link": "https://www.legislation.gov.uk/uksi/2002/2677/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Hazardous Materials legislation from 2002. Requires compliance review.",
+    "LegislationType": "Hazardous Materials",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "REACH Enforcement Regulations 2008",
+    "Link": "https://www.legislation.gov.uk/uksi/2008/2852/contents",
+    "IndustryName": "Manufacturing",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Chemical Safety legislation from 2008. Requires compliance review.",
+    "LegislationType": "Chemical Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Control of Major Accident Hazards Regulations 2015 (COMAH)",
+    "Link": "https://www.legislation.gov.uk/uksi/2015/483/contents",
+    "IndustryName": "Chemical",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Hazardous Materials legislation from 2015. Requires compliance review.",
+    "LegislationType": "Hazardous Materials",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Dangerous Substances and Explosive Atmospheres Regulations 2002 (DSEAR)",
+    "Link": "https://www.legislation.gov.uk/uksi/2002/2776/contents",
+    "IndustryName": "Manufacturing",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Hazardous Materials legislation from 2002. Requires compliance review.",
+    "LegislationType": "Hazardous Materials",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Explosives Act 1875",
+    "Link": "https://www.legislation.gov.uk/ukpga/1875/17/contents",
+    "IndustryName": "Mining",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Hazardous Materials legislation from 1875. Requires compliance review.",
+    "LegislationType": "Hazardous Materials",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Radioactive Substances Act 1993",
+    "Link": "https://www.legislation.gov.uk/ukpga/1993/12/contents",
+    "IndustryName": "Healthcare",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Radiation Safety legislation from 1993. Requires compliance review.",
+    "LegislationType": "Radiation Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Workplace (Health, Safety and Welfare) Regulations 1992",
+    "Link": "https://www.legislation.gov.uk/uksi/1992/3004/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 1992. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Management of Health and Safety at Work Regulations 1999",
+    "Link": "https://www.legislation.gov.uk/uksi/1999/3242/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 1999. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Personal Protective Equipment at Work Regulations 1992",
+    "Link": "https://www.legislation.gov.uk/uksi/1992/2966/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 1992. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Manual Handling Operations Regulations 1992",
+    "Link": "https://www.legislation.gov.uk/uksi/1992/2793/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "Medium",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 1992. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Display Screen Equipment Regulations 1992",
+    "Link": "https://www.legislation.gov.uk/uksi/1992/2792/contents",
+    "IndustryName": "Technology",
+    "RiskLevel": "Medium",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 1992. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Noise at Work Regulations 2005",
+    "Link": "https://www.legislation.gov.uk/uksi/2005/1643/contents",
+    "IndustryName": "Manufacturing",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 2005. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Vibration at Work Regulations 2005",
+    "Link": "https://www.legislation.gov.uk/uksi/2005/1093/contents",
+    "IndustryName": "Construction",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 2005. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Construction (Design and Management) Regulations 2015 (CDM)",
+    "Link": "https://www.legislation.gov.uk/uksi/2015/51/contents",
+    "IndustryName": "Construction",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 2015. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Work at Height Regulations 2005",
+    "Link": "https://www.legislation.gov.uk/uksi/2005/735/contents",
+    "IndustryName": "Construction",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 2005. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Construction (Health, Safety and Welfare) Regulations 1996",
+    "Link": "https://www.legislation.gov.uk/uksi/1996/1592/contents",
+    "IndustryName": "Construction",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 1996. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Lifting Operations and Lifting Equipment Regulations 1998 (LOLER)",
+    "Link": "https://www.legislation.gov.uk/uksi/1998/2307/contents",
+    "IndustryName": "Construction",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Equipment Safety legislation from 1998. Requires compliance review.",
+    "LegislationType": "Equipment Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Provision and Use of Work Equipment Regulations 1998 (PUWER)",
+    "Link": "https://www.legislation.gov.uk/uksi/1998/2306/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Equipment Safety legislation from 1998. Requires compliance review.",
+    "LegislationType": "Equipment Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Electricity at Work Regulations 1989",
+    "Link": "https://www.legislation.gov.uk/uksi/1989/635/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Electrical Safety legislation from 1989. Requires compliance review.",
+    "LegislationType": "Electrical Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Electrical Equipment (Safety) Regulations 2016",
+    "Link": "https://www.legislation.gov.uk/uksi/2016/1101/contents",
+    "IndustryName": "Manufacturing",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Electrical Safety legislation from 2016. Requires compliance review.",
+    "LegislationType": "Electrical Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Gas Safety (Installation and Use) Regulations 1998",
+    "Link": "https://www.legislation.gov.uk/uksi/1998/2451/contents",
+    "IndustryName": "Construction",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Gas Safety legislation from 1998. Requires compliance review.",
+    "LegislationType": "Gas Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Pressure Systems Safety Regulations 2000",
+    "Link": "https://www.legislation.gov.uk/uksi/2000/128/contents",
+    "IndustryName": "Manufacturing",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Equipment Safety legislation from 2000. Requires compliance review.",
+    "LegislationType": "Equipment Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Pressure Equipment (Safety) Regulations 2016",
+    "Link": "https://www.legislation.gov.uk/uksi/2016/1105/contents",
+    "IndustryName": "Manufacturing",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Equipment Safety legislation from 2016. Requires compliance review.",
+    "LegislationType": "Equipment Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Reporting of Injuries, Diseases and Dangerous Occurrences Regulations 2013 (RIDDOR)",
+    "Link": "https://www.legislation.gov.uk/uksi/2013/1471/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 2013. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Health and Safety (First-Aid) Regulations 1981",
+    "Link": "https://www.legislation.gov.uk/uksi/1981/917/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "Medium",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 1981. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Safety Representatives and Safety Committees Regulations 1977",
+    "Link": "https://www.legislation.gov.uk/uksi/1977/500/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "Medium",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 1977. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Health and Safety (Consultation with Employees) Regulations 1996",
+    "Link": "https://www.legislation.gov.uk/uksi/1996/1513/contents",
+    "IndustryName": "All Industries",
+    "RiskLevel": "Medium",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 1996. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Mines Regulations 2014",
+    "Link": "https://www.legislation.gov.uk/uksi/2014/3248/contents",
+    "IndustryName": "Mining",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 2014. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Quarries Regulations 1999",
+    "Link": "https://www.legislation.gov.uk/uksi/1999/2024/contents",
+    "IndustryName": "Mining",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 1999. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Diving at Work Regulations 1997",
+    "Link": "https://www.legislation.gov.uk/uksi/1997/2776/contents",
+    "IndustryName": "Maritime",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 1997. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Merchant Shipping Act 1995",
+    "Link": "https://www.legislation.gov.uk/ukpga/1995/21/contents",
+    "IndustryName": "Maritime",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 1995. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Railways and Other Guided Transport Systems (Safety) Regulations 2006 (ROGS)",
+    "Link": "https://www.legislation.gov.uk/uksi/2006/599/contents",
+    "IndustryName": "Transport",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Rail Safety legislation from 2006. Requires compliance review.",
+    "LegislationType": "Rail Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Air Navigation Order 2016",
+    "Link": "https://www.legislation.gov.uk/uksi/2016/765/contents",
+    "IndustryName": "Aviation",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Aviation legislation from 2016. Requires compliance review.",
+    "LegislationType": "Aviation",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Control of Asbestos Regulations 2012",
+    "Link": "https://www.legislation.gov.uk/uksi/2012/632/contents",
+    "IndustryName": "Construction",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Hazardous Materials legislation from 2012. Requires compliance review.",
+    "LegislationType": "Hazardous Materials",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Control of Lead at Work Regulations 2002",
+    "Link": "https://www.legislation.gov.uk/uksi/2002/2676/contents",
+    "IndustryName": "Construction",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Hazardous Materials legislation from 2002. Requires compliance review.",
+    "LegislationType": "Hazardous Materials",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Control of Biological Agents at Work Regulations 1994",
+    "Link": "https://www.legislation.gov.uk/uksi/1994/3246/contents",
+    "IndustryName": "Healthcare",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Health & Safety legislation from 1994. Requires compliance review.",
+    "LegislationType": "Health & Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Ionising Radiations Regulations 2017",
+    "Link": "https://www.legislation.gov.uk/uksi/2017/1075/contents",
+    "IndustryName": "Healthcare",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Radiation Safety legislation from 2017. Requires compliance review.",
+    "LegislationType": "Radiation Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Genetically Modified Organisms (Contained Use) Regulations 2014",
+    "Link": "https://www.legislation.gov.uk/uksi/2014/1663/contents",
+    "IndustryName": "Healthcare",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Biotechnology legislation from 2014. Requires compliance review.",
+    "LegislationType": "Biotechnology",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Waste Management Licensing Regulations 1994",
+    "Link": "https://www.legislation.gov.uk/uksi/1994/1056/contents",
+    "IndustryName": "Waste Management",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Environmental legislation from 1994. Requires compliance review.",
+    "LegislationType": "Environmental",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Hazardous Waste (England and Wales) Regulations 2005",
+    "Link": "https://www.legislation.gov.uk/uksi/2005/894/contents",
+    "IndustryName": "Waste Management",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Environmental legislation from 2005. Requires compliance review.",
+    "LegislationType": "Environmental",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Waste Electrical and Electronic Equipment Regulations 2013 (WEEE)",
+    "Link": "https://www.legislation.gov.uk/uksi/2013/3113/contents",
+    "IndustryName": "Technology",
+    "RiskLevel": "Medium",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Environmental legislation from 2013. Requires compliance review.",
+    "LegislationType": "Environmental",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Producer Responsibility Obligations (Packaging Waste) Regulations 2007",
+    "Link": "https://www.legislation.gov.uk/uksi/2007/871/contents",
+    "IndustryName": "Manufacturing",
+    "RiskLevel": "Medium",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Environmental legislation from 2007. Requires compliance review.",
+    "LegislationType": "Environmental",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Wildlife and Countryside Act 1981",
+    "Link": "https://www.legislation.gov.uk/ukpga/1981/69/contents",
+    "IndustryName": "Construction",
+    "RiskLevel": "Medium",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Environmental legislation from 1981. Requires compliance review.",
+    "LegislationType": "Environmental",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Natural Environment and Rural Communities Act 2006",
+    "Link": "https://www.legislation.gov.uk/ukpga/2006/16/contents",
+    "IndustryName": "Agriculture",
+    "RiskLevel": "Medium",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Environmental legislation from 2006. Requires compliance review.",
+    "LegislationType": "Environmental",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Conservation of Habitats and Species Regulations 2017",
+    "Link": "https://www.legislation.gov.uk/uksi/2017/1012/contents",
+    "IndustryName": "Construction",
+    "RiskLevel": "Medium",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Environmental legislation from 2017. Requires compliance review.",
+    "LegislationType": "Environmental",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Building Safety Act 2022",
+    "Link": "https://www.legislation.gov.uk/ukpga/2022/30/contents",
+    "IndustryName": "Construction",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Building Safety legislation from 2022. Requires compliance review.",
+    "LegislationType": "Building Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Fire Safety Act 2021",
+    "Link": "https://www.legislation.gov.uk/ukpga/2021/24/contents",
+    "IndustryName": "Real Estate",
+    "RiskLevel": "High",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Fire Safety legislation from 2021. Requires compliance review.",
+    "LegislationType": "Fire Safety",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  },
+  {
+    "Name": "Levelling-up and Regeneration Act 2023",
+    "Link": "https://www.legislation.gov.uk/ukpga/2023/55/contents",
+    "IndustryName": "Construction",
+    "RiskLevel": "Medium",
+    "ComplianceStatus": "Under Review",
+    "Notes": "Planning legislation from 2023. Requires compliance review.",
+    "LegislationType": "Planning",
+    "LatestUpdate": "2025-08-14T08:43:26.359Z"
+  }
+]

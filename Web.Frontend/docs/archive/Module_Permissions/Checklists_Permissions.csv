@@ -1,0 +1,81 @@
+Page,Element_Type,Element_Title,Permission_Required,Location,Parent_Component,Admin,Manager,Operator,Viewer,Notes
+Checklists Home,Page,Checklists Dashboard,checklists.view,Main Content,Checklists Home,Yes,Yes,Yes,Yes,Main checklists page
+Checklists Home,KPICard,Total Checklists,checklists.view,Dashboard,Checklist Metrics,Yes,Yes,Yes,Yes,Total checklist count
+Checklists Home,KPICard,Completed Today,checklists.view,Dashboard,Completion Metrics,Yes,Yes,Yes,Yes,Daily completion stats
+Checklists Home,KPICard,Pending Tasks,checklists.view,Dashboard,Task Metrics,Yes,Yes,Yes,Yes,Outstanding checklist tasks
+Checklists Home,KPICard,Compliance Rate,checklists.view,Dashboard,Compliance Metrics,Yes,Yes,Yes,Yes,Overall compliance percentage
+Checklists Home,Button,Create Checklist,checklists.create,Header,Quick Actions,Yes,Yes,No,No,Create new checklist
+Checklists Home,Button,Assign Checklist,checklists.assign,Header,Quick Actions,Yes,Yes,No,No,Assign to users
+Checklists Home,Button,View Reports,checklists.reports,Header,Quick Actions,Yes,Yes,No,No,Checklist reporting
+Checklists Home,Section,Recent Activity,checklists.view,Main Content,Activity Feed,Yes,Yes,Yes,Yes,Recent checklist actions
+Checklists Home,Section,My Assignments,checklists.view,Main Content,Personal Tasks,Yes,Yes,Yes,Yes,User-assigned checklists
+Create Checklist,Page,Checklist Builder,checklists.create,Main Content,Checklist Creation,Yes,Yes,No,No,Checklist creation interface
+Create Checklist,Form,Basic Info,checklists.create,Main Content,Checklist Form,Yes,Yes,No,No,Checklist metadata
+Create Checklist,Button,Add Question,checklists.create,Form Section,Question Builder,Yes,Yes,No,No,Add checklist questions
+Create Checklist,Button,Add Section,checklists.create,Form Section,Section Builder,Yes,Yes,No,No,Add checklist sections
+Create Checklist,Dropdown,Question Type,checklists.create,Question Panel,Question Config,Yes,Yes,No,No,Select question type
+Create Checklist,Input,Question Text,checklists.create,Question Panel,Question Config,Yes,Yes,No,No,Question content
+Create Checklist,Checkbox,Required Field,checklists.create,Question Panel,Question Options,Yes,Yes,No,No,Mark as required
+Create Checklist,Button,Preview,checklists.create,Header,Preview Actions,Yes,Yes,No,No,Preview checklist
+Create Checklist,Button,Save Draft,checklists.create,Header,Save Actions,Yes,Yes,No,No,Save as draft
+Create Checklist,Button,Publish,checklists.create,Header,Publish Actions,Yes,Yes,No,No,Publish checklist
+Create Document,Page,Document Import,checklists.create,Main Content,Document Import,Yes,Yes,No,No,Import from document
+Create Document,Upload,File Upload,checklists.create,Main Content,File Handler,Yes,Yes,No,No,Upload document file
+Create Document,Button,Process Document,checklists.create,Upload Section,AI Processing,Yes,Yes,No,No,AI document processing
+Create Document,Section,Extracted Content,checklists.create,Main Content,Content Display,Yes,Yes,No,No,AI-extracted checklist items
+Create Document,Button,Edit Content,checklists.create,Content Section,Content Editor,Yes,Yes,No,No,Edit extracted content
+Create Document,Button,Generate Checklist,checklists.create,Footer,Generation Actions,Yes,Yes,No,No,Create checklist from document
+My Checklists,Page,Personal Checklists,checklists.view,Main Content,Personal Dashboard,Yes,Yes,Yes,Yes,User's checklists
+My Checklists,Table,Assigned Checklists,checklists.view,Main Content,Assignment Table,Yes,Yes,Yes,Yes,Checklists assigned to user
+My Checklists,Table,Created Checklists,checklists.view,Main Content,Created Table,Yes,Yes,No,No,User-created checklists
+My Checklists,Button,Complete Checklist,checklists.complete,Table Row,Action Buttons,Yes,Yes,Yes,Yes,Complete assigned checklist
+My Checklists,Button,View Checklist,checklists.view,Table Row,Action Buttons,Yes,Yes,Yes,Yes,View checklist details
+My Checklists,Button,Edit Checklist,checklists.edit,Table Row,Action Buttons,Yes,Yes,No,No,Edit checklist content
+My Checklists,Status,Completion Status,checklists.view,Table Row,Status Display,Yes,Yes,Yes,Yes,Checklist completion status
+My Checklists,Filter,Status Filter,checklists.view,Header,Filter Controls,Yes,Yes,Yes,Yes,Filter by completion status
+My Checklists,Filter,Date Filter,checklists.view,Header,Filter Controls,Yes,Yes,Yes,Yes,Filter by date range
+Manage Checklists,Page,Checklist Management,checklists.manage,Main Content,Management Dashboard,Yes,Yes,No,No,Administrative checklist management
+Manage Checklists,Table,All Checklists,checklists.manage,Main Content,Checklist Table,Yes,Yes,No,No,System-wide checklist list
+Manage Checklists,Button,Create Template,checklists.create,Header,Template Actions,Yes,Yes,No,No,Create checklist template
+Manage Checklists,Button,Import Template,checklists.import,Header,Import Actions,Yes,Yes,No,No,Import existing template
+Manage Checklists,Button,Export Template,checklists.export,Table Row,Export Actions,Yes,Yes,No,No,Export checklist template
+Manage Checklists,Button,Clone Checklist,checklists.create,Table Row,Clone Actions,Yes,Yes,No,No,Duplicate existing checklist
+Manage Checklists,Button,Archive Checklist,checklists.archive,Table Row,Archive Actions,Yes,Yes,No,No,Archive old checklists
+Manage Checklists,Button,Delete Checklist,checklists.delete,Table Row,Delete Actions,Yes,No,No,No,Permanently delete checklist
+Manage Checklists,Modal,Checklist Preview,checklists.view,Modal,Preview Display,Yes,Yes,No,No,Preview checklist content
+Manage Checklists,Form,Bulk Actions,checklists.manage,Header,Bulk Operations,Yes,Yes,No,No,Mass checklist operations
+Assign Checklists,Page,Assignment Management,checklists.assign,Main Content,Assignment Dashboard,Yes,Yes,No,No,Checklist assignment interface
+Assign Checklists,Table,Available Checklists,checklists.view,Main Content,Checklist Selection,Yes,Yes,No,No,Checklists available for assignment
+Assign Checklists,Table,Users List,users.view,Main Content,User Selection,Yes,Yes,No,No,Users who can be assigned
+Assign Checklists,Button,Assign Selected,checklists.assign,Header,Assignment Actions,Yes,Yes,No,No,Assign checklist to users
+Assign Checklists,Button,Bulk Assign,checklists.assign,Header,Bulk Actions,Yes,Yes,No,No,Mass assignment operations
+Assign Checklists,Form,Assignment Details,checklists.assign,Assignment Panel,Assignment Config,Yes,Yes,No,No,Assignment configuration
+Assign Checklists,Input,Due Date,checklists.assign,Assignment Panel,Assignment Config,Yes,Yes,No,No,Set assignment due date
+Assign Checklists,Dropdown,Priority Level,checklists.assign,Assignment Panel,Assignment Config,Yes,Yes,No,No,Set assignment priority
+Assign Checklists,Checkbox,Send Notification,checklists.assign,Assignment Panel,Assignment Config,Yes,Yes,No,No,Notify assigned users
+Assign Checklists,Table,Assignment History,checklists.assign,Tab Panel,History Display,Yes,Yes,No,No,Previous assignments
+Assign Checklists,KPICard,Total Assignments,checklists.assign,Dashboard,Assignment Metrics,Yes,Yes,No,No,Assignment statistics
+Assign Checklists,KPICard,Completion Rate,checklists.view,Dashboard,Completion Metrics,Yes,Yes,No,No,Assignment completion rate
+Reports,Page,Checklist Reports,checklists.reports,Main Content,Reporting Dashboard,Yes,Yes,No,No,Checklist reporting interface
+Reports,Chart,Completion Trends,checklists.reports,Dashboard,Trend Charts,Yes,Yes,No,No,Completion trend analysis
+Reports,Chart,Compliance Metrics,checklists.reports,Dashboard,Compliance Charts,Yes,Yes,No,No,Compliance rate analysis
+Reports,Table,Detailed Report,checklists.reports,Main Content,Report Display,Yes,Yes,No,No,Detailed checklist report
+Reports,Button,Generate Report,checklists.reports,Header,Report Actions,Yes,Yes,No,No,Create custom report
+Reports,Button,Export Report,checklists.export,Header,Export Actions,Yes,Yes,No,No,Export report data
+Reports,Button,Schedule Report,checklists.reports,Header,Schedule Actions,Yes,Yes,No,No,Schedule automated reports
+Reports,Filter,Date Range,checklists.reports,Header,Report Filters,Yes,Yes,No,No,Filter by date range
+Reports,Filter,User Filter,checklists.reports,Header,Report Filters,Yes,Yes,No,No,Filter by user
+Reports,Filter,Checklist Filter,checklists.reports,Header,Report Filters,Yes,Yes,No,No,Filter by checklist type
+Dashboard,Page,Checklist Dashboard,checklists.view,Main Content,Module Dashboard,Yes,Yes,Yes,Yes,Module-specific dashboard
+Dashboard,KPICard,Active Checklists,checklists.view,Dashboard,Activity Metrics,Yes,Yes,Yes,Yes,Currently active checklists
+Dashboard,KPICard,Overdue Items,checklists.view,Dashboard,Overdue Metrics,Yes,Yes,Yes,Yes,Overdue checklist items
+Dashboard,Section,Quick Actions,checklists.access,Dashboard,Action Panel,Yes,Yes,Yes,Yes,Common checklist actions
+Dashboard,Section,Recent Completions,checklists.view,Dashboard,Activity Feed,Yes,Yes,Yes,Yes,Recently completed checklists
+Complete Checklist,Page,Checklist Completion,checklists.complete,Main Content,Completion Interface,Yes,Yes,Yes,Yes,Complete assigned checklist
+Complete Checklist,Form,Checklist Form,checklists.complete,Main Content,Completion Form,Yes,Yes,Yes,Yes,Checklist completion form
+Complete Checklist,Input,Response Field,checklists.complete,Question Section,Response Input,Yes,Yes,Yes,Yes,Answer checklist questions
+Complete Checklist,Checkbox,Completion Status,checklists.complete,Question Section,Status Control,Yes,Yes,Yes,Yes,Mark item as complete
+Complete Checklist,Upload,Evidence Upload,checklists.complete,Question Section,Evidence Handler,Yes,Yes,Yes,Yes,Upload supporting evidence
+Complete Checklist,Button,Save Progress,checklists.complete,Footer,Save Actions,Yes,Yes,Yes,Yes,Save partial completion
+Complete Checklist,Button,Submit Checklist,checklists.complete,Footer,Submit Actions,Yes,Yes,Yes,Yes,Submit completed checklist
+Complete Checklist,Section,Progress Indicator,checklists.complete,Header,Progress Display,Yes,Yes,Yes,Yes,Show completion progress

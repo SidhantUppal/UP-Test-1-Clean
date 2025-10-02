@@ -1,0 +1,375 @@
+T100 Database Analysis - Azure SQL (Original)
+Generated: 2025-07-04T15:00:29.451Z
+
+===== SUMMARY =====
+Total Tables: 38
+Permission Tables: 17
+
+===== ALL TABLES =====
+V7.AnswerType
+V7.Attachment
+V7.AttachmentUserArea *** PERMISSION TABLE ***
+V7.AuditLog
+V7.CategoryType
+V7.ChecklistTemplate
+V7.ChecklistTemplateAssignment
+V7.ChecklistTemplateCategory
+V7.ChecklistTemplateEnrolment
+V7.Employee
+V7.FrequencyType
+V7.Location
+V7.LocationEmployee
+V7.OrgGroup
+V7.OrgGroupEmployee
+V7.SystemPermission *** PERMISSION TABLE ***
+V7.SystemRole *** PERMISSION TABLE ***
+V7.SystemRolePermission *** PERMISSION TABLE ***
+V7.Task
+V7.TaskAssignment
+V7.TaskSchedule
+V7.TaskScheduleAssignment
+V7.TaskType
+V7.TaskTypeUserArea *** PERMISSION TABLE ***
+V7.Tenant
+V7.TenantRole *** PERMISSION TABLE ***
+V7.TenantRolePermission *** PERMISSION TABLE ***
+V7.ThemeType
+V7.User *** PERMISSION TABLE ***
+V7.UserArea *** PERMISSION TABLE ***
+V7.UserAreaContractor *** PERMISSION TABLE ***
+V7.UserAreaForm *** PERMISSION TABLE ***
+V7.UserAreaFormQuestion *** PERMISSION TABLE ***
+V7.UserAreaFormQuestionAnswer *** PERMISSION TABLE ***
+V7.UserAreaFormResponse *** PERMISSION TABLE ***
+V7.UserAreaFormSection *** PERMISSION TABLE ***
+V7.UserTenant *** PERMISSION TABLE ***
+V7.UserTenantRole *** PERMISSION TABLE ***
+
+===== PERMISSION TABLE DETAILS =====
+
+--- V7.AttachmentUserArea ---
+Columns:
+  - AttachmentUserAreaID (int, PK)
+  - AttachmentID (int)
+  - UserAreaID (int)
+
+
+--- V7.SystemPermission ---
+Columns:
+  - PermissionID (int, PK)
+  - Name (nvarchar)
+  - DisplayName (nvarchar)
+  - Layer (nvarchar, nullable)
+  - Module (nvarchar)
+  - Description (nvarchar, nullable)
+
+
+--- V7.SystemRole ---
+Columns:
+  - RoleID (int, PK)
+  - Name (nvarchar)
+  - DisplayName (nvarchar)
+  - Category (nvarchar)
+  - IsSystemRole (bit)
+
+
+--- V7.SystemRolePermission ---
+Columns:
+  - SystemRoleID (int, PK)
+  - PermissionID (int)
+
+
+--- V7.TaskTypeUserArea ---
+Columns:
+  - TaskTypeUserAreaID (int, PK)
+  - TaskTypeID (int)
+  - UserAreaID (int)
+
+
+--- V7.TenantRole ---
+Columns:
+  - TenantRoleID (int, PK)
+  - TenantID (int)
+  - Name (nvarchar)
+  - DisplayName (nvarchar)
+  - ParentSystemRoleID (int, nullable)
+  - IsCustomRole (bit)
+
+
+--- V7.TenantRolePermission ---
+Columns:
+  - TenantRolePermissionID (int, PK)
+  - TenantID (int)
+  - PermissionID (int)
+  - IsGranted (bit)
+
+
+--- V7.User ---
+Columns:
+  - UserID (int, PK)
+  - GUID (uniqueidentifier)
+  - MasterUserAreaID (int, nullable)
+  - FullName (nvarchar)
+  - Email (nvarchar, nullable)
+  - IsMobileAppUser (bit)
+  - HasReadDisclaimer (bit)
+  - IsLocked (bit)
+  - LockedMessage (nvarchar, nullable)
+  - LastLoginDate (datetimeoffset, nullable)
+  - CreatedByUserID (int, nullable)
+  - CreatedDate (datetimeoffset)
+  - ModifiedByUserID (int, nullable)
+  - ModifiedDate (datetimeoffset, nullable)
+  - ArchivedByUserID (int, nullable)
+  - ArchivedDate (datetimeoffset, nullable)
+  - AzureADObjectId (nvarchar, nullable)
+
+Sample Data:
+  Row 1: {"UserID":1,"GUID":"1DA1BB51-4880-449B-848A-D1CF3A4AFFE7","MasterUserAreaID":1,"FullName":"Admin User","Email":null,"IsMobileAppUser":true,"HasReadDisclaimer":false,"IsLocked":false,"LockedMessage":null,"LastLoginDate":null,"CreatedByUserID":1,"CreatedDate":"2025-06-26T11:50:23.249Z","ModifiedByUserID":null,"ModifiedDate":null,"ArchivedByUserID":null,"ArchivedDate":null,"AzureADObjectId":null}
+
+
+--- V7.UserArea ---
+Columns:
+  - UserAreaID (int, PK)
+  - ThemeTypeID (int)
+  - GUID (uniqueidentifier)
+  - Title (nvarchar)
+  - Description (nvarchar, nullable)
+  - Prefix (nvarchar, nullable)
+  - IsDemo (bit)
+  - ExpiryDate (date, nullable)
+  - BaseURL (nvarchar, nullable)
+  - SSOLoginURL (nvarchar, nullable)
+  - MobileIdentityAPIInstanceID (int, nullable)
+  - UploadedFileMBLimit (int, nullable)
+  - CreatedByUserID (int)
+  - CreatedDate (datetimeoffset)
+  - ModifiedByUserID (int, nullable)
+  - ModifiedDate (datetimeoffset, nullable)
+  - ArchivedByUserID (int, nullable)
+  - ArchivedDate (datetimeoffset, nullable)
+
+Sample Data:
+  Row 1: {"UserAreaID":1,"ThemeTypeID":1,"GUID":"C6728746-D9CF-4727-99D8-47B59E3E8D25","Title":"Demo Area","Description":null,"Prefix":null,"IsDemo":false,"ExpiryDate":null,"BaseURL":null,"SSOLoginURL":null,"MobileIdentityAPIInstanceID":null,"UploadedFileMBLimit":null,"CreatedByUserID":1,"CreatedDate":"2025-06-26T11:59:57.297Z","ModifiedByUserID":null,"ModifiedDate":null,"ArchivedByUserID":null,"ArchivedDate":null}
+
+
+--- V7.UserAreaContractor ---
+Columns:
+  - UserAreaContractorID (int, PK)
+  - UserAreaID (int)
+  - ContractorUserAreaID (int)
+  - IsActive (bit)
+  - CreatedByUserID (int)
+  - CreatedDate (datetimeoffset)
+  - ModifiedByUserID (int, nullable)
+  - ModifiedDate (datetimeoffset, nullable)
+  - ArchivedByUserID (int, nullable)
+  - ArchivedDate (datetimeoffset, nullable)
+
+
+--- V7.UserAreaForm ---
+Columns:
+  - UserAreaFormID (int, PK)
+  - OriginalUserAreaFormID (int, nullable)
+  - Version (tinyint)
+  - Status (nvarchar)
+  - UserAreaID (int, nullable)
+  - Reference (nvarchar, nullable)
+  - Title (nvarchar)
+  - Description (nvarchar, nullable)
+  - IsEnabledForWeb (bit)
+  - IsEnabledForApp (bit)
+  - CreatedByUserID (int)
+  - CreatedDate (datetimeoffset)
+  - ModifiedByUserID (int, nullable)
+  - ModifiedDate (datetimeoffset, nullable)
+  - ArchivedByUserID (int, nullable)
+  - ArchivedDate (datetimeoffset, nullable)
+
+
+--- V7.UserAreaFormQuestion ---
+Columns:
+  - UserAreaFormQuestionID (int, PK)
+  - OriginalUserAreaFormQuestionID (int, nullable)
+  - UserAreaFormSectionID (int)
+  - AnswerTypeID (int)
+  - Title (nvarchar)
+  - Description (nvarchar, nullable)
+  - ConfigData (nvarchar, nullable)
+  - ParentIDAnswerValues (nvarchar, nullable)
+  - AnswerTypeOptionsTable (nvarchar, nullable)
+  - AnswerTypeOptionsList (nvarchar, nullable)
+  - OrderNum (tinyint)
+  - Weighting (tinyint, nullable)
+  - MaxScore (tinyint, nullable)
+  - IsMandatory (bit)
+  - CreatedByUserID (int)
+  - CreatedDate (datetimeoffset)
+  - ModifiedByUserID (int, nullable)
+  - ModifiedDate (datetimeoffset, nullable)
+  - ArchivedByUserID (int, nullable)
+  - ArchivedDate (datetimeoffset, nullable)
+
+
+--- V7.UserAreaFormQuestionAnswer ---
+Columns:
+  - UserAreaFormQuestionAnswerID (int, PK)
+  - OriginalUserAreaFormQuestionAnswerID (int, nullable)
+  - UserAreaFormQuestionID (int)
+  - AnswerText (nvarchar)
+  - OrderNum (tinyint)
+  - Weighting (tinyint, nullable)
+  - ScoreValue (tinyint, nullable)
+  - JumpToOriginalUserAreaFormSectionID (int, nullable)
+  - ConfigData (nvarchar, nullable)
+  - CreatedByUserID (int)
+  - CreatedDate (datetimeoffset)
+  - ModifiedByUserID (int, nullable)
+  - ModifiedDate (datetimeoffset, nullable)
+  - ArchivedByUserID (int, nullable)
+  - ArchivedDate (datetimeoffset, nullable)
+
+
+--- V7.UserAreaFormResponse ---
+Columns:
+  - UserAreaFormResponseID (int, PK)
+  - OriginalUserAreaFormResponseID (int, nullable)
+  - Version (tinyint)
+  - Status (nvarchar)
+  - UserAreaFormID (int)
+  - UserAreaID (int)
+  - EmployeeID (int)
+  - LocationID (int, nullable)
+  - OrgGroupID (int, nullable)
+  - Reference (nvarchar, nullable)
+  - QuestionResponseData (nvarchar, nullable)
+  - AttachmentIDList (nvarchar, nullable)
+  - TaskIDList (nvarchar, nullable)
+  - SubmissionDate (datetimeoffset, nullable)
+  - CreatedByUserID (int)
+  - CreatedDate (datetimeoffset)
+  - ModifiedByUserID (int, nullable)
+  - ModifiedDate (datetimeoffset, nullable)
+  - ArchivedByUserID (int, nullable)
+  - ArchivedDate (datetimeoffset, nullable)
+
+
+--- V7.UserAreaFormSection ---
+Columns:
+  - UserAreaFormSectionID (int, PK)
+  - OriginalUserAreaFormSectionID (int, nullable)
+  - UserAreaFormID (int)
+  - Reference (nvarchar, nullable)
+  - Title (nvarchar)
+  - HelpText (nvarchar, nullable)
+  - OrderNum (tinyint)
+  - CreatedByUserID (int)
+  - CreatedDate (datetimeoffset)
+  - ModifiedByUserID (int, nullable)
+  - ModifiedDate (datetimeoffset, nullable)
+  - ArchivedByUserID (int, nullable)
+  - ArchivedDate (datetimeoffset, nullable)
+
+
+--- V7.UserTenant ---
+Columns:
+  - UserTenantID (int, PK)
+  - UserID (int)
+  - TenantID (int)
+  - Status (nvarchar, nullable)
+
+
+--- V7.UserTenantRole ---
+Columns:
+  - UserTenantRoleID (int, PK)
+  - UserTenantID (int)
+  - TenantRoleID (int)
+  - AssignedAt (datetimeoffset)
+
+
+===== FOREIGN KEY RELATIONSHIPS =====
+V7.Attachment.ArchivedByUserID -> V7.User.UserID
+V7.Attachment.CreatedByUserID -> V7.User.UserID
+V7.Attachment.ModifiedByUserID -> V7.User.UserID
+V7.AttachmentUserArea.AttachmentID -> V7.Attachment.AttachmentID
+V7.AttachmentUserArea.UserAreaID -> V7.UserArea.UserAreaID
+V7.AuditLog.UserID -> V7.User.UserID
+V7.AuditLog.UserAreaID -> V7.UserArea.UserAreaID
+V7.ChecklistTemplate.ArchivedByUserID -> V7.User.UserID
+V7.ChecklistTemplate.CreatedByUserID -> V7.User.UserID
+V7.ChecklistTemplate.ModifiedByUserID -> V7.User.UserID
+V7.ChecklistTemplate.OriginalUserAreaFormID -> V7.UserAreaForm.UserAreaFormID
+V7.ChecklistTemplate.UserAreaID -> V7.UserArea.UserAreaID
+V7.ChecklistTemplateAssignment.AssignedUserAreaID -> V7.UserArea.UserAreaID
+V7.ChecklistTemplateAssignment.IssuingUserAreaID -> V7.UserArea.UserAreaID
+V7.ChecklistTemplateEnrolment.OriginalUserAreaFormResponseID -> V7.UserAreaFormResponse.UserAreaFormResponseID
+V7.Employee.ArchivedByUserID -> V7.User.UserID
+V7.Employee.CreatedByUserID -> V7.User.UserID
+V7.Employee.ModifiedByUserID -> V7.User.UserID
+V7.Employee.UserID -> V7.User.UserID
+V7.Employee.UserAreaID -> V7.UserArea.UserAreaID
+V7.Location.ArchivedByUserID -> V7.User.UserID
+V7.Location.CreatedByUserID -> V7.User.UserID
+V7.Location.ModifiedByUserID -> V7.User.UserID
+V7.Location.UserAreaID -> V7.UserArea.UserAreaID
+V7.OrgGroup.ArchivedByUserID -> V7.User.UserID
+V7.OrgGroup.CreatedByUserID -> V7.User.UserID
+V7.OrgGroup.ModifiedByUserID -> V7.User.UserID
+V7.OrgGroup.UserAreaID -> V7.UserArea.UserAreaID
+V7.SystemRolePermission.PermissionID -> V7.SystemPermission.PermissionID
+V7.Task.ArchivedByUserID -> V7.User.UserID
+V7.Task.CreatedByUserID -> V7.User.UserID
+V7.Task.ModifiedByUserID -> V7.User.UserID
+V7.Task.UserAreaID -> V7.UserArea.UserAreaID
+V7.TaskSchedule.ArchivedByUserID -> V7.User.UserID
+V7.TaskSchedule.CreatedByUserID -> V7.User.UserID
+V7.TaskSchedule.ModifiedByUserID -> V7.User.UserID
+V7.TaskSchedule.UserAreaID -> V7.UserArea.UserAreaID
+V7.TaskTypeUserArea.TaskTypeID -> V7.TaskType.TaskTypeID
+V7.TaskTypeUserArea.UserAreaID -> V7.UserArea.UserAreaID
+V7.TenantRole.TenantID -> V7.Tenant.TenantID
+V7.TenantRolePermission.PermissionID -> V7.SystemPermission.PermissionID
+V7.TenantRolePermission.TenantID -> V7.Tenant.TenantID
+V7.User.ArchivedByUserID -> V7.User.UserID
+V7.User.CreatedByUserID -> V7.User.UserID
+V7.User.ModifiedByUserID -> V7.User.UserID
+V7.User.MasterUserAreaID -> V7.UserArea.UserAreaID
+V7.UserArea.ArchivedByUserID -> V7.User.UserID
+V7.UserArea.CreatedByUserID -> V7.User.UserID
+V7.UserArea.ModifiedByUserID -> V7.User.UserID
+V7.UserArea.ThemeTypeID -> V7.ThemeType.ThemeTypeID
+V7.UserAreaContractor.ArchivedByUserID -> V7.User.UserID
+V7.UserAreaContractor.CreatedByUserID -> V7.User.UserID
+V7.UserAreaContractor.ContractorUserAreaID -> V7.UserArea.UserAreaID
+V7.UserAreaContractor.ModifiedByUserID -> V7.User.UserID
+V7.UserAreaContractor.UserAreaID -> V7.UserArea.UserAreaID
+V7.UserAreaForm.ArchivedByUserID -> V7.User.UserID
+V7.UserAreaForm.CreatedByUserID -> V7.User.UserID
+V7.UserAreaForm.ModifiedByUserID -> V7.User.UserID
+V7.UserAreaForm.UserAreaID -> V7.UserArea.UserAreaID
+V7.UserAreaFormQuestion.AnswerTypeID -> V7.AnswerType.AnswerTypeID
+V7.UserAreaFormQuestion.ArchivedByUserID -> V7.User.UserID
+V7.UserAreaFormQuestion.CreatedByUserID -> V7.User.UserID
+V7.UserAreaFormQuestion.ModifiedByUserID -> V7.User.UserID
+V7.UserAreaFormQuestion.UserAreaFormSectionID -> V7.UserAreaFormSection.UserAreaFormSectionID
+V7.UserAreaFormQuestionAnswer.ArchivedByUserID -> V7.User.UserID
+V7.UserAreaFormQuestionAnswer.CreatedByUserID -> V7.User.UserID
+V7.UserAreaFormQuestionAnswer.ModifiedByUserID -> V7.User.UserID
+V7.UserAreaFormQuestionAnswer.JumpToOriginalUserAreaFormSectionID -> V7.UserAreaFormSection.UserAreaFormSectionID
+V7.UserAreaFormQuestionAnswer.UserAreaFormQuestionID -> V7.UserAreaFormQuestion.UserAreaFormQuestionID
+V7.UserAreaFormResponse.ArchivedByUserID -> V7.User.UserID
+V7.UserAreaFormResponse.CreatedByUserID -> V7.User.UserID
+V7.UserAreaFormResponse.EmployeeID -> V7.Employee.EmployeeID
+V7.UserAreaFormResponse.LocationID -> V7.Location.LocationID
+V7.UserAreaFormResponse.ModifiedByUserID -> V7.User.UserID
+V7.UserAreaFormResponse.OrgGroupID -> V7.OrgGroup.OrgGroupID
+V7.UserAreaFormResponse.UserAreaID -> V7.UserArea.UserAreaID
+V7.UserAreaFormResponse.UserAreaFormID -> V7.UserAreaForm.UserAreaFormID
+V7.UserAreaFormSection.ArchivedByUserID -> V7.User.UserID
+V7.UserAreaFormSection.CreatedByUserID -> V7.User.UserID
+V7.UserAreaFormSection.ModifiedByUserID -> V7.User.UserID
+V7.UserAreaFormSection.UserAreaFormID -> V7.UserAreaForm.UserAreaFormID
+V7.UserTenant.TenantID -> V7.Tenant.TenantID
+V7.UserTenant.UserID -> V7.User.UserID
+V7.UserTenantRole.TenantRoleID -> V7.TenantRole.TenantRoleID
+V7.UserTenantRole.UserTenantID -> V7.UserTenant.UserTenantID

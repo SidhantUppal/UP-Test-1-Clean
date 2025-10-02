@@ -1,0 +1,27 @@
+﻿CREATE TABLE [V7].[HAVSRegisterEntry] (
+    [HAVSRegisterEntryID]  INT            IDENTITY (1, 1) NOT NULL,
+    [UserAreaID]           INT            NOT NULL,
+    [EmployeeID]           INT            NOT NULL,
+    [Year]                 INT            NULL,
+    [Month]                INT            NULL,
+    [Day]                  INT            NULL,
+    [IsOnLeave]            BIT            DEFAULT ((0)) NOT NULL,
+    [IsOffSick]            BIT            DEFAULT ((0)) NOT NULL,
+    [IsSubmitted]          BIT            DEFAULT ((0)) NOT NULL,
+    [IsBlocked]            BIT            DEFAULT ((0)) NOT NULL,
+    [BlockedReason]        NVARCHAR (255) NULL,
+    [CreatedByUserID]      INT            NOT NULL,
+    [CreatedDate]          DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID] INT            NULL,
+    [ModifiedDate]     DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]     INT            NULL,
+    [ArchivedDate]         DATETIMEOFFSET (7) NULL,
+    [EntryDate]            DATE           NOT NULL,
+    PRIMARY KEY CLUSTERED ([HAVSRegisterEntryID] ASC),
+    CONSTRAINT [FK_HAVSRegisterEntry_ArchivedBy] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_HAVSRegisterEntry_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_HAVSRegisterEntry_Employee] FOREIGN KEY ([EmployeeID]) REFERENCES [V7].[Employee] ([EmployeeID]),
+    CONSTRAINT [FK_HAVSRegisterEntry_ModifiedBy] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_HAVSRegisterEntry_UserArea] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+

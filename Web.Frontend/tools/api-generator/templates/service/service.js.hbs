@@ -1,0 +1,124 @@
+import {{ResourceName}}Repository from '../repositories/{{resourceName}}.repository.js';
+
+export class {{ResourceName}}Service {
+  constructor() {
+    this.repository = new {{ResourceName}}Repository();
+  }
+
+  async getAll(userAreaId, options) {
+    // Validate options
+    const validatedOptions = {
+      page: Math.max(1, options.page || 1),
+      limit: Math.min(100, Math.max(1, options.limit || 20)),
+      search: options.search || '',
+      sortBy: this.validateSortField(options.sortBy),
+      sortOrder: options.sortOrder === 'ASC' ? 'ASC' : 'DESC'
+    };
+
+    return await this.repository.getAll(userAreaId, validatedOptions);
+  }
+
+  async getById(userAreaId, id) {
+    if (!id || isNaN(id)) {
+      throw new Error('Invalid ID provided');
+    }
+
+    return await this.repository.getById(userAreaId, id);
+  }
+
+  async create(userAreaId, userId, data) {
+    // Validate required fields
+    {{#each fields}}
+    {{#if required}}
+    if (data.{{lowercase name}} === undefined || data.{{lowercase name}} === null) {
+      throw new Error('{{name}} is required');
+    }
+    {{/if}}
+    {{/each}}
+
+    // Business logic validation
+    const validatedData = this.validateData(data);
+
+    return await this.repository.create(userAreaId, userId, validatedData);
+  }
+
+  async update(userAreaId, userId, id, data) {
+    if (!id || isNaN(id)) {
+      throw new Error('Invalid ID provided');
+    }
+
+    // Check if exists
+    const existing = await this.repository.getById(userAreaId, id);
+    if (!existing) {
+      return null;
+    }
+
+    // Validate data
+    const validatedData = this.validateData(data);
+
+    return await this.repository.update(userAreaId, userId, id, validatedData);
+  }
+
+  async delete(userAreaId, userId, id) {
+    if (!id || isNaN(id)) {
+      throw new Error('Invalid ID provided');
+    }
+
+    return await this.repository.delete(userAreaId, userId, id);
+  }
+
+  validateData(data) {
+    const validated = {};
+
+    {{#each fields}}
+    // Validate {{name}}
+    {{#if (eq type 'string')}}
+    if (data.{{lowercase name}} !== undefined) {
+      validated.{{lowercase name}} = String(data.{{lowercase name}}).trim();
+      {{#if required}}
+      if (!validated.{{lowercase name}}) {
+        throw new Error('{{name}} cannot be empty');
+      }
+      {{/if}}
+    }
+    {{/if}}
+    {{#if (eq type 'number')}}
+    if (data.{{lowercase name}} !== undefined) {
+      validated.{{lowercase name}} = parseInt(data.{{lowercase name}});
+      if (isNaN(validated.{{lowercase name}})) {
+        throw new Error('{{name}} must be a valid number');
+      }
+    }
+    {{/if}}
+    {{#if (eq type 'boolean')}}
+    if (data.{{lowercase name}} !== undefined) {
+      validated.{{lowercase name}} = Boolean(data.{{lowercase name}});
+    }
+    {{/if}}
+    {{#if (eq type 'Date')}}
+    if (data.{{lowercase name}} !== undefined) {
+      validated.{{lowercase name}} = new Date(data.{{lowercase name}});
+      if (isNaN(validated.{{lowercase name}}.getTime())) {
+        throw new Error('{{name}} must be a valid date');
+      }
+    }
+    {{/if}}
+    {{/each}}
+
+    return validated;
+  }
+
+  validateSortField(field) {
+    const validFields = [
+      {{#each fields}}
+      '{{name}}',
+      {{/each}}
+      'CreatedDate',
+      'ModifiedDate'
+    ];
+
+    return validFields.includes(field) ? field : 'CreatedDate';
+  }
+}
+
+export default {{ResourceName}}Service;

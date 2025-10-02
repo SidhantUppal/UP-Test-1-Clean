@@ -1,0 +1,17 @@
+# LOCI Development Files
+# This entire folder is excluded from production builds
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp

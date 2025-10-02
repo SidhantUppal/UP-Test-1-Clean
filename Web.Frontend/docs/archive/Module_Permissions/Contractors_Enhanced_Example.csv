@@ -1,0 +1,55 @@
+Page,Element_Type,Element_ID,Element_Name,R0,Display_Mode,API_Action,Done,SuperAdmin,TenantAdmin,ProjectManager,SiteManager,QualityInspector,Contractor,DocumentManager,Viewer,Is_Dynamic,Dynamic_Source,Notes
+Contractors List,Page,CTR_LIST_PAGE,Contractors Management Page,No,disabled,GET /api/contractors,✓,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,,Main contractors list page
+Contractors List,Table,CTR_LIST_TBL,Contractors Table,Yes,disabled,GET /api/contractors,✓,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,,Main data table - everyone who can access page sees it
+Contractors List,Label,CTR_LIST_LBL_COUNT,Total: {count} contractors,Yes,disabled,,,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,,Count label - R0 means visible to all
+Contractors List,Button,CTR_LIST_BTN_REFRESH,Refresh,Yes,disabled,GET /api/contractors,✓,Yes,Yes,Yes,Yes,No,No,No,No,No,,Refresh data - visible to all but disabled for some
+Contractors List,Search,CTR_LIST_SEARCH,Search Contractors,Yes,disabled,,,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,,Search box - everyone can use
+Contractors List,Filter,CTR_LIST_FLT_STATUS,Status Filter,Yes,disabled,,,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,contractor_statuses,Dropdown filter - populated from DB
+Contractors List,Button,CTR_LIST_BTN_ADD,Add Contractor,No,disabled,Modal:CTR_ADD_MDL,✓,Yes,Yes,Yes,Yes,No,No,No,No,No,,Opens add contractor modal
+Contractors List,Modal,CTR_ADD_MDL,Add Contractor Modal,No,hidden,,,Yes,Yes,Yes,Yes,No,No,No,No,No,,Modal container for adding contractor
+Contractors List,Form,CTR_ADD_FRM,Add Contractor Form,No,hidden,POST /api/contractors,,Yes,Yes,Yes,Yes,No,No,No,No,No,,Form inside modal
+Contractors List,Input,CTR_ADD_INP_NAME,Company Name,No,disabled,,,Yes,Yes,Yes,Yes,No,No,No,No,No,,Required field
+Contractors List,Input,CTR_ADD_INP_EMAIL,Email,No,disabled,,,Yes,Yes,Yes,Yes,No,No,No,No,No,,Required field
+Contractors List,Dropdown,CTR_ADD_DD_TYPE,Contractor Type,No,disabled,Load:/api/contractor-types,,Yes,Yes,Yes,Yes,No,No,No,No,Yes,contractor_types,DB-driven dropdown
+Contractors List,Dropdown,CTR_ADD_DD_CATEGORY,Category,No,disabled,Load:/api/contractor-categories,,Yes,Yes,Yes,Yes,No,No,No,No,Yes,contractor_categories,DB-driven dropdown
+Contractors List,Button,CTR_ADD_BTN_SUBMIT,Save Contractor,No,disabled,POST /api/contractors,,Yes,Yes,Yes,Yes,No,No,No,No,No,,Submit button in modal
+Contractors List,Button,CTR_ADD_BTN_CANCEL,Cancel,No,disabled,Close:Modal,,Yes,Yes,Yes,Yes,No,No,No,No,No,,Cancel button in modal
+Contractors List,Button,CTR_LIST_BTN_EXPORT,Export to Excel,No,disabled,GET /api/contractors/export,✓,Yes,Yes,Yes,No,No,No,No,No,No,,Export functionality
+Contractors List,Button,CTR_LIST_BTN_IMPORT,Import from Excel,No,hidden,Modal:CTR_IMPORT_MDL,,Yes,Yes,No,No,No,No,No,No,No,,Hidden from most users
+Contractors List,Modal,CTR_IMPORT_MDL,Import Contractors Modal,No,hidden,,,Yes,Yes,No,No,No,No,No,No,No,,Import modal
+Contractors List,FileUpload,CTR_IMPORT_FILE,Select Excel File,No,disabled,,,Yes,Yes,No,No,No,No,No,No,No,,File upload in modal
+Contractors List,Button,CTR_IMPORT_BTN_UPLOAD,Upload & Import,No,disabled,POST /api/contractors/import,,Yes,Yes,No,No,No,No,No,No,No,,Process import
+Contractors List,Button,CTR_LIST_ROW_VIEW,View,Yes,disabled,Navigate:/contractors/{id},✓,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,,Row action - everyone can view
+Contractors List,Button,CTR_LIST_ROW_EDIT,Edit,No,disabled,Modal:CTR_EDIT_MDL,✓,Yes,Yes,Yes,Yes,No,No,No,No,No,,Row action - opens edit modal
+Contractors List,Modal,CTR_EDIT_MDL,Edit Contractor Modal,No,hidden,,,Yes,Yes,Yes,Yes,No,No,No,No,No,,Edit modal container
+Contractors List,Form,CTR_EDIT_FRM,Edit Contractor Form,No,hidden,PUT /api/contractors/{id},,Yes,Yes,Yes,Yes,No,No,No,No,No,,Form in edit modal
+Contractors List,Input,CTR_EDIT_INP_NAME,Company Name,No,disabled,,,Yes,Yes,Yes,Yes,No,No,No,No,No,,Editable field
+Contractors List,Dropdown,CTR_EDIT_DD_STATUS,Status,No,disabled,Load:/api/contractor-statuses,,Yes,Yes,Yes,Yes,No,No,No,No,Yes,contractor_statuses,Status change dropdown
+Contractors List,Button,CTR_EDIT_BTN_SAVE,Save Changes,No,disabled,PUT /api/contractors/{id},,Yes,Yes,Yes,Yes,No,No,No,No,No,,Save button in modal
+Contractors List,Button,CTR_LIST_ROW_DELETE,Delete,No,hidden,Modal:CTR_DELETE_MDL,,Yes,Yes,No,No,No,No,No,No,No,,Hidden from most - opens confirm modal
+Contractors List,Modal,CTR_DELETE_MDL,Confirm Delete Modal,No,hidden,,,Yes,Yes,No,No,No,No,No,No,No,,Delete confirmation modal
+Contractors List,Text,CTR_DELETE_TXT,Are you sure you want to delete this contractor?,No,disabled,,,Yes,Yes,No,No,No,No,No,No,No,,Confirmation message
+Contractors List,Button,CTR_DELETE_BTN_CONFIRM,Yes Delete,No,disabled,DELETE /api/contractors/{id},,Yes,Yes,No,No,No,No,No,No,No,,Confirm delete button
+Contractors List,Button,CTR_DELETE_BTN_CANCEL,Cancel,No,disabled,Close:Modal,,Yes,Yes,No,No,No,No,No,No,No,,Cancel delete button
+Contractors List,Button,CTR_LIST_ROW_APPROVE,Approve,No,disabled,Modal:CTR_APPROVE_MDL,,Yes,Yes,Yes,No,No,No,No,No,No,,Approve contractor button
+Contractors List,Modal,CTR_APPROVE_MDL,Approve Contractor Modal,No,hidden,,,Yes,Yes,Yes,No,No,No,No,No,No,,Approval modal
+Contractors List,Dropdown,CTR_APPROVE_DD_LEVEL,Approval Level,No,disabled,Load:/api/approval-levels,,Yes,Yes,Yes,No,No,No,No,No,Yes,approval_levels,Select approval level
+Contractors List,Textarea,CTR_APPROVE_TXT_NOTES,Approval Notes,No,disabled,,,Yes,Yes,Yes,No,No,No,No,No,No,,Optional approval notes
+Contractors List,Button,CTR_APPROVE_BTN_SUBMIT,Approve Contractor,No,disabled,POST /api/contractors/{id}/approve,,Yes,Yes,Yes,No,No,No,No,No,No,,Submit approval
+Contractors List,Dropdown,CTR_LIST_ROW_STATUS,Quick Status,No,disabled,PATCH /api/contractors/{id}/status,,Yes,Yes,Yes,Yes,No,No,No,No,Yes,contractor_statuses,Inline status change
+Contractors List,Button,CTR_LIST_BULK_SELECT,Select All,No,disabled,,,Yes,Yes,Yes,No,No,No,No,No,No,,Bulk selection checkbox
+Contractors List,Button,CTR_LIST_BULK_DELETE,Bulk Delete,No,hidden,Modal:CTR_BULK_DELETE_MDL,,Yes,No,No,No,No,No,No,No,No,,Bulk delete - admin only
+Contractors List,Modal,CTR_BULK_DELETE_MDL,Bulk Delete Confirmation,No,hidden,,,Yes,No,No,No,No,No,No,No,No,,Bulk delete modal
+Contractors List,Text,CTR_BULK_DELETE_TXT,Delete {count} selected contractors?,No,disabled,,,Yes,No,No,No,No,No,No,No,No,,Bulk delete message
+Contractors List,Button,CTR_BULK_DELETE_CONFIRM,Delete All,No,disabled,POST /api/contractors/bulk-delete,,Yes,No,No,No,No,No,No,No,No,,Confirm bulk delete
+Contractor Detail,Page,CTR_DETAIL_PAGE,Contractor Detail Page,No,disabled,GET /api/contractors/{id},✓,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,,Individual contractor page
+Contractor Detail,Section,CTR_DETAIL_INFO,Basic Information,Yes,disabled,,,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,,Info section - R0 for all viewers
+Contractor Detail,Button,CTR_DETAIL_BTN_EDIT,Edit Details,No,disabled,Modal:CTR_EDIT_MDL,✓,Yes,Yes,Yes,Yes,No,No,No,No,No,,Reuses edit modal from list
+Contractor Detail,Section,CTR_DETAIL_DOCS,Documents,Yes,disabled,GET /api/contractors/{id}/documents,✓,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,,Documents section
+Contractor Detail,Button,CTR_DETAIL_BTN_UPLOAD,Upload Document,No,disabled,Modal:CTR_UPLOAD_MDL,,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,,Upload documents
+Contractor Detail,Modal,CTR_UPLOAD_MDL,Upload Document Modal,No,hidden,,,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,,Document upload modal
+Contractor Detail,FileUpload,CTR_UPLOAD_FILE,Select File,No,disabled,,,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,,File selector
+Contractor Detail,Dropdown,CTR_UPLOAD_DD_TYPE,Document Type,No,disabled,Load:/api/document-types,,Yes,Yes,Yes,Yes,No,Yes,Yes,No,Yes,document_types,Document type selection
+Contractor Detail,Button,CTR_UPLOAD_BTN_SUBMIT,Upload,No,disabled,POST /api/contractors/{id}/documents,,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,,Submit upload
+Contractor Detail,Section,CTR_DETAIL_ACTIVITY,Activity Log,No,disabled,GET /api/contractors/{id}/activity,,Yes,Yes,Yes,No,No,No,No,No,No,,Activity history - restricted
+Contractor Detail,Button,CTR_DETAIL_BTN_DEACTIVATE,Deactivate Contractor,No,hidden,PATCH /api/contractors/{id}/deactivate,,Yes,Yes,No,No,No,No,No,No,No,,Deactivate - hidden from most

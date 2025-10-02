@@ -1,0 +1,27 @@
+﻿CREATE TABLE [V7].[Update] (
+    [UpdateID]             INT            IDENTITY (1, 1) NOT NULL,
+    [Action]               NVARCHAR (255) NULL,
+    [Controller]           NVARCHAR (255) NULL,
+    [RouteValues]          NVARCHAR (MAX) NULL,
+    [UserAreaID]           INT            NULL,
+    [CreatedDate]          DATETIMEOFFSET (7) NOT NULL,
+    [CreatedByUserID]      INT            NOT NULL,
+    [ArchivedDate]         DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]     INT            NULL,
+    [ExternalURL]          NVARCHAR (255) NULL,
+    [StartDate]            DATETIMEOFFSET (7) NULL,
+    [ExpiryDate]           DATETIMEOFFSET (7) NULL,
+    [ModifiedDate]     DATETIMEOFFSET (7) NULL,
+    [ModifiedByUserID] INT            NULL,
+    [UpdateTypeID]         INT            DEFAULT ((1)) NOT NULL,
+    [OrderNumber]          INT            NULL,
+    [Title] NVARCHAR (150) NULL,
+    [Description] NVARCHAR (MAX) NULL,
+    CONSTRAINT [PK__Update__7A0CF325DF430612] PRIMARY KEY CLUSTERED ([UpdateID] ASC),
+    CONSTRAINT [FK_Update_ArchivedByUserID] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_Update_CreatedByUserID] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_Update_ModifiedByUserID] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_Update_UpdateTypeID] FOREIGN KEY ([UpdateTypeID]) REFERENCES [V7].[UpdateType] ([UpdateTypeID]),
+    CONSTRAINT [FK_Update_UserAreaID] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+

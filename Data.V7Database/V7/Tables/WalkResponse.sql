@@ -1,0 +1,26 @@
+﻿CREATE TABLE [V7].[WalkResponse] (
+    [WalkResponseID]       INT            IDENTITY (1, 1) NOT NULL,
+    [WalkID]               INT            NOT NULL,
+    [WalkAssignmentID]     INT            NULL,
+    [ActualStartTime]      DATETIMEOFFSET (7) NULL,
+    [ActualFinishTime]     DATETIMEOFFSET (7) NULL,
+    [ActualDuration]       INT            NULL,
+    [HasAutoClosed]        BIT            DEFAULT ((0)) NOT NULL,
+    [CloseReason]          NVARCHAR (255) NULL,
+    [BreachedReasonTypeID] INT            NULL,
+    [BreachComment]        NVARCHAR (500) NULL,
+    [GPSRoute]             NVARCHAR (MAX) NULL,
+    [RandomImageID]        INT            NULL,
+    [CreatedByUserID]      INT            NOT NULL,
+    [CreatedDate]          DATETIMEOFFSET (7) NOT NULL,
+    [ArchivedByUserID]     INT            NULL,
+    [ArchivedDate]         DATETIMEOFFSET (7) NULL,
+    [EmployeeID]           INT            NULL,
+    PRIMARY KEY CLUSTERED ([WalkResponseID] ASC),
+    CONSTRAINT [FK_WalkResponse_ArchivedBy] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_WalkResponse_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_WalkResponse_EmployeeID] FOREIGN KEY ([EmployeeID]) REFERENCES [V7].[Employee] ([EmployeeID]),
+    CONSTRAINT [FK_WalkResponse_WalkAssignmentID] FOREIGN KEY ([WalkAssignmentID]) REFERENCES [V7].[WalkAssignment] ([WalkAssignmentID]),
+    CONSTRAINT [FK_WalkResponse_WalkID] FOREIGN KEY ([WalkID]) REFERENCES [V7].[Walk] ([WalkID])
+);
+

@@ -1,0 +1,25 @@
+﻿CREATE TABLE [V7].[RIDDORSubmission] (
+    [RIDDORSubmissionID]   INT            IDENTITY (1, 1) NOT NULL,
+    [UserAreaID]           INT            NOT NULL,
+    [AccidentCaseID]       INT            NOT NULL,
+    [XMLContent]           XML            NOT NULL,
+    [SubmissionDate]       DATETIMEOFFSET (7) NOT NULL,
+    [EmailTo]              NVARCHAR (255) NOT NULL,
+    [EmailFrom]            NVARCHAR (255) NOT NULL,
+    [IsValid]              BIT            NULL,
+    [Note]                 NVARCHAR (255) NULL,
+    [CreatedByUserID]      INT            NOT NULL,
+    [CreatedDate]          DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID] INT            NULL,
+    [ModifiedDate]     DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]     INT            NULL,
+    [ArchivedDate]         DATETIMEOFFSET (7) NULL,
+    [Reference]            VARCHAR (30)   NOT NULL,
+    PRIMARY KEY CLUSTERED ([RIDDORSubmissionID] ASC),
+    CONSTRAINT [FK_RIDDORSubmission_AccidentCase] FOREIGN KEY ([AccidentCaseID]) REFERENCES [V7].[AccidentCase] ([AccidentCaseID]),
+    CONSTRAINT [FK_RIDDORSubmission_ArchiveddBy] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_RIDDORSubmission_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_RIDDORSubmission_ModifiedBy] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_RIDDORSubmission_UserArea] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+

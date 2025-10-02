@@ -1,0 +1,28 @@
+﻿CREATE TABLE [V7].[ChecklistTemplate] (
+    [ChecklistTemplateID]      INT                IDENTITY (1, 1) NOT NULL,
+    [UserAreaID]               INT                NULL,
+    [OriginalUserAreaFormID]   INT                NOT NULL,
+    [Reference]                NVARCHAR (50)      NULL,
+    [Title]                    NVARCHAR (255)     NOT NULL,
+    [Description]              NVARCHAR (MAX)     NULL,
+    [IsRenewable]              BIT                DEFAULT ((0)) NOT NULL,
+    [RenewalFrequencyTypeID]   INT                NULL,
+    [RenewalFrequencyPeriod]   INT                NULL,
+    [HasTasksAllowed]          BIT                DEFAULT ((0)) NOT NULL,
+    [DefaultManagerEmployeeID] INT                NULL,
+    [CreatedByUserID]          INT                NOT NULL,
+    [CreatedDate]              DATETIMEOFFSET (7) NOT NULL,
+    [ModifiedByUserID]         INT                NULL,
+    [ModifiedDate]         DATETIMEOFFSET (7) NULL,
+    [ArchivedByUserID]         INT                NULL,
+    [ArchivedDate]             DATETIMEOFFSET (7) NULL,
+    PRIMARY KEY CLUSTERED ([ChecklistTemplateID] ASC),
+    CONSTRAINT [FK_ChecklistTemplate_ArchivedBy] FOREIGN KEY ([ArchivedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_ChecklistTemplate_CreatedBy] FOREIGN KEY ([CreatedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_ChecklistTemplate_DefaultManagerEmployee] FOREIGN KEY ([DefaultManagerEmployeeID]) REFERENCES [V7].[Employee] ([EmployeeID]),
+    CONSTRAINT [FK_ChecklistTemplate_ModifiedBy] FOREIGN KEY ([ModifiedByUserID]) REFERENCES [V7].[User] ([UserID]),
+    CONSTRAINT [FK_ChecklistTemplate_OriginalUserAreaForm] FOREIGN KEY ([OriginalUserAreaFormID]) REFERENCES [V7].[UserAreaForm] ([UserAreaFormID]),
+    CONSTRAINT [FK_ChecklistTemplate_RenewalFrequencyType] FOREIGN KEY ([RenewalFrequencyTypeID]) REFERENCES [V7].[FrequencyType] ([FrequencyTypeID]),
+    CONSTRAINT [FK_ChecklistTemplate_UserArea] FOREIGN KEY ([UserAreaID]) REFERENCES [V7].[UserArea] ([UserAreaID])
+);
+
